@@ -2,9 +2,9 @@
 <project version="4">
   <component name="MPSProject">
     <projectModules>
-      <modulePath path="$USER_HOME$/Documents/SI5/Part2/DSL/MPS/tuto/ArduinoML.mpl" folder="" />
-      <modulePath path="$USER_HOME$/Documents/SI5/Part2/DSL/MPS/tuto/runtime/ArduinoML.runtime.msd" folder="" />
-      <modulePath path="$USER_HOME$/Documents/SI5/Part2/DSL/MPS/tuto/sandbox/ArduinoML.sandbox.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/ArduinoML/ArduinoML.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/ArduinoML/runtime/ArduinoML.runtime.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/ArduinoML/sandbox/ArduinoML.sandbox.msd" folder="" />
     </projectModules>
   </component>
 </project>

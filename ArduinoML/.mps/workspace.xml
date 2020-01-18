@@ -6,7 +6,7 @@
     </option>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="846da83a-3ec3-4bfa-b812-4cd1bd96c6ee" name="Default Changelist" comment="" />
+    <list default="true" id="2cc0ee2a-6fe5-4832-a585-1ea04db7bf84" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,7 +18,7 @@
         <TabState>
           <option name="title" value="Console" />
           <tab>
-            <model ref="273f79d0-01a4-4fae-9ddf-95e67d7ea5e0/r:46e7ba41-2261-40ee-a81c-00984851bbd0(TempModule273f79d0-01a4-4fae-9ddf-95e67d7ea5e0/ConsoleModel_5482730111200)">
+            <model ref="f88e135e-c70c-4d75-8a40-50c4e9e681b0/r:d2cbaca4-415e-4408-86cf-01c2cb17cdc6(TempModulef88e135e-c70c-4d75-8a40-50c4e9e681b0/ConsoleModel_102770168127600)">
               <persistence version="9" />
               <languages>
                 <devkit ref="70d3d6da-af63-483d-a75f-9c8acf8de332(jetbrains.mps.console.devkit)" />
@@ -38,11 +38,11 @@
                   <concept id="757553790980850366" name="jetbrains.mps.console.base.structure.History" flags="ng" index="3balQm" />
                 </language>
               </registry>
-              <node concept="aymSD" id="3t2zB1Lww8l">
-                <node concept="3balQm" id="3t2zB1Lww8m" role="aymYE" />
-                <node concept="2Clz$F" id="3t2zB1Lww8n" role="aymYO" />
-                <node concept="2_V_lH" id="3t2zB1Lww8o" role="1PhJh3">
-                  <ref role="2_V_lI" node="3t2zB1Lww8n" resolve="CommandHolder" />
+              <node concept="aymSD" id="3qUZ94756Bq">
+                <node concept="3balQm" id="3qUZ94756Br" role="aymYE" />
+                <node concept="2Clz$F" id="3qUZ94756Bs" role="aymYO" />
+                <node concept="2_V_lH" id="3qUZ94756Bt" role="1PhJh3">
+                  <ref role="2_V_lI" node="3qUZ94756Bs" resolve="CommandHolder" />
                 </node>
               </node>
             </model>
@@ -63,6 +63,9 @@
         <flags show_one_result="true" new_tab="false" />
       </view>
     </search_options>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MPSBookmarkManager">
     <option name="myBookmarkInfos">
@@ -89,7 +92,7 @@
       </MessageListState>
     </option>
   </component>
-  <component name="ProjectId" id="1WQavriGZosaNeuDQV8QVjP40NZ" />
+  <component name="ProjectId" id="1Wa0SyW5zhUnpBgAWQo9ORPFaHj" />
   <component name="ProjectPluginManager">
     <option name="pluginsState">
       <option name="jetbrains.mps.baseLanguage.lightweightdsl.pluginSolution.plugin.PluginSolution_ProjectPlugin">
@@ -148,27 +151,9 @@
     </option>
   </component>
   <component name="ProjectView">
-    <navigator currentView="FileSystem" proportions="" version="1" />
+    <navigator proportions="" version="1" />
     <panes>
-      <pane id="FileSystem">
-        <subPane>
-          <expand>
-            <path>
-              <item name="" type="" />
-            </path>
-            <path>
-              <item name="" type="" />
-              <item name="" type="" />
-            </path>
-            <path>
-              <item name="" type="" />
-              <item name="" type="" />
-              <item name="" type="" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="FileSystem" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -177,25 +162,11 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="3f27be72-9184-43d4-852b-6911dc3fbf7e(ArduinoML)" />
+              <option name="myItemId" value="dc4471fe-75cf-409b-bf03-8bc732728db2(ArduinoML)" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ArduinoML#01" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:85bfa46d-9b0b-4289-a32a-2eeba8dd7623(main@generator) in IdeaFile[path: C:/Users/theof/Documents/SI5/Part2/DSL/MPS/tuto/generator/templates/main@generator.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="5382086756141888982" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
+              <option name="myItemId" value="r:37f52adb-0f85-4b7f-9195-97f6372328af(ArduinoML.behavior) in IdeaFile[path: C:/Users/theof/Documents/SI5/Part2/DSL/FinalMPSProject/languages/ArduinoML/models/ArduinoML.behavior.mps]" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -205,25 +176,11 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="3f27be72-9184-43d4-852b-6911dc3fbf7e(ArduinoML)" />
+              <option name="myItemId" value="dc4471fe-75cf-409b-bf03-8bc732728db2(ArduinoML)" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ArduinoML#01" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="3f27be72-9184-43d4-852b-6911dc3fbf7e(ArduinoML)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:6bddb2ef-fede-4ecc-977f-ec58ae4d70de(ArduinoML.textGen) in IdeaFile[path: C:/Users/theof/Documents/SI5/Part2/DSL/MPS/tuto/models/ArduinoML.textGen.mps]" />
+              <option name="myItemId" value="r:1e4e32fc-e42a-4b05-84e5-5f0ea797c86d(ArduinoML.structure) in IdeaFile[path: C:/Users/theof/Documents/SI5/Part2/DSL/FinalMPSProject/languages/ArduinoML/models/ArduinoML.structure.mps]" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -233,15 +190,15 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="3f27be72-9184-43d4-852b-6911dc3fbf7e(ArduinoML)" />
+              <option name="myItemId" value="035bd220-160a-489f-a5e3-23fa990703d9" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ArduinoML#01" />
+              <option name="myItemId" value="ArduinoML" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="r:85bfa46d-9b0b-4289-a32a-2eeba8dd7623(main@generator) in IdeaFile[path: C:/Users/theof/Documents/SI5/Part2/DSL/MPS/tuto/generator/templates/main@generator.mps]" />
+              <option name="myItemId" value="r:9d9a766a-5ec5-41fe-9e01-89059659f557(ArduinoML.sandbox) in IdeaFile[path: C:/Users/theof/Documents/SI5/Part2/DSL/FinalMPSProject/languages/ArduinoML/sandbox/models/ArduinoML.sandbox.mps]" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -251,7 +208,51 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="3f27be72-9184-43d4-852b-6911dc3fbf7e(ArduinoML)" />
+              <option name="myItemId" value="dc4471fe-75cf-409b-bf03-8bc732728db2(ArduinoML)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dc4471fe-75cf-409b-bf03-8bc732728db2(ArduinoML)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:db448323-31f6-437e-a2cc-e81f7d6fec90(ArduinoML.editor) in IdeaFile[path: C:/Users/theof/Documents/SI5/Part2/DSL/FinalMPSProject/languages/ArduinoML/models/ArduinoML.editor.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="035bd220-160a-489f-a5e3-23fa990703d9" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="035bd220-160a-489f-a5e3-23fa990703d9" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ArduinoML" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -261,11 +262,19 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="3f27be72-9184-43d4-852b-6911dc3fbf7e(ArduinoML)" />
+              <option name="myItemId" value="035bd220-160a-489f-a5e3-23fa990703d9" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="r:b813abdb-bdc7-4b1d-9515-f9c9d6be43cf(ArduinoML.structure) in IdeaFile[path: C:/Users/theof/Documents/SI5/Part2/DSL/MPS/tuto/models/ArduinoML.structure.mps]" />
+              <option name="myItemId" value="ArduinoML" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:9d9a766a-5ec5-41fe-9e01-89059659f557(ArduinoML.sandbox) in IdeaFile[path: C:/Users/theof/Documents/SI5/Part2/DSL/FinalMPSProject/languages/ArduinoML/sandbox/models/ArduinoML.sandbox.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="3943742123535532059" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </SELECTED>
@@ -280,8 +289,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/SI5/Part2/DSL/ArduinoML-kernel/externals/mps" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -300,11 +309,11 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="846da83a-3ec3-4bfa-b812-4cd1bd96c6ee" name="Default Changelist" comment="" />
-      <created>1579084505422</created>
+      <changelist id="2cc0ee2a-6fe5-4832-a585-1ea04db7bf84" name="Default Changelist" comment="" />
+      <created>1579372401733</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1579084505422</updated>
+      <updated>1579372401733</updated>
     </task>
     <servers />
   </component>
@@ -316,29 +325,13 @@
     </default_view_options>
   </component>
   <component name="WindowStateProjectService">
-    <state x="475" y="196" key="#MPSPropertiesConfigurable" timestamp="1579280965279">
+    <state x="574" y="126" key="#jetbrains.mps.ide.util.NodesChooser" timestamp="1579374869647">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="475" y="196" key="#MPSPropertiesConfigurable/0.0.1536.834@0.0.1536.834" timestamp="1579280965279" />
-    <state x="223" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579197723089">
+    <state x="574" y="126" key="#jetbrains.mps.ide.util.NodesChooser/0.0.1536.834@0.0.1536.834" timestamp="1579374869647" />
+    <state x="499" y="172" key="#jetbrains.mps.workbench.dialogs.project.utildialogs.addmodelimport.AddRequiredModelImportsDialog2" timestamp="1579375977135">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="223" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1579197723089" />
-    <state x="574" y="126" key="#jetbrains.mps.ide.util.NodesChooser" timestamp="1579190477475">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="574" y="126" key="#jetbrains.mps.ide.util.NodesChooser/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1579190477475" />
-    <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1579194048110">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1579194048110" />
-    <state x="277" y="59" key="SettingsEditor" timestamp="1579281690682">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="277" y="59" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1579281690682" />
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1579281656590">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1579281656590" />
+    <state x="499" y="172" key="#jetbrains.mps.workbench.dialogs.project.utildialogs.addmodelimport.AddRequiredModelImportsDialog2/0.0.1536.834@0.0.1536.834" timestamp="1579375977135" />
   </component>
 </project>
