@@ -74,6 +74,9 @@ public class App_TextGen extends TextGenDescriptorBase {
     tgs.append("void setup() {");
     tgs.newLine();
     ctx.getBuffer().area().increaseIndent();
+    tgs.indent();
+    tgs.append("Serial.begin(9600);");
+    tgs.newLine();
     ListSequence.fromList(SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.actuators$LKOW)).visitAll(new IVisitor<SNode>() {
       public void visit(SNode it) {
         tgs.indent();
@@ -88,12 +91,9 @@ public class App_TextGen extends TextGenDescriptorBase {
     tgs.append("}");
     tgs.newLine();
     tgs.newLine();
-    tgs.append("int main(void) {");
+    tgs.append("void loop() {");
     tgs.newLine();
     ctx.getBuffer().area().increaseIndent();
-    tgs.indent();
-    tgs.append("setup();");
-    tgs.newLine();
     tgs.indent();
     tgs.append("state_");
     tgs.append(SPropertyOperations.getString(ListSequence.fromList(SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.states$LKNY)).findFirst(new IWhereFilter<SNode>() {
@@ -102,9 +102,6 @@ public class App_TextGen extends TextGenDescriptorBase {
       }
     }), PROPS.name$tAp1));
     tgs.append("();");
-    tgs.newLine();
-    tgs.indent();
-    tgs.append("return 0;");
     tgs.newLine();
     ctx.getBuffer().area().decreaseIndent();
     tgs.append("}");

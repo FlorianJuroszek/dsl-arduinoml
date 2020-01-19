@@ -9,7 +9,7 @@ void state_on();
 void state_off();
 
 // Declaring available actuators 
-int theLed = 13;
+int theLed = 12;
 
 // Declaring states 
 void state_on()
