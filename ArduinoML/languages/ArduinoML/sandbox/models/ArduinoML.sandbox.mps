@@ -7,11 +7,16 @@
   <imports />
   <registry>
     <language id="dc4471fe-75cf-409b-bf03-8bc732728db2" name="ArduinoML">
+      <concept id="2776581263317563408" name="ArduinoML.structure.Brick" flags="ng" index="2kx1Ry">
+        <property id="2776581263317563411" name="pin" index="2kx1Rx" />
+      </concept>
+      <concept id="2776581263317563417" name="ArduinoML.structure.Sensor" flags="ng" index="2kx1RF" />
       <concept id="3943742123535526366" name="ArduinoML.structure.Action" flags="ng" index="LFDlf">
         <property id="3943742123535526369" name="signal" index="LFDlK" />
         <reference id="3943742123535526381" name="target" index="LFDlW" />
       </concept>
       <concept id="3943742123535526391" name="ArduinoML.structure.App" flags="ng" index="LFDlA">
+        <child id="2776581263317583953" name="bricks" index="2kxaQz" />
         <child id="3943742123535526394" name="states" index="LFDlF" />
         <child id="3943742123535526396" name="actuators" index="LFDlH" />
       </concept>
@@ -32,6 +37,10 @@
   </registry>
   <node concept="LFDlA" id="3qUZ947580r">
     <property role="TrG5h" value="LED" />
+    <node concept="2kx1RF" id="2q8pvaM3igK" role="2kxaQz">
+      <property role="TrG5h" value="theButton" />
+      <property role="2kx1Rx" value="11" />
+    </node>
     <node concept="LFDlY" id="3qUZ947580s" role="LFDlF">
       <property role="TrG5h" value="on" />
       <ref role="LFDl_" node="3qUZ94758mY" resolve="off" />

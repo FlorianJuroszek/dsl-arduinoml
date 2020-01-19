@@ -22,6 +22,10 @@
       <concept id="1080736578640" name="jetbrains.mps.lang.editor.structure.BaseEditorComponent" flags="ig" index="2wURMF">
         <child id="1080736633877" name="cellModel" index="2wV5jI" />
       </concept>
+      <concept id="1078938745671" name="jetbrains.mps.lang.editor.structure.EditorComponentDeclaration" flags="ig" index="PKFIW" />
+      <concept id="1078939183254" name="jetbrains.mps.lang.editor.structure.CellModel_Component" flags="sg" stub="3162947552742194261" index="PMmxH">
+        <reference id="1078939183255" name="editorComponent" index="PMmxG" />
+      </concept>
       <concept id="1186414928363" name="jetbrains.mps.lang.editor.structure.SelectableStyleSheetItem" flags="ln" index="VPM3Z" />
       <concept id="8313721352726366579" name="jetbrains.mps.lang.editor.structure.CellModel_Empty" flags="ng" index="35HoNQ" />
       <concept id="1088013125922" name="jetbrains.mps.lang.editor.structure.CellModel_RefCell" flags="sg" stub="730538219795941030" index="1iCGBv">
@@ -47,6 +51,11 @@
       <concept id="1198256887712" name="jetbrains.mps.lang.editor.structure.CellModel_Indent" flags="ng" index="3XFhqQ" />
       <concept id="1166049232041" name="jetbrains.mps.lang.editor.structure.AbstractComponent" flags="ng" index="1XWOmA">
         <reference id="1166049300910" name="conceptDeclaration" index="1XX52x" />
+      </concept>
+    </language>
+    <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
+        <property id="1169194664001" name="name" index="TrG5h" />
       </concept>
     </language>
   </registry>
@@ -177,6 +186,23 @@
         <node concept="l2Vlx" id="3qUZ94758_b" role="2iSdaV" />
       </node>
       <node concept="35HoNQ" id="3qUZ94758Ac" role="3EZMnx" />
+      <node concept="3F0ifn" id="2q8pvaM3cxn" role="3EZMnx">
+        <property role="3F0ifm" value="Bricks:" />
+      </node>
+      <node concept="3EZMnI" id="2q8pvaM3cwv" role="3EZMnx">
+        <node concept="VPM3Z" id="2q8pvaM3cwx" role="3F10Kt" />
+        <node concept="3XFhqQ" id="2q8pvaM3cx2" role="3EZMnx" />
+        <node concept="3F2HdR" id="2q8pvaM3cx8" role="3EZMnx">
+          <ref role="1NtTu8" to="c1p6:2q8pvaM3cxh" resolve="bricks" />
+          <node concept="2iRkQZ" id="2q8pvaM3cxb" role="2czzBx" />
+          <node concept="VPM3Z" id="2q8pvaM3cxc" role="3F10Kt" />
+          <node concept="3F0ifn" id="2q8pvaM3cxl" role="2czzBI">
+            <property role="3F0ifm" value="no bricks defined" />
+          </node>
+        </node>
+        <node concept="l2Vlx" id="2q8pvaM3cw$" role="2iSdaV" />
+      </node>
+      <node concept="35HoNQ" id="2q8pvaM3cvg" role="3EZMnx" />
       <node concept="3EZMnI" id="3qUZ94758AI" role="3EZMnx">
         <node concept="VPM3Z" id="3qUZ94758AK" role="3F10Kt" />
         <node concept="3XFhqQ" id="3qUZ94758B8" role="3EZMnx" />
@@ -191,6 +217,37 @@
         <node concept="l2Vlx" id="3qUZ94758AN" role="2iSdaV" />
       </node>
       <node concept="2iRkQZ" id="3qUZ94758$0" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="PKFIW" id="2q8pvaM37wq">
+    <property role="TrG5h" value="CommonBrickProperties" />
+    <ref role="1XX52x" to="c1p6:2q8pvaM37wg" resolve="Brick" />
+    <node concept="3EZMnI" id="2q8pvaM37ws" role="2wV5jI">
+      <node concept="3F0ifn" id="2q8pvaM37wz" role="3EZMnx">
+        <property role="3F0ifm" value="name:" />
+      </node>
+      <node concept="3F0A7n" id="2q8pvaM37xv" role="3EZMnx">
+        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+      </node>
+      <node concept="3F0ifn" id="2q8pvaM37xB" role="3EZMnx">
+        <property role="3F0ifm" value="on pin" />
+      </node>
+      <node concept="3F0A7n" id="2q8pvaM37xL" role="3EZMnx">
+        <ref role="1NtTu8" to="c1p6:2q8pvaM37wj" resolve="pin" />
+      </node>
+      <node concept="l2Vlx" id="2q8pvaM37wv" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="2q8pvaM37xR">
+    <ref role="1XX52x" to="c1p6:2q8pvaM37wp" resolve="Sensor" />
+    <node concept="3EZMnI" id="2q8pvaM37xT" role="2wV5jI">
+      <node concept="3F0ifn" id="2q8pvaM37y0" role="3EZMnx">
+        <property role="3F0ifm" value="Sensor" />
+      </node>
+      <node concept="PMmxH" id="2q8pvaM37y6" role="3EZMnx">
+        <ref role="PMmxG" node="2q8pvaM37wq" resolve="CommonBrickProperties" />
+      </node>
+      <node concept="l2Vlx" id="2q8pvaM37xW" role="2iSdaV" />
     </node>
   </node>
 </model>

@@ -71,7 +71,10 @@ import org.jetbrains.mps.openapi.language.SConcept;
     editorCell.addEditorCell(createEmpty_0());
     editorCell.addEditorCell(createCollection_2());
     editorCell.addEditorCell(createEmpty_1());
+    editorCell.addEditorCell(createConstant_2());
     editorCell.addEditorCell(createCollection_3());
+    editorCell.addEditorCell(createEmpty_2());
+    editorCell.addEditorCell(createCollection_4());
     return editorCell;
   }
   private EditorCell createCollection_1() {
@@ -210,9 +213,15 @@ import org.jetbrains.mps.openapi.language.SConcept;
     editorCell.setCellId("Empty_g38wqt_d0");
     return editorCell;
   }
+  private EditorCell createConstant_2() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Bricks:");
+    editorCell.setCellId("Constant_g38wqt_e0");
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
   private EditorCell createCollection_3() {
     EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
-    editorCell.setCellId("Collection_g38wqt_e0");
+    editorCell.setCellId("Collection_g38wqt_f0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.SELECTABLE, false);
     editorCell.getStyle().putAll(style);
@@ -225,7 +234,95 @@ import org.jetbrains.mps.openapi.language.SConcept;
     return editorCell;
   }
   private EditorCell createRefNodeList_1() {
-    AbstractCellListHandler handler = new statesListHandler_g38wqt_b4a(myNode, getEditorContext());
+    AbstractCellListHandler handler = new bricksListHandler_g38wqt_b5a(myNode, getEditorContext());
+    EditorCell_Collection editorCell = handler.createCells(new CellLayout_Vertical(), false);
+    editorCell.setCellId("refNodeList_bricks");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.SELECTABLE, false);
+    editorCell.getStyle().putAll(style);
+    editorCell.setSRole(handler.getElementSRole());
+    return editorCell;
+  }
+  private static class bricksListHandler_g38wqt_b5a extends RefNodeListHandler {
+    @NotNull
+    private SNode myNode;
+
+    public bricksListHandler_g38wqt_b5a(SNode ownerNode, EditorContext context) {
+      super(context, false);
+      myNode = ownerNode;
+    }
+
+    @NotNull
+    public SNode getNode() {
+      return myNode;
+    }
+    public SContainmentLink getSLink() {
+      return LINKS.bricks$XojH;
+    }
+    public SAbstractConcept getChildSConcept() {
+      return CONCEPTS.Brick$dz;
+    }
+
+    public EditorCell createNodeCell(SNode elementNode) {
+      EditorCell elementCell = getUpdateSession().updateChildNodeCell(elementNode);
+      installElementCellActions(elementNode, elementCell, false);
+      return elementCell;
+    }
+    public EditorCell createEmptyCell() {
+      getCellFactory().pushCellContext();
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(bricksListHandler_g38wqt_b5a.this.getNode(), LINKS.bricks$XojH));
+      try {
+        EditorCell emptyCell = null;
+        emptyCell = createConstant_3();
+        installElementCellActions(null, emptyCell, true);
+        setCellContext(emptyCell);
+        return emptyCell;
+      } finally {
+        getCellFactory().popCellContext();
+      }
+    }
+    public void installElementCellActions(SNode elementNode, EditorCell elementCell, boolean isEmptyCell) {
+      if (elementCell.getUserObject(AbstractCellListHandler.ELEMENT_CELL_ACTIONS_SET) == null) {
+        elementCell.putUserObject(AbstractCellListHandler.ELEMENT_CELL_ACTIONS_SET, AbstractCellListHandler.ELEMENT_CELL_ACTIONS_SET);
+        if (elementNode != null) {
+          elementCell.setAction(CellActionType.DELETE, new CellAction_DeleteNode(elementNode, CellAction_DeleteNode.DeleteDirection.FORWARD));
+          elementCell.setAction(CellActionType.BACKSPACE, new CellAction_DeleteNode(elementNode, CellAction_DeleteNode.DeleteDirection.BACKWARD));
+        }
+        if (elementCell.getSubstituteInfo() == null || elementCell.getSubstituteInfo() instanceof DefaultSubstituteInfo) {
+          elementCell.setSubstituteInfo((isEmptyCell ? new SEmptyContainmentSubstituteInfo(elementCell) : new SChildSubstituteInfo(elementCell)));
+        }
+      }
+    }
+    private EditorCell createConstant_3() {
+      EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "no bricks defined");
+      editorCell.setCellId("Constant_g38wqt_a1f0");
+      editorCell.setDefaultText("");
+      return editorCell;
+    }
+  }
+  private EditorCell createEmpty_2() {
+    EditorCell_Empty editorCell = new EditorCell_Empty(getEditorContext(), myNode);
+    editorCell.setAction(CellActionType.DELETE, new CellAction_DeleteNode(editorCell.getSNode(), CellAction_DeleteNode.DeleteDirection.FORWARD));
+    editorCell.setAction(CellActionType.BACKSPACE, new CellAction_DeleteNode(editorCell.getSNode(), CellAction_DeleteNode.DeleteDirection.BACKWARD));
+    editorCell.setCellId("Empty_g38wqt_g0");
+    return editorCell;
+  }
+  private EditorCell createCollection_4() {
+    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
+    editorCell.setCellId("Collection_g38wqt_h0");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.SELECTABLE, false);
+    editorCell.getStyle().putAll(style);
+    editorCell.addEditorCell(createIndentCell_2());
+    editorCell.addEditorCell(createRefNodeList_2());
+    return editorCell;
+  }
+  private EditorCell createIndentCell_2() {
+    EditorCell_Indent editorCell = new EditorCell_Indent(getEditorContext(), myNode);
+    return editorCell;
+  }
+  private EditorCell createRefNodeList_2() {
+    AbstractCellListHandler handler = new statesListHandler_g38wqt_b7a(myNode, getEditorContext());
     EditorCell_Collection editorCell = handler.createCells(new CellLayout_Vertical(), false);
     editorCell.setCellId("refNodeList_states");
     Style style = new StyleImpl();
@@ -234,11 +331,11 @@ import org.jetbrains.mps.openapi.language.SConcept;
     editorCell.setSRole(handler.getElementSRole());
     return editorCell;
   }
-  private static class statesListHandler_g38wqt_b4a extends RefNodeListHandler {
+  private static class statesListHandler_g38wqt_b7a extends RefNodeListHandler {
     @NotNull
     private SNode myNode;
 
-    public statesListHandler_g38wqt_b4a(SNode ownerNode, EditorContext context) {
+    public statesListHandler_g38wqt_b7a(SNode ownerNode, EditorContext context) {
       super(context, false);
       myNode = ownerNode;
     }
@@ -261,10 +358,10 @@ import org.jetbrains.mps.openapi.language.SConcept;
     }
     public EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(statesListHandler_g38wqt_b4a.this.getNode(), LINKS.states$LKNY));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(statesListHandler_g38wqt_b7a.this.getNode(), LINKS.states$LKNY));
       try {
         EditorCell emptyCell = null;
-        emptyCell = createConstant_2();
+        emptyCell = createConstant_4();
         installElementCellActions(null, emptyCell, true);
         setCellContext(emptyCell);
         return emptyCell;
@@ -284,9 +381,9 @@ import org.jetbrains.mps.openapi.language.SConcept;
         }
       }
     }
-    private EditorCell createConstant_2() {
+    private EditorCell createConstant_4() {
       EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "no states defined");
-      editorCell.setCellId("Constant_g38wqt_a1e0");
+      editorCell.setCellId("Constant_g38wqt_a1h0");
       editorCell.setDefaultText("");
       return editorCell;
     }
@@ -299,11 +396,13 @@ import org.jetbrains.mps.openapi.language.SConcept;
   private static final class CONCEPTS {
     /*package*/ static final SConcept PropertyAttribute$jT = MetaAdapterFactory.getConcept(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x2eb1ad060897da56L, "jetbrains.mps.lang.core.structure.PropertyAttribute");
     /*package*/ static final SConcept Actuator$PN = MetaAdapterFactory.getConcept(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469e8L, "ArduinoML.structure.Actuator");
+    /*package*/ static final SConcept Brick$dz = MetaAdapterFactory.getConcept(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x268865f2b20c7810L, "ArduinoML.structure.Brick");
     /*package*/ static final SConcept State$3n = MetaAdapterFactory.getConcept(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469efL, "ArduinoML.structure.State");
   }
 
   private static final class LINKS {
     /*package*/ static final SContainmentLink actuators$LKOW = MetaAdapterFactory.getContainmentLink(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469f7L, 0x36bafc91071469fcL, "actuators");
+    /*package*/ static final SContainmentLink bricks$XojH = MetaAdapterFactory.getContainmentLink(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469f7L, 0x268865f2b20cc851L, "bricks");
     /*package*/ static final SContainmentLink states$LKNY = MetaAdapterFactory.getContainmentLink(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469f7L, 0x36bafc91071469faL, "states");
   }
 }

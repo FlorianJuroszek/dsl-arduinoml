@@ -14,21 +14,26 @@ int theLed = 12;
 // Declaring states 
 void state_on()
 {
-  digitalWrite(theLed, OUTPUT); _delay_ms(1000); state_off();
+  Serial.print("on \n");
+  digitalWrite(theLed, HIGH);
+  delay(1000);
+  state_off();
 }
 
 void state_off()
 {
-  digitalWrite(theLed, OUTPUT); _delay_ms(1000); state_on();
+  Serial.print("off \n");
+  digitalWrite(theLed, LOW);
+  delay(1000);
+  state_on();
 }
 
 
 void setup() {
+  Serial.begin(9600);
   pinMode(theLed, OUTPUT);
 }
 
-int main(void) {
-  setup();
+void loop() {
   state_off();
-  return 0;
 }
