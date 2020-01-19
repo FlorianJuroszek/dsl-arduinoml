@@ -23,13 +23,13 @@ public class Actuator_Constraints extends BaseConstraintsDescriptor {
 
   public static class Pin_Property extends BasePropertyConstraintsDescriptor {
     public Pin_Property(ConstraintsDescriptor container) {
-      super(PROPS.pin$LKnu, container);
+      super(PROPS.pin$E8DD, container);
     }
     @Override
     public boolean hasOwnValidator() {
       return true;
     }
-    private static final SNodePointer validatePropertyBreakingPoint = new SNodePointer("r:42d792ff-bfc4-4332-ad25-3cc7b5b3b993(ArduinoML.constraints)", "3943742123535534667");
+    private static final SNodePointer validatePropertyBreakingPoint = new SNodePointer("r:42d792ff-bfc4-4332-ad25-3cc7b5b3b993(ArduinoML.constraints)", "9033870657985620559");
     @Override
     public boolean validateValue(SNode node, Object propertyValue, CheckingNodeContext checkingNodeContext) {
       boolean result = staticValidateProperty(node, SPropertyOperations.castInteger(propertyValue));
@@ -45,7 +45,7 @@ public class Actuator_Constraints extends BaseConstraintsDescriptor {
   @Override
   protected Map<SProperty, PropertyConstraintsDescriptor> getSpecifiedProperties() {
     Map<SProperty, PropertyConstraintsDescriptor> properties = new HashMap<SProperty, PropertyConstraintsDescriptor>();
-    properties.put(PROPS.pin$LKnu, new Pin_Property(this));
+    properties.put(PROPS.pin$E8DD, new Pin_Property(this));
     return properties;
   }
 
@@ -54,6 +54,6 @@ public class Actuator_Constraints extends BaseConstraintsDescriptor {
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty pin$LKnu = MetaAdapterFactory.getProperty(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469e8L, 0x36bafc91071469ebL, "pin");
+    /*package*/ static final SProperty pin$E8DD = MetaAdapterFactory.getProperty(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x268865f2b20c7810L, 0x268865f2b20c7813L, "pin");
   }
 }

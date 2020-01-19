@@ -46,7 +46,7 @@ public class App_TextGen extends TextGenDescriptorBase {
     tgs.append("// Declaring available actuators ");
     tgs.newLine();
     {
-      Iterable<SNode> collection = SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.actuators$LKOW);
+      Iterable<SNode> collection = SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.bricks$XojH);
       final SNode lastItem = Sequence.fromIterable(collection).last();
       for (SNode item : collection) {
         tgs.appendNode(item);
@@ -77,7 +77,7 @@ public class App_TextGen extends TextGenDescriptorBase {
     tgs.indent();
     tgs.append("Serial.begin(9600);");
     tgs.newLine();
-    ListSequence.fromList(SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.actuators$LKOW)).visitAll(new IVisitor<SNode>() {
+    ListSequence.fromList(SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.bricks$XojH)).visitAll(new IVisitor<SNode>() {
       public void visit(SNode it) {
         tgs.indent();
         tgs.append("pinMode(");
@@ -114,6 +114,6 @@ public class App_TextGen extends TextGenDescriptorBase {
 
   private static final class LINKS {
     /*package*/ static final SContainmentLink states$LKNY = MetaAdapterFactory.getContainmentLink(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469f7L, 0x36bafc91071469faL, "states");
-    /*package*/ static final SContainmentLink actuators$LKOW = MetaAdapterFactory.getContainmentLink(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469f7L, 0x36bafc91071469fcL, "actuators");
+    /*package*/ static final SContainmentLink bricks$XojH = MetaAdapterFactory.getContainmentLink(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469f7L, 0x268865f2b20cc851L, "bricks");
   }
 }

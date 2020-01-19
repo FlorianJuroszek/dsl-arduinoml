@@ -273,8 +273,8 @@
             <property role="lbP0B" value="\n" />
             <node concept="2OqwBi" id="3qUZ9475INy" role="lbANJ">
               <node concept="117lpO" id="3qUZ9475IGN" role="2Oq$k0" />
-              <node concept="3Tsc0h" id="3qUZ9475IXl" role="2OqNvi">
-                <ref role="3TtcxE" to="c1p6:3qUZ94756BW" resolve="actuators" />
+              <node concept="3Tsc0h" id="7PuKnZW3IyB" role="2OqNvi">
+                <ref role="3TtcxE" to="c1p6:2q8pvaM3cxh" resolve="bricks" />
               </node>
             </node>
           </node>
@@ -324,8 +324,8 @@
               <node concept="2OqwBi" id="3qUZ9475Odv" role="3clFbG">
                 <node concept="2OqwBi" id="3qUZ9475MMt" role="2Oq$k0">
                   <node concept="117lpO" id="3qUZ9475MFK" role="2Oq$k0" />
-                  <node concept="3Tsc0h" id="3qUZ9475MWn" role="2OqNvi">
-                    <ref role="3TtcxE" to="c1p6:3qUZ94756BW" resolve="actuators" />
+                  <node concept="3Tsc0h" id="7PuKnZW3IJK" role="2OqNvi">
+                    <ref role="3TtcxE" to="c1p6:2q8pvaM3cxh" resolve="bricks" />
                   </node>
                 </node>
                 <node concept="2es0OD" id="3qUZ9475QMr" role="2OqNvi">
@@ -337,11 +337,11 @@
                           <property role="lacIc" value="pinMode(" />
                         </node>
                         <node concept="l9hG8" id="3qUZ9475RfM" role="lcghm">
-                          <node concept="2OqwBi" id="3qUZ9475RtK" role="lb14g">
+                          <node concept="2OqwBi" id="7PuKnZW3J2L" role="lb14g">
                             <node concept="37vLTw" id="3qUZ9475RiQ" role="2Oq$k0">
                               <ref role="3cqZAo" node="3qUZ9475QMv" resolve="it" />
                             </node>
-                            <node concept="3TrcHB" id="3qUZ9475RDc" role="2OqNvi">
+                            <node concept="3TrcHB" id="7PuKnZW3Jed" role="2OqNvi">
                               <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
                             </node>
                           </node>
@@ -581,6 +581,44 @@
                 <ref role="3TsBF5" to="c1p6:3qUZ94756Bx" resolve="signal" />
               </node>
             </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="WtQ9Q" id="7PuKnZW4mEq">
+    <ref role="WuzLi" to="c1p6:2q8pvaM37wp" resolve="Sensor" />
+    <node concept="11bSqf" id="7PuKnZW4mEu" role="11c4hB">
+      <node concept="3clFbS" id="7PuKnZW4mEv" role="2VODD2">
+        <node concept="lc7rE" id="7PuKnZW4mMA" role="3cqZAp">
+          <node concept="la8eA" id="7PuKnZW4mOt" role="lcghm">
+            <property role="lacIc" value="int " />
+          </node>
+          <node concept="l9hG8" id="7PuKnZW4ns7" role="lcghm">
+            <node concept="2OqwBi" id="7PuKnZW4n_y" role="lb14g">
+              <node concept="117lpO" id="7PuKnZW4ntV" role="2Oq$k0" />
+              <node concept="3TrcHB" id="7PuKnZW4nJD" role="2OqNvi">
+                <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+              </node>
+            </node>
+          </node>
+          <node concept="la8eA" id="7PuKnZW4nM3" role="lcghm">
+            <property role="lacIc" value=" = " />
+          </node>
+          <node concept="l9hG8" id="7PuKnZW4nPH" role="lcghm">
+            <node concept="2YIFZM" id="7PuKnZW4nVr" role="lb14g">
+              <ref role="1Pybhc" to="wyt6:~String" resolve="String" />
+              <ref role="37wK5l" to="wyt6:~String.valueOf(int)" resolve="valueOf" />
+              <node concept="2OqwBi" id="7PuKnZW4oEP" role="37wK5m">
+                <node concept="117lpO" id="7PuKnZW4ovy" role="2Oq$k0" />
+                <node concept="3TrcHB" id="7PuKnZW4oPo" role="2OqNvi">
+                  <ref role="3TsBF5" to="c1p6:2q8pvaM37wj" resolve="pin" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="la8eA" id="7PuKnZW4pBt" role="lcghm">
+            <property role="lacIc" value=";" />
           </node>
         </node>
       </node>
