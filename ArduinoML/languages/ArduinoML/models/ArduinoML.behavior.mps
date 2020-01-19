@@ -128,28 +128,29 @@
             <node concept="3clFbH" id="3qUZ9475yYU" role="3cqZAp" />
           </node>
         </node>
-        <node concept="3clFbJ" id="3qUZ9475zt0" role="3cqZAp">
-          <node concept="3clFbS" id="3qUZ9475zt2" role="3clFbx">
-            <node concept="3clFbH" id="3qUZ9475$9g" role="3cqZAp" />
-            <node concept="3cpWs6" id="3qUZ9475$8c" role="3cqZAp">
-              <node concept="2YIFZM" id="3qUZ9475$iS" role="3cqZAk">
+        <node concept="3clFbH" id="2q8pvaM3G7X" role="3cqZAp" />
+        <node concept="3clFbJ" id="2q8pvaM3F1P" role="3cqZAp">
+          <node concept="3clFbS" id="2q8pvaM3F1R" role="3clFbx">
+            <node concept="3cpWs6" id="2q8pvaM3F_P" role="3cqZAp">
+              <node concept="2YIFZM" id="2q8pvaM3FIK" role="3cqZAk">
                 <ref role="37wK5l" to="o8zo:6t3ylNOzI9Y" resolve="forNamedElements" />
                 <ref role="1Pybhc" to="o8zo:7ipADkTevLm" resolve="SimpleRoleScope" />
-                <node concept="13iPFW" id="3qUZ9475$mq" role="37wK5m" />
-                <node concept="359W_D" id="3qUZ9475$u5" role="37wK5m">
+                <node concept="13iPFW" id="2q8pvaM3FKZ" role="37wK5m" />
+                <node concept="359W_D" id="2q8pvaM3FRm" role="37wK5m">
                   <ref role="359W_E" to="c1p6:3qUZ94756BR" resolve="App" />
-                  <ref role="359W_F" to="c1p6:3qUZ94756BW" resolve="actuators" />
+                  <ref role="359W_F" to="c1p6:2q8pvaM3cxh" resolve="bricks" />
                 </node>
               </node>
             </node>
+            <node concept="3clFbH" id="2q8pvaM3F1Q" role="3cqZAp" />
           </node>
-          <node concept="2OqwBi" id="3qUZ9475zHp" role="3clFbw">
-            <node concept="37vLTw" id="3qUZ9475zuh" role="2Oq$k0">
+          <node concept="2OqwBi" id="2q8pvaM3FjH" role="3clFbw">
+            <node concept="37vLTw" id="2q8pvaM3F50" role="2Oq$k0">
               <ref role="3cqZAo" node="3qUZ9475xKm" resolve="kind" />
             </node>
-            <node concept="2Zo12i" id="3qUZ9475zW$" role="2OqNvi">
-              <node concept="chp4Y" id="3qUZ9475$55" role="2Zo12j">
-                <ref role="cht4Q" to="c1p6:3qUZ94756BC" resolve="Actuator" />
+            <node concept="2Zo12i" id="2q8pvaM3Fwf" role="2OqNvi">
+              <node concept="chp4Y" id="2q8pvaM3Fzy" role="2Zo12j">
+                <ref role="cht4Q" to="c1p6:2q8pvaM37wg" resolve="Brick" />
               </node>
             </node>
           </node>

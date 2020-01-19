@@ -25,7 +25,7 @@
       <node id="3943742123535653716" at="18,22,19,102" concept="2" />
       <node id="3943742123535663345" at="19,102,20,20" concept="2" />
       <node id="3943742123535651154" at="24,0,25,0" concept="8" trace="name$tAp1" />
-      <node id="3943742123535651154" at="25,0,26,0" concept="8" trace="pin$LKnu" />
+      <node id="3943742123535651154" at="25,0,26,0" concept="8" trace="pin$E8DD" />
       <node id="3943742123535651154" at="13,0,22,0" concept="5" trace="generateText#(Ljetbrains/mps/text/rt/TextGenContext;)V" />
       <scope id="3943742123535651154" at="14,54,20,20">
         <var name="tgs" id="3943742123535651154" />

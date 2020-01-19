@@ -39,9 +39,10 @@ public final class App__BehaviorDescriptor extends BaseBHDescriptor {
       return SimpleRoleScope.forNamedElements(__thisNode__, LINKS.states$LKNY);
 
     }
-    if (SConceptOperations.isSubConceptOf(SNodeOperations.asSConcept(kind), CONCEPTS.Actuator$PN)) {
 
-      return SimpleRoleScope.forNamedElements(__thisNode__, LINKS.actuators$LKOW);
+    if (SConceptOperations.isSubConceptOf(SNodeOperations.asSConcept(kind), CONCEPTS.Brick$dz)) {
+      return SimpleRoleScope.forNamedElements(__thisNode__, LINKS.bricks$XojH);
+
     }
     return null;
   }
@@ -94,11 +95,11 @@ public final class App__BehaviorDescriptor extends BaseBHDescriptor {
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept State$3n = MetaAdapterFactory.getConcept(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469efL, "ArduinoML.structure.State");
-    /*package*/ static final SConcept Actuator$PN = MetaAdapterFactory.getConcept(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469e8L, "ArduinoML.structure.Actuator");
+    /*package*/ static final SConcept Brick$dz = MetaAdapterFactory.getConcept(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x268865f2b20c7810L, "ArduinoML.structure.Brick");
   }
 
   private static final class LINKS {
     /*package*/ static final SContainmentLink states$LKNY = MetaAdapterFactory.getContainmentLink(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469f7L, 0x36bafc91071469faL, "states");
-    /*package*/ static final SContainmentLink actuators$LKOW = MetaAdapterFactory.getContainmentLink(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469f7L, 0x36bafc91071469fcL, "actuators");
+    /*package*/ static final SContainmentLink bricks$XojH = MetaAdapterFactory.getContainmentLink(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469f7L, 0x268865f2b20cc851L, "bricks");
   }
 }

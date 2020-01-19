@@ -61,24 +61,15 @@
   </registry>
   <node concept="24kQdi" id="3qUZ94758n4">
     <ref role="1XX52x" to="c1p6:3qUZ94756BC" resolve="Actuator" />
-    <node concept="3EZMnI" id="3qUZ94758qQ" role="2wV5jI">
-      <node concept="3EZMnI" id="3qUZ94758r1" role="3EZMnx">
-        <node concept="VPM3Z" id="3qUZ94758r3" role="3F10Kt" />
-        <node concept="3F0ifn" id="3qUZ94758rg" role="3EZMnx">
-          <property role="3F0ifm" value="actuator:" />
-        </node>
-        <node concept="3F0A7n" id="3qUZ94758rm" role="3EZMnx">
-          <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-        </node>
-        <node concept="3F0ifn" id="3qUZ94758ru" role="3EZMnx">
-          <property role="3F0ifm" value="on pin" />
-        </node>
-        <node concept="3F0A7n" id="3qUZ94758rC" role="3EZMnx">
-          <ref role="1NtTu8" to="c1p6:3qUZ94756BF" resolve="pin" />
-        </node>
-        <node concept="l2Vlx" id="3qUZ94758r6" role="2iSdaV" />
+    <node concept="3EZMnI" id="3qUZ94758r1" role="2wV5jI">
+      <node concept="VPM3Z" id="3qUZ94758r3" role="3F10Kt" />
+      <node concept="3F0ifn" id="3qUZ94758rg" role="3EZMnx">
+        <property role="3F0ifm" value="actuator" />
       </node>
-      <node concept="2iRfu4" id="3qUZ94758qT" role="2iSdaV" />
+      <node concept="PMmxH" id="2q8pvaM3iiN" role="3EZMnx">
+        <ref role="PMmxG" node="2q8pvaM37wq" resolve="CommonBrickProperties" />
+      </node>
+      <node concept="l2Vlx" id="3qUZ94758r6" role="2iSdaV" />
     </node>
   </node>
   <node concept="24kQdi" id="3qUZ94758rS">
@@ -171,20 +162,6 @@
         </node>
         <node concept="l2Vlx" id="3qUZ94758$9" role="2iSdaV" />
       </node>
-      <node concept="35HoNQ" id="3qUZ94758$A" role="3EZMnx" />
-      <node concept="3EZMnI" id="3qUZ94758_6" role="3EZMnx">
-        <node concept="VPM3Z" id="3qUZ94758_8" role="3F10Kt" />
-        <node concept="3XFhqQ" id="3qUZ94758_r" role="3EZMnx" />
-        <node concept="3F2HdR" id="3qUZ94758__" role="3EZMnx">
-          <ref role="1NtTu8" to="c1p6:3qUZ94756BW" resolve="actuators" />
-          <node concept="2iRkQZ" id="3qUZ94758_C" role="2czzBx" />
-          <node concept="VPM3Z" id="3qUZ94758_D" role="3F10Kt" />
-          <node concept="3F0ifn" id="3qUZ94758_I" role="2czzBI">
-            <property role="3F0ifm" value="no actuators defined" />
-          </node>
-        </node>
-        <node concept="l2Vlx" id="3qUZ94758_b" role="2iSdaV" />
-      </node>
       <node concept="35HoNQ" id="3qUZ94758Ac" role="3EZMnx" />
       <node concept="3F0ifn" id="2q8pvaM3cxn" role="3EZMnx">
         <property role="3F0ifm" value="Bricks:" />
@@ -242,7 +219,7 @@
     <ref role="1XX52x" to="c1p6:2q8pvaM37wp" resolve="Sensor" />
     <node concept="3EZMnI" id="2q8pvaM37xT" role="2wV5jI">
       <node concept="3F0ifn" id="2q8pvaM37y0" role="3EZMnx">
-        <property role="3F0ifm" value="Sensor" />
+        <property role="3F0ifm" value="sensor" />
       </node>
       <node concept="PMmxH" id="2q8pvaM37y6" role="3EZMnx">
         <ref role="PMmxG" node="2q8pvaM37wq" resolve="CommonBrickProperties" />

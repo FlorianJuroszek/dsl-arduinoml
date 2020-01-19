@@ -2,14 +2,14 @@
 #include <util/delay.h>
 #include <Arduino.h>
 
-/** Generating code for applicationLED**/
+/** Generating code for applicationApp**/
 
 // Declaring states function headers 
 void state_on();
 void state_off();
 
 // Declaring available actuators 
-int theLed = 12;
+
 
 // Declaring states 
 void state_on()
@@ -23,7 +23,7 @@ void state_on()
 void state_off()
 {
   Serial.print("off \n");
-  digitalWrite(theLed, LOW);
+  digitalWrite(theLed, HIGH);
   delay(1000);
   state_on();
 }
@@ -31,7 +31,6 @@ void state_off()
 
 void setup() {
   Serial.begin(9600);
-  pinMode(theLed, OUTPUT);
 }
 
 void loop() {

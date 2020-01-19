@@ -12,17 +12,13 @@
       </concept>
       <concept id="2776581263317563417" name="ArduinoML.structure.Sensor" flags="ng" index="2kx1RF" />
       <concept id="3943742123535526366" name="ArduinoML.structure.Action" flags="ng" index="LFDlf">
-        <property id="3943742123535526369" name="signal" index="LFDlK" />
         <reference id="3943742123535526381" name="target" index="LFDlW" />
       </concept>
       <concept id="3943742123535526391" name="ArduinoML.structure.App" flags="ng" index="LFDlA">
         <child id="2776581263317583953" name="bricks" index="2kxaQz" />
         <child id="3943742123535526394" name="states" index="LFDlF" />
-        <child id="3943742123535526396" name="actuators" index="LFDlH" />
       </concept>
-      <concept id="3943742123535526376" name="ArduinoML.structure.Actuator" flags="ng" index="LFDlT">
-        <property id="3943742123535526379" name="pin" index="LFDlU" />
-      </concept>
+      <concept id="3943742123535526376" name="ArduinoML.structure.Actuator" flags="ng" index="LFDlT" />
       <concept id="3943742123535526383" name="ArduinoML.structure.State" flags="ng" index="LFDlY">
         <property id="3943742123535532063" name="isInitial" index="LFBMe" />
         <reference id="3943742123535526388" name="next" index="LFDl_" />
@@ -35,31 +31,30 @@
       </concept>
     </language>
   </registry>
-  <node concept="LFDlA" id="3qUZ947580r">
-    <property role="TrG5h" value="LED" />
-    <node concept="2kx1RF" id="2q8pvaM3igK" role="2kxaQz">
-      <property role="TrG5h" value="theButton" />
-      <property role="2kx1Rx" value="11" />
-    </node>
-    <node concept="LFDlY" id="3qUZ947580s" role="LFDlF">
+  <node concept="LFDlA" id="2q8pvaM3HwI">
+    <property role="TrG5h" value="App" />
+    <node concept="LFDlY" id="2q8pvaM3HwJ" role="LFDlF">
       <property role="TrG5h" value="on" />
-      <ref role="LFDl_" node="3qUZ94758mY" resolve="off" />
-      <node concept="LFDlf" id="3qUZ947580t" role="LFDlz">
-        <ref role="LFDlW" node="3qUZ947580u" resolve="theLed" />
+      <ref role="LFDl_" node="2q8pvaM3Hx3" resolve="off" />
+      <node concept="LFDlf" id="2q8pvaM3Hx0" role="LFDlz">
+        <ref role="LFDlW" node="2q8pvaM3HwM" resolve="theLed" />
       </node>
     </node>
-    <node concept="LFDlY" id="3qUZ94758mY" role="LFDlF">
+    <node concept="LFDlY" id="2q8pvaM3Hx3" role="LFDlF">
       <property role="TrG5h" value="off" />
       <property role="LFBMe" value="true" />
-      <ref role="LFDl_" node="3qUZ947580s" resolve="on" />
-      <node concept="LFDlf" id="3qUZ94758mZ" role="LFDlz">
-        <property role="LFDlK" value="3qUZ94756B_/LOW" />
-        <ref role="LFDlW" node="3qUZ947580u" resolve="theLed" />
+      <ref role="LFDl_" node="2q8pvaM3HwJ" resolve="on" />
+      <node concept="LFDlf" id="2q8pvaM3Hx9" role="LFDlz">
+        <ref role="LFDlW" node="2q8pvaM3HwM" resolve="theLed" />
       </node>
     </node>
-    <node concept="LFDlT" id="3qUZ947580u" role="LFDlH">
+    <node concept="LFDlT" id="2q8pvaM3HwM" role="2kxaQz">
       <property role="TrG5h" value="theLed" />
-      <property role="LFDlU" value="12" />
+      <property role="2kx1Rx" value="12" />
+    </node>
+    <node concept="2kx1RF" id="2q8pvaM3HwS" role="2kxaQz">
+      <property role="TrG5h" value="theButton" />
+      <property role="2kx1Rx" value="11" />
     </node>
   </node>
 </model>

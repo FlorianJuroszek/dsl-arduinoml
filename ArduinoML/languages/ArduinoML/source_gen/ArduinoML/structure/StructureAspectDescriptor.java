@@ -82,10 +82,9 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForActuator() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ArduinoML", "Actuator", 0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469e8L);
     b.class_(false, false, false);
-    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.super_("ArduinoML.structure.Brick", 0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x268865f2b20c7810L);
     b.origin("r:1e4e32fc-e42a-4b05-84e5-5f0ea797c86d(ArduinoML.structure)/3943742123535526376");
     b.version(2);
-    b.property("pin", 0x36bafc91071469ebL).type(PrimitiveTypeId.INTEGER).origin("3943742123535526379").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForApp() {
@@ -96,7 +95,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:1e4e32fc-e42a-4b05-84e5-5f0ea797c86d(ArduinoML.structure)/3943742123535526391");
     b.version(2);
     b.aggregate("states", 0x36bafc91071469faL).target(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469efL).optional(false).ordered(true).multiple(true).origin("3943742123535526394").done();
-    b.aggregate("actuators", 0x36bafc91071469fcL).target(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469e8L).optional(false).ordered(true).multiple(true).origin("3943742123535526396").done();
     b.aggregate("bricks", 0x268865f2b20cc851L).target(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x268865f2b20c7810L).optional(false).ordered(true).multiple(true).origin("2776581263317583953").done();
     return b.create();
   }
