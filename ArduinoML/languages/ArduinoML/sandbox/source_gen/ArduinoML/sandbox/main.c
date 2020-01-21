@@ -2,40 +2,48 @@
 #include <util/delay.h>
 #include <Arduino.h>
 
-/** Generating code for applicationApp**/
+/** Generating code for applicationScenario3**/
 
 // Declaring states function headers 
-void state_on();
-void state_off();
+void state_on3();
+void state_off3();
 
 // Declaring available actuators 
-int theLed = 12;
-int theBuzzer = 11;
-int theButton = 10;
+int theLed3 = 12;
+int theButton3 = 10;
 
 // Declaring states 
-void state_on()
+void state_on3()
 {
-  digitalWrite(int theLed = 12;, HIGH);
-digitalWrite(int theBuzzer = 11;, HIGH);
-Serial.print("on \n");
+  digitalWrite(theLed3, HIGH);
+  Serial.print("on3 \n");
+  if (digitalRead(theButton3) == HIGH) {
+    state_off3();
   }
+  else {
+    state_on3();
+  }
+}
 
-void state_off()
+void state_off3()
 {
-  digitalWrite(int theLed = 12;, LOW);
-digitalWrite(int theBuzzer = 11;, LOW);
-Serial.print("off \n");
+  digitalWrite(theLed3, LOW);
+  Serial.print("off3 \n");
+  if (digitalRead(theButton3) == HIGH) {
+    state_on3();
   }
+  else {
+    state_off3();
+  }
+}
 
 
 void setup() {
   Serial.begin(9600);
-  pinMode(theLed, OUTPUT);
-  pinMode(theBuzzer, OUTPUT);
-  pinMode(theButton, OUTPUT);
+  pinMode(theLed3, OUTPUT);
+  pinMode(theButton3, INPUT);
 }
 
 void loop() {
-  state_off();
+  state_off3();
 }

@@ -86,7 +86,7 @@ public class App_TextGen extends TextGenDescriptorBase {
         tgs.append(SPropertyOperations.getString(it, PROPS.name$tAp1));
         tgs.append(", ");
         if (SNodeOperations.isInstanceOf(it, CONCEPTS.Actuator$PN)) {
-          tgs.append("OUPUT);");
+          tgs.append("OUTPUT);");
           tgs.newLine();
         }
         if (SNodeOperations.isInstanceOf(it, CONCEPTS.Sensor$s5)) {
