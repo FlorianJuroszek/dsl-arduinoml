@@ -11,10 +11,12 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.internal.collections.runtime.IVisitor;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.internal.collections.runtime.Sequence;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.internal.collections.runtime.IWhereFilter;
 import org.jetbrains.mps.openapi.language.SProperty;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
+import org.jetbrains.mps.openapi.language.SConcept;
 
 public class App_TextGen extends TextGenDescriptorBase {
   @Override
@@ -83,8 +85,15 @@ public class App_TextGen extends TextGenDescriptorBase {
         tgs.append("pinMode(");
         tgs.append(SPropertyOperations.getString(it, PROPS.name$tAp1));
         tgs.append(", ");
-        tgs.append("OUTPUT);");
-        tgs.newLine();
+        if (SNodeOperations.isInstanceOf(it, CONCEPTS.Actuator$PN)) {
+          tgs.append("OUPUT);");
+          tgs.newLine();
+        }
+        if (SNodeOperations.isInstanceOf(it, CONCEPTS.Sensor$s5)) {
+          tgs.append("INPUT);");
+          tgs.newLine();
+        }
+
       }
     });
     ctx.getBuffer().area().decreaseIndent();
@@ -98,7 +107,7 @@ public class App_TextGen extends TextGenDescriptorBase {
     tgs.append("state_");
     tgs.append(SPropertyOperations.getString(ListSequence.fromList(SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.states$LKNY)).findFirst(new IWhereFilter<SNode>() {
       public boolean accept(SNode it) {
-        return SPropertyOperations.getBoolean(it, PROPS.isInitial$gxVX);
+        return SPropertyOperations.getBoolean(it, PROPS.isInitial$j0QN);
       }
     }), PROPS.name$tAp1));
     tgs.append("();");
@@ -109,11 +118,16 @@ public class App_TextGen extends TextGenDescriptorBase {
 
   private static final class PROPS {
     /*package*/ static final SProperty name$tAp1 = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
-    /*package*/ static final SProperty isInitial$gxVX = MetaAdapterFactory.getProperty(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469efL, 0x36bafc910714801fL, "isInitial");
+    /*package*/ static final SProperty isInitial$j0QN = MetaAdapterFactory.getProperty(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469efL, 0xa00ce583b286469L, "isInitial");
   }
 
   private static final class LINKS {
     /*package*/ static final SContainmentLink states$LKNY = MetaAdapterFactory.getContainmentLink(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469f7L, 0x36bafc91071469faL, "states");
     /*package*/ static final SContainmentLink bricks$XojH = MetaAdapterFactory.getContainmentLink(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469f7L, 0x268865f2b20cc851L, "bricks");
+  }
+
+  private static final class CONCEPTS {
+    /*package*/ static final SConcept Actuator$PN = MetaAdapterFactory.getConcept(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469e8L, "ArduinoML.structure.Actuator");
+    /*package*/ static final SConcept Sensor$s5 = MetaAdapterFactory.getConcept(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x268865f2b20c7819L, "ArduinoML.structure.Sensor");
   }
 }

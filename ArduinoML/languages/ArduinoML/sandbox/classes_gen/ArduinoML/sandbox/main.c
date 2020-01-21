@@ -2,33 +2,42 @@
 #include <util/delay.h>
 #include <Arduino.h>
 
-/** Generating code for applicationLED**/
+/** Generating code for applicationapp**/
 
 // Declaring states function headers 
 void state_on();
 void state_off();
 
 // Declaring available actuators 
-int theLed = 13;
+<!TextGen not found for 'ArduinoML.structure.Brick'!>
+<!TextGen not found for 'ArduinoML.structure.Brick'!>
+<!TextGen not found for 'ArduinoML.structure.Brick'!>
 
 // Declaring states 
 void state_on()
 {
-  digitalWrite(theLed, OUTPUT); _delay_ms(1000); state_off();
+  Serial.print("on \n");
+  digitalWrite(null, HIGH);
+  delay(1000);
+  state_off();
 }
 
 void state_off()
 {
-  digitalWrite(theLed, OUTPUT); _delay_ms(1000); state_on();
+  Serial.print("off \n");
+  digitalWrite(null, HIGH);
+  delay(1000);
+  state_on();
 }
 
 
 void setup() {
-  pinMode(theLed, OUTPUT);
+  Serial.begin(9600);
+  pinMode(, OUTPUT);
+  pinMode(, OUTPUT);
+  pinMode(, OUTPUT);
 }
 
-int main(void) {
-  setup();
-  state_off();
-  return 0;
+void loop() {
+  state_();
 }

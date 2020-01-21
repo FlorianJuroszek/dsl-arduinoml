@@ -27,7 +27,7 @@ public class unique_initial_state_NonTypesystemRule extends AbstractNonTypesyste
   public void applyRule(final SNode app, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
     if (ListSequence.fromList(SLinkOperations.getChildren(app, LINKS.states$LKNY)).where(new IWhereFilter<SNode>() {
       public boolean accept(SNode it) {
-        return Objects.equals(SPropertyOperations.getBoolean(it, PROPS.isInitial$gxVX), true);
+        return Objects.equals(SPropertyOperations.getBoolean(it, PROPS.isInitial$j0QN), true);
       }
     }).count() > 1) {
       {
@@ -51,7 +51,7 @@ public class unique_initial_state_NonTypesystemRule extends AbstractNonTypesyste
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty isInitial$gxVX = MetaAdapterFactory.getProperty(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469efL, 0x36bafc910714801fL, "isInitial");
+    /*package*/ static final SProperty isInitial$j0QN = MetaAdapterFactory.getProperty(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469efL, 0xa00ce583b286469L, "isInitial");
     /*package*/ static final SProperty name$tAp1 = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
   }
 

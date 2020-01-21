@@ -6,8 +6,10 @@ import jetbrains.mps.text.rt.TextGenDescriptorBase;
 import jetbrains.mps.text.rt.TextGenContext;
 import jetbrains.mps.text.impl.TextGenSupport;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import jetbrains.mps.internal.collections.runtime.IVisitor;
+import org.jetbrains.mps.openapi.model.SNode;
 import org.jetbrains.mps.openapi.language.SProperty;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
@@ -25,24 +27,36 @@ public class State_TextGen extends TextGenDescriptorBase {
     tgs.newLine();
     ctx.getBuffer().area().increaseIndent();
     tgs.indent();
+    ListSequence.fromList(SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.actions$LK_u)).visitAll(new IVisitor<SNode>() {
+      public void visit(SNode it) {
+
+        tgs.append("digitalWrite(");
+        tgs.append(SPropertyOperations.getString(SLinkOperations.getTarget(it, LINKS.target$LKy8), PROPS.name$tAp1));
+        tgs.append(", ");
+        tgs.append(SPropertyOperations.getString(it, PROPS.signal$LK7Y));
+        tgs.append(");");
+        tgs.newLine();
+        tgs.indent();
+      }
+    });
     tgs.append("Serial.print(\"");
     tgs.append(SPropertyOperations.getString(ctx.getPrimaryInput(), PROPS.name$tAp1));
     tgs.append(" \\n\");");
     tgs.newLine();
     tgs.indent();
-    tgs.append("digitalWrite(");
-    tgs.append(String.valueOf(SLinkOperations.getTarget(ListSequence.fromList(SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.actions$LK_u)).getElement(0), LINKS.target$LKy8)));
-    tgs.append(", ");
-    tgs.appendNode(ListSequence.fromList(SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.actions$LK_u)).getElement(0));
-    tgs.append(");");
+    tgs.appendNode(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.transition$rzLd));
     tgs.newLine();
     tgs.indent();
-    tgs.append("delay(1000);");
+    tgs.append("else {");
     tgs.newLine();
+    tgs.indent();
     tgs.indent();
     tgs.append("state_");
-    tgs.append(SPropertyOperations.getString(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.next$LKAs), PROPS.name$tAp1));
+    tgs.append(SPropertyOperations.getString(ctx.getPrimaryInput(), PROPS.name$tAp1));
     tgs.append("();");
+    tgs.newLine();
+    tgs.indent();
+    tgs.append("}");
     tgs.newLine();
     ctx.getBuffer().area().decreaseIndent();
     tgs.append("}");
@@ -51,11 +65,12 @@ public class State_TextGen extends TextGenDescriptorBase {
 
   private static final class PROPS {
     /*package*/ static final SProperty name$tAp1 = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
+    /*package*/ static final SProperty signal$LK7Y = MetaAdapterFactory.getProperty(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469deL, 0x36bafc91071469e1L, "signal");
   }
 
   private static final class LINKS {
     /*package*/ static final SContainmentLink actions$LK_u = MetaAdapterFactory.getContainmentLink(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469efL, 0x36bafc91071469f2L, "actions");
     /*package*/ static final SReferenceLink target$LKy8 = MetaAdapterFactory.getReferenceLink(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469deL, 0x36bafc91071469edL, "target");
-    /*package*/ static final SReferenceLink next$LKAs = MetaAdapterFactory.getReferenceLink(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469efL, 0x36bafc91071469f4L, "next");
+    /*package*/ static final SContainmentLink transition$rzLd = MetaAdapterFactory.getContainmentLink(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469efL, 0xa00ce583b2832a2L, "transition");
   }
 }

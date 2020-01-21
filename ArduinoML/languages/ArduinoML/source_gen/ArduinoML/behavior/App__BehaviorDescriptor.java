@@ -44,6 +44,7 @@ public final class App__BehaviorDescriptor extends BaseBHDescriptor {
       return SimpleRoleScope.forNamedElements(__thisNode__, LINKS.bricks$XojH);
 
     }
+
     return null;
   }
 
