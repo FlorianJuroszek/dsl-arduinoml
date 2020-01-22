@@ -12,12 +12,17 @@ void state_off3();
 int theLed3 = 12;
 int theButton3 = 10;
 
+long time = 0;
+long debounce = 200;
+
 // Declaring states 
 void state_on3()
 {
   digitalWrite(theLed3, HIGH);
   Serial.print("on3 \n");
-  boolean guard = millis() - time > debounce;if (digitalRead(theButton3) == HIGH && guard) {
+  boolean guard = millis() - time > debounce;
+  if (digitalRead(theButton3) == HIGH && guard) {
+    time = millis();
     state_off3();
   }
   else {
@@ -29,7 +34,9 @@ void state_off3()
 {
   digitalWrite(theLed3, LOW);
   Serial.print("off3 \n");
-  boolean guard = millis() - time > debounce;if (digitalRead(theButton3) == HIGH && guard) {
+  boolean guard = millis() - time > debounce;
+  if (digitalRead(theButton3) == HIGH && guard) {
+    time = millis();
     state_on3();
   }
   else {
@@ -45,7 +52,5 @@ void setup() {
 }
 
 void loop() {
-  long time = 0;
-long debounce = 200;
-state_off3();
+  state_off3();
 }

@@ -8,6 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2cc0ee2a-6fe5-4832-a585-1ea04db7bf84" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.mps/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.mps/workspace.xml" afterDir="false" />
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/languages/ArduinoML/classes_gen/ArduinoML/behavior/BehaviorAspectDescriptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ArduinoML/classes_gen/ArduinoML/behavior/BehaviorAspectDescriptor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/ArduinoML/classes_gen/ArduinoML/behavior/State__BehaviorDescriptor$CONCEPTS.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/ArduinoML/classes_gen/ArduinoML/behavior/State__BehaviorDescriptor$LINKS.class" beforeDir="false" />
@@ -39,6 +40,8 @@
       <change beforePath="$PROJECT_DIR$/languages/ArduinoML/source_gen/ArduinoML/textGen/Transition_TextGen.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ArduinoML/source_gen/ArduinoML/textGen/Transition_TextGen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/ArduinoML/source_gen/ArduinoML/textGen/aspectcps-descriptorclasses.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ArduinoML/source_gen/ArduinoML/textGen/aspectcps-descriptorclasses.mps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/ArduinoML/source_gen/ArduinoML/textGen/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ArduinoML/source_gen/ArduinoML/textGen/trace.info" afterDir="false" />
+=======
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +54,11 @@
         <TabState>
           <option name="title" value="Console" />
           <tab>
+<<<<<<< Updated upstream
             <model ref="08adaf1b-cc70-4c16-9f43-7b35a108ed12/r:3ac9d5d9-bdd3-46b6-a479-0a5c82df9452(TempModule08adaf1b-cc70-4c16-9f43-7b35a108ed12/ConsoleModel_374579890317800)">
+=======
+            <model ref="76c24980-803d-4031-b3d8-b06506b71c5b/r:9297b9cc-b809-4d19-9760-72aa7e6a5a31(TempModule76c24980-803d-4031-b3d8-b06506b71c5b/ConsoleModel_406757535547500)">
+>>>>>>> Stashed changes
               <persistence version="9" />
               <languages>
                 <devkit ref="70d3d6da-af63-483d-a75f-9c8acf8de332(jetbrains.mps.console.devkit)" />
@@ -71,11 +78,19 @@
                   <concept id="757553790980850366" name="jetbrains.mps.console.base.structure.History" flags="ng" index="3balQm" />
                 </language>
               </registry>
+<<<<<<< Updated upstream
               <node concept="aymSD" id="4lTE7Bn7S7X">
                 <node concept="3balQm" id="4lTE7Bn7S7Y" role="aymYE" />
                 <node concept="2Clz$F" id="4lTE7Bn7S7Z" role="aymYO" />
                 <node concept="2_V_lH" id="4lTE7Bn7S80" role="1PhJh3">
                   <ref role="2_V_lI" node="4lTE7Bn7S7Z" resolve="CommandHolder" />
+=======
+              <node concept="aymSD" id="7MnUryHHzV1">
+                <node concept="3balQm" id="7MnUryHHzV2" role="aymYE" />
+                <node concept="2Clz$F" id="7MnUryHHzV3" role="aymYO" />
+                <node concept="2_V_lH" id="7MnUryHHzV4" role="1PhJh3">
+                  <ref role="2_V_lI" node="7MnUryHHzV3" resolve="CommandHolder" />
+>>>>>>> Stashed changes
                 </node>
               </node>
             </model>
@@ -186,6 +201,7 @@
   <component name="ProjectView">
     <navigator proportions="" version="1" />
     <panes>
+      <pane id="FileSystem" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -198,7 +214,11 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< Updated upstream
               <option name="myItemId" value="r:42d792ff-bfc4-4332-ad25-3cc7b5b3b993(ArduinoML.constraints) in IdeaFile[path: C:/Users/Laura Lopez/Documents/SI5-Periode-2/DSL/project/dsl-arduinoml/ArduinoML/languages/ArduinoML/models/ArduinoML.constraints.mps]" />
+=======
+              <option name="myItemId" value="r:1e4e32fc-e42a-4b05-84e5-5f0ea797c86d(ArduinoML.structure) in IdeaFile[path: C:/Users/theof/Documents/SI5/Part2/DSL/repo/dsl-arduinoml/ArduinoML/languages/ArduinoML/models/ArduinoML.structure.mps]" />
+>>>>>>> Stashed changes
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -226,7 +246,11 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< Updated upstream
               <option name="myItemId" value="r:37f52adb-0f85-4b7f-9195-97f6372328af(ArduinoML.behavior) in IdeaFile[path: C:/Users/Laura Lopez/Documents/SI5-Periode-2/DSL/project/dsl-arduinoml/ArduinoML/languages/ArduinoML/models/ArduinoML.behavior.mps]" />
+=======
+              <option name="myItemId" value="r:42d792ff-bfc4-4332-ad25-3cc7b5b3b993(ArduinoML.constraints) in IdeaFile[path: C:/Users/theof/Documents/SI5/Part2/DSL/repo/dsl-arduinoml/ArduinoML/languages/ArduinoML/models/ArduinoML.constraints.mps]" />
+>>>>>>> Stashed changes
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -240,6 +264,7 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< Updated upstream
               <option name="myItemId" value="ArduinoML" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -247,6 +272,9 @@
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="Project" />
+=======
+              <option name="myItemId" value="r:db448323-31f6-437e-a2cc-e81f7d6fec90(ArduinoML.editor) in IdeaFile[path: C:/Users/theof/Documents/SI5/Part2/DSL/repo/dsl-arduinoml/ArduinoML/languages/ArduinoML/models/ArduinoML.editor.mps]" />
+>>>>>>> Stashed changes
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -274,19 +302,19 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="035bd220-160a-489f-a5e3-23fa990703d9" />
+              <option name="myItemId" value="dc4471fe-75cf-409b-bf03-8bc732728db2(ArduinoML)" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ArduinoML" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
+<<<<<<< Updated upstream
               <option name="myItemId" value="r:9d9a766a-5ec5-41fe-9e01-89059659f557(ArduinoML.sandbox) in IdeaFile[path: C:/Users/Laura Lopez/Documents/SI5-Periode-2/DSL/project/dsl-arduinoml/ArduinoML/languages/ArduinoML/sandbox/models/ArduinoML.sandbox.mps]" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="2776581263317719086" />
+=======
+              <option name="myItemId" value="r:37f52adb-0f85-4b7f-9195-97f6372328af(ArduinoML.behavior) in IdeaFile[path: C:/Users/theof/Documents/SI5/Part2/DSL/repo/dsl-arduinoml/ArduinoML/languages/ArduinoML/models/ArduinoML.behavior.mps]" />
+>>>>>>> Stashed changes
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -300,7 +328,11 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< Updated upstream
               <option name="myItemId" value="r:db448323-31f6-437e-a2cc-e81f7d6fec90(ArduinoML.editor) in IdeaFile[path: C:/Users/Laura Lopez/Documents/SI5-Periode-2/DSL/project/dsl-arduinoml/ArduinoML/languages/ArduinoML/models/ArduinoML.editor.mps]" />
+=======
+              <option name="myItemId" value="r:f6b0d18c-3dcd-4dca-9d55-0c11786435ff(ArduinoML.textGen) in IdeaFile[path: C:/Users/theof/Documents/SI5/Part2/DSL/repo/dsl-arduinoml/ArduinoML/languages/ArduinoML/models/ArduinoML.textGen.mps]" />
+>>>>>>> Stashed changes
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -313,10 +345,13 @@
               <option name="myItemId" value="dc4471fe-75cf-409b-bf03-8bc732728db2(ArduinoML)" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
+<<<<<<< Updated upstream
             <PATH_ELEMENT>
               <option name="myItemId" value="r:f6b0d18c-3dcd-4dca-9d55-0c11786435ff(ArduinoML.textGen) in IdeaFile[path: C:/Users/Laura Lopez/Documents/SI5-Periode-2/DSL/project/dsl-arduinoml/ArduinoML/languages/ArduinoML/models/ArduinoML.textGen.mps]" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
+=======
+>>>>>>> Stashed changes
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -324,21 +359,28 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="dc4471fe-75cf-409b-bf03-8bc732728db2(ArduinoML)" />
+              <option name="myItemId" value="035bd220-160a-489f-a5e3-23fa990703d9" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< Updated upstream
               <option name="myItemId" value="r:1e4e32fc-e42a-4b05-84e5-5f0ea797c86d(ArduinoML.structure) in IdeaFile[path: C:/Users/Laura Lopez/Documents/SI5-Periode-2/DSL/project/dsl-arduinoml/ArduinoML/languages/ArduinoML/models/ArduinoML.structure.mps]" />
+=======
+              <option name="myItemId" value="ArduinoML" />
+>>>>>>> Stashed changes
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="Project" />
+<<<<<<< Updated upstream
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="dc4471fe-75cf-409b-bf03-8bc732728db2(ArduinoML)" />
+=======
+>>>>>>> Stashed changes
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -355,6 +397,7 @@
               <option name="myItemId" value="ArduinoML" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
+<<<<<<< Updated upstream
             <PATH_ELEMENT>
               <option name="myItemId" value="r:9d9a766a-5ec5-41fe-9e01-89059659f557(ArduinoML.sandbox) in IdeaFile[path: C:/Users/Laura Lopez/Documents/SI5-Periode-2/DSL/project/dsl-arduinoml/ArduinoML/languages/ArduinoML/sandbox/models/ArduinoML.sandbox.mps]" />
               <option name="myItemType" value="" />
@@ -367,30 +410,41 @@
             </PATH_ELEMENT>
           </PATH>
           <SELECTED>
+=======
+>>>>>>> Stashed changes
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:9d9a766a-5ec5-41fe-9e01-89059659f557(ArduinoML.sandbox) in IdeaFile[path: C:/Users/theof/Documents/SI5/Part2/DSL/repo/dsl-arduinoml/ArduinoML/languages/ArduinoML/sandbox/models/ArduinoML.sandbox.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <SELECTED>
             <PATH_ELEMENT>
               <option name="myItemId" value="Project" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="035bd220-160a-489f-a5e3-23fa990703d9" />
+              <option name="myItemId" value="dc4471fe-75cf-409b-bf03-8bc732728db2(ArduinoML)" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ArduinoML" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
+<<<<<<< Updated upstream
               <option name="myItemId" value="r:9d9a766a-5ec5-41fe-9e01-89059659f557(ArduinoML.sandbox) in IdeaFile[path: C:/Users/Laura Lopez/Documents/SI5-Periode-2/DSL/project/dsl-arduinoml/ArduinoML/languages/ArduinoML/sandbox/models/ArduinoML.sandbox.mps]" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="2776581263317719086" />
+=======
+              <option name="myItemId" value="r:1e4e32fc-e42a-4b05-84e5-5f0ea797c86d(ArduinoML.structure) in IdeaFile[path: C:/Users/theof/Documents/SI5/Part2/DSL/repo/dsl-arduinoml/ArduinoML/languages/ArduinoML/models/ArduinoML.structure.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="3943742123535526383" />
+>>>>>>> Stashed changes
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </SELECTED>
         </subPane>
       </pane>
-      <pane id="FileSystem" />
     </panes>
   </component>
   <component name="ProjectViewState">

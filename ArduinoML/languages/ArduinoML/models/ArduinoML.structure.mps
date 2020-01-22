@@ -157,6 +157,7 @@
   <node concept="1TIwiD" id="2q8pvaM37wp">
     <property role="EcuMT" value="2776581263317563417" />
     <property role="TrG5h" value="Sensor" />
+    <property role="R5$K7" value="true" />
     <ref role="1TJDcQ" node="2q8pvaM37wg" resolve="Brick" />
   </node>
   <node concept="1TIwiD" id="C0N_wVa3aq">
@@ -183,6 +184,16 @@
     <node concept="PrWs8" id="C0N_wVad0d" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
+  </node>
+  <node concept="1TIwiD" id="44tB$RL1EJQ">
+    <property role="EcuMT" value="4692080444383341558" />
+    <property role="TrG5h" value="DigitalSensor" />
+    <ref role="1TJDcQ" node="2q8pvaM37wp" resolve="Sensor" />
+  </node>
+  <node concept="1TIwiD" id="44tB$RL1EJR">
+    <property role="EcuMT" value="4692080444383341559" />
+    <property role="TrG5h" value="AnalogSensor" />
+    <ref role="1TJDcQ" node="2q8pvaM37wp" resolve="Sensor" />
   </node>
 </model>
 

@@ -11,8 +11,10 @@ import jetbrains.mps.smodel.runtime.ConceptPresentationBuilder;
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
   private ConceptPresentation props_Action;
   private ConceptPresentation props_Actuator;
+  private ConceptPresentation props_AnalogSensor;
   private ConceptPresentation props_App;
   private ConceptPresentation props_Brick;
+  private ConceptPresentation props_DigitalSensor;
   private ConceptPresentation props_Sensor;
   private ConceptPresentation props_State;
   private ConceptPresentation props_Transition;
@@ -36,6 +38,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Actuator = cpb.create();
         }
         return props_Actuator;
+      case LanguageConceptSwitch.AnalogSensor:
+        if (props_AnalogSensor == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_AnalogSensor = cpb.create();
+        }
+        return props_AnalogSensor;
       case LanguageConceptSwitch.App:
         if (props_App == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -49,10 +58,16 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Brick = cpb.create();
         }
         return props_Brick;
+      case LanguageConceptSwitch.DigitalSensor:
+        if (props_DigitalSensor == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_DigitalSensor = cpb.create();
+        }
+        return props_DigitalSensor;
       case LanguageConceptSwitch.Sensor:
         if (props_Sensor == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByName();
           props_Sensor = cpb.create();
         }
         return props_Sensor;

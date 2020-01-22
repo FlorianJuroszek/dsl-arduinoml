@@ -11,11 +11,11 @@ import jetbrains.mps.nodeEditor.cells.EditorCell_Collection;
 import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Indent;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
 
-/*package*/ class Sensor_EditorBuilder_a extends AbstractEditorBuilder {
+/*package*/ class AnalogSensor_EditorBuilder_a extends AbstractEditorBuilder {
   @NotNull
   private SNode myNode;
 
-  public Sensor_EditorBuilder_a(@NotNull EditorContext context, @NotNull SNode node) {
+  public AnalogSensor_EditorBuilder_a(@NotNull EditorContext context, @NotNull SNode node) {
     super(context);
     myNode = node;
   }
@@ -32,7 +32,7 @@ import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
 
   private EditorCell createCollection_0() {
     EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
-    editorCell.setCellId("Collection_qb70eh_a");
+    editorCell.setCellId("Collection_z2xh6p_a");
     editorCell.setBig(true);
     setCellContext(editorCell);
     editorCell.addEditorCell(createConstant_0());
@@ -40,8 +40,8 @@ import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
     return editorCell;
   }
   private EditorCell createConstant_0() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "sensor");
-    editorCell.setCellId("Constant_qb70eh_a0");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "a_sensor");
+    editorCell.setCellId("Constant_z2xh6p_a0");
     editorCell.setDefaultText("");
     return editorCell;
   }
