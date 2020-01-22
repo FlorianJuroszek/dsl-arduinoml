@@ -29,7 +29,7 @@ public class App_TextGen extends TextGenDescriptorBase {
     tgs.append("#include <Arduino.h>");
     tgs.newLine();
     tgs.newLine();
-    tgs.append("/** Generating code for application");
+    tgs.append("/** Generating code for application ");
     tgs.append(SPropertyOperations.getString(ctx.getPrimaryInput(), PROPS.name$tAp1));
     tgs.append("**/");
     tgs.newLine();
@@ -57,6 +57,11 @@ public class App_TextGen extends TextGenDescriptorBase {
         }
       }
     }
+    tgs.newLine();
+    tgs.newLine();
+    tgs.append("long time = 0;");
+    tgs.newLine();
+    tgs.append("long debounce = 200;");
     tgs.newLine();
     tgs.newLine();
     tgs.append("// Declaring states ");

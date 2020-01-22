@@ -15,11 +15,18 @@ public class Transition_TextGen extends TextGenDescriptorBase {
   @Override
   public void generateText(final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
+    tgs.append("boolean guard = millis() - time > debounce;");
+    tgs.newLine();
+    tgs.indent();
     tgs.append("if (digitalRead(");
     tgs.append(SPropertyOperations.getString(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.sensor$FmZ1), PROPS.name$tAp1));
     tgs.append(") == ");
     tgs.append(SPropertyOperations.getString(ctx.getPrimaryInput(), PROPS.value$Fn0u));
-    tgs.append(") {");
+    tgs.append(" && guard) {");
+    tgs.newLine();
+    tgs.indent();
+    tgs.indent();
+    tgs.append("time = millis();");
     tgs.newLine();
     tgs.indent();
     tgs.indent();

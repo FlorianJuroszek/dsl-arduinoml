@@ -199,7 +199,7 @@
         </node>
         <node concept="lc7rE" id="3qUZ9475Cod" role="3cqZAp">
           <node concept="la8eA" id="3qUZ9475Hz$" role="lcghm">
-            <property role="lacIc" value="/** Generating code for application" />
+            <property role="lacIc" value="/** Generating code for application " />
           </node>
           <node concept="l9hG8" id="3qUZ9475H_S" role="lcghm">
             <node concept="2OqwBi" id="3qUZ9475HIf" role="lb14g">
@@ -286,6 +286,21 @@
         <node concept="lc7rE" id="3qUZ9475LHJ" role="3cqZAp">
           <node concept="l8MVK" id="3qUZ9475LHL" role="lcghm" />
           <node concept="l8MVK" id="3qUZ9475LOz" role="lcghm" />
+        </node>
+        <node concept="lc7rE" id="4lTE7Bn8uyI" role="3cqZAp">
+          <node concept="la8eA" id="4lTE7Bn8uIh" role="lcghm">
+            <property role="lacIc" value="long time = 0;" />
+          </node>
+          <node concept="l8MVK" id="4lTE7Bn8uJp" role="lcghm" />
+        </node>
+        <node concept="lc7rE" id="4lTE7Bn8uWs" role="3cqZAp">
+          <node concept="la8eA" id="4lTE7Bn8vi1" role="lcghm">
+            <property role="lacIc" value="long debounce = 200;" />
+          </node>
+          <node concept="l8MVK" id="4lTE7Bn8vk5" role="lcghm" />
+        </node>
+        <node concept="lc7rE" id="4lTE7Bn8vvX" role="3cqZAp">
+          <node concept="l8MVK" id="4lTE7Bn8vFA" role="lcghm" />
         </node>
         <node concept="lc7rE" id="3qUZ9475M1k" role="3cqZAp">
           <node concept="la8eA" id="3qUZ9475M1l" role="lcghm">
@@ -695,6 +710,13 @@
     <ref role="WuzLi" to="c1p6:C0N_wVa3aq" resolve="Transition" />
     <node concept="11bSqf" id="C0N_wVbsJl" role="11c4hB">
       <node concept="3clFbS" id="C0N_wVbsJm" role="2VODD2">
+        <node concept="lc7rE" id="4lTE7Bn81bB" role="3cqZAp">
+          <node concept="la8eA" id="4lTE7Bn81dF" role="lcghm">
+            <property role="lacIc" value="boolean guard = millis() - time &gt; debounce;" />
+          </node>
+          <node concept="l8MVK" id="4lTE7Bn8HPk" role="lcghm" />
+        </node>
+        <node concept="1bpajm" id="4lTE7Bn8SLt" role="3cqZAp" />
         <node concept="lc7rE" id="C0N_wVbDB2" role="3cqZAp">
           <node concept="la8eA" id="C0N_wVbKTs" role="lcghm">
             <property role="lacIc" value="if (digitalRead(" />
@@ -724,12 +746,20 @@
             </node>
           </node>
           <node concept="la8eA" id="C0N_wVbME$" role="lcghm">
-            <property role="lacIc" value=") {" />
+            <property role="lacIc" value=" &amp;&amp; guard) {" />
           </node>
           <node concept="l8MVK" id="C0N_wVbMIo" role="lcghm" />
         </node>
         <node concept="1bpajm" id="C0N_wVcueI" role="3cqZAp" />
         <node concept="1bpajm" id="C0N_wVcDLZ" role="3cqZAp" />
+        <node concept="lc7rE" id="4lTE7Bn8I8y" role="3cqZAp">
+          <node concept="la8eA" id="4lTE7Bn8IaD" role="lcghm">
+            <property role="lacIc" value="time = millis();" />
+          </node>
+          <node concept="l8MVK" id="4lTE7Bn8Icf" role="lcghm" />
+        </node>
+        <node concept="1bpajm" id="4lTE7Bn8Ikn" role="3cqZAp" />
+        <node concept="1bpajm" id="4lTE7Bn8Ioy" role="3cqZAp" />
         <node concept="lc7rE" id="C0N_wVbMLn" role="3cqZAp">
           <node concept="la8eA" id="C0N_wVbMMX" role="lcghm">
             <property role="lacIc" value="state_" />

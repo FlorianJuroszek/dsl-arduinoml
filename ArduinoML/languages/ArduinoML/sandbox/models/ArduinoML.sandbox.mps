@@ -38,7 +38,7 @@
     </language>
   </registry>
   <node concept="LFDlA" id="2q8pvaM3HwI">
-    <property role="TrG5h" value="App" />
+    <property role="TrG5h" value="Scenario1" />
     <node concept="LFDlT" id="2q8pvaM3HwM" role="2kxaQz">
       <property role="TrG5h" value="theLed" />
       <property role="2kx1Rx" value="12" />
@@ -112,6 +112,65 @@
     </node>
     <node concept="2kx1RF" id="4zRErOldMej" role="2kxaQz">
       <property role="TrG5h" value="theButton3" />
+      <property role="2kx1Rx" value="10" />
+    </node>
+  </node>
+  <node concept="LFDlA" id="4lTE7Bn8HNO">
+    <property role="TrG5h" value="Scenario4" />
+    <node concept="LFDlY" id="4lTE7Bn8HNP" role="LFDlF">
+      <property role="TrG5h" value="buzzerOn" />
+      <node concept="LFDlf" id="4lTE7Bn8HOx" role="LFDlz">
+        <property role="LFDlK" value="3qUZ94756B_/LOW" />
+        <ref role="LFDlW" node="4lTE7Bn8HNT" resolve="theLed4" />
+      </node>
+      <node concept="LFDlf" id="4lTE7Bn8HOB" role="LFDlz">
+        <ref role="LFDlW" node="4lTE7Bn8HNZ" resolve="theBuzzer4" />
+      </node>
+      <node concept="LafN2" id="4lTE7Bn8HNR" role="LafNU">
+        <ref role="LafNX" node="4lTE7Bn8HO7" resolve="theButton4" />
+        <ref role="LafN3" node="4lTE7Bn8HOl" resolve="ledOn" />
+      </node>
+    </node>
+    <node concept="LFDlY" id="4lTE7Bn8HOc" role="LFDlF">
+      <property role="TrG5h" value="standBy" />
+      <property role="LaaCL" value="true" />
+      <node concept="LFDlf" id="4lTE7Bn8HOF" role="LFDlz">
+        <property role="LFDlK" value="3qUZ94756B_/LOW" />
+        <ref role="LFDlW" node="4lTE7Bn8HNT" resolve="theLed4" />
+      </node>
+      <node concept="LFDlf" id="4lTE7Bn8HOL" role="LFDlz">
+        <property role="LFDlK" value="3qUZ94756B_/LOW" />
+        <ref role="LFDlW" node="4lTE7Bn8HNZ" resolve="theBuzzer4" />
+      </node>
+      <node concept="LafN2" id="4lTE7Bn8HOe" role="LafNU">
+        <ref role="LafNX" node="4lTE7Bn8HO7" resolve="theButton4" />
+        <ref role="LafN3" node="4lTE7Bn8HNP" resolve="buzzerOn" />
+      </node>
+    </node>
+    <node concept="LFDlY" id="4lTE7Bn8HOl" role="LFDlF">
+      <property role="TrG5h" value="ledOn" />
+      <node concept="LFDlf" id="4lTE7Bn8HOP" role="LFDlz">
+        <ref role="LFDlW" node="4lTE7Bn8HNT" resolve="theLed4" />
+      </node>
+      <node concept="LFDlf" id="4lTE7Bn8HOV" role="LFDlz">
+        <property role="LFDlK" value="3qUZ94756B_/LOW" />
+        <ref role="LFDlW" node="4lTE7Bn8HNZ" resolve="theBuzzer4" />
+      </node>
+      <node concept="LafN2" id="4lTE7Bn8HOn" role="LafNU">
+        <ref role="LafNX" node="4lTE7Bn8HO7" resolve="theButton4" />
+        <ref role="LafN3" node="4lTE7Bn8HOc" resolve="standBy" />
+      </node>
+    </node>
+    <node concept="LFDlT" id="4lTE7Bn8HNT" role="2kxaQz">
+      <property role="TrG5h" value="theLed4" />
+      <property role="2kx1Rx" value="12" />
+    </node>
+    <node concept="LFDlT" id="4lTE7Bn8HNZ" role="2kxaQz">
+      <property role="TrG5h" value="theBuzzer4" />
+      <property role="2kx1Rx" value="11" />
+    </node>
+    <node concept="2kx1RF" id="4lTE7Bn8HO7" role="2kxaQz">
+      <property role="TrG5h" value="theButton4" />
       <property role="2kx1Rx" value="10" />
     </node>
   </node>

@@ -2,7 +2,7 @@
 #include <util/delay.h>
 #include <Arduino.h>
 
-/** Generating code for applicationScenario3**/
+/** Generating code for application Scenario3**/
 
 // Declaring states function headers 
 void state_on3();
@@ -17,7 +17,7 @@ void state_on3()
 {
   digitalWrite(theLed3, HIGH);
   Serial.print("on3 \n");
-  if (digitalRead(theButton3) == HIGH) {
+  boolean guard = millis() - time > debounce;if (digitalRead(theButton3) == HIGH && guard) {
     state_off3();
   }
   else {
@@ -29,7 +29,7 @@ void state_off3()
 {
   digitalWrite(theLed3, LOW);
   Serial.print("off3 \n");
-  if (digitalRead(theButton3) == HIGH) {
+  boolean guard = millis() - time > debounce;if (digitalRead(theButton3) == HIGH && guard) {
     state_on3();
   }
   else {
@@ -45,5 +45,7 @@ void setup() {
 }
 
 void loop() {
-  state_off3();
+  long time = 0;
+long debounce = 200;
+state_off3();
 }
