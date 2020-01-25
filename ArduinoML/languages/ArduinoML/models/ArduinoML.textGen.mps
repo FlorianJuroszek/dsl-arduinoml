@@ -596,6 +596,13 @@
               <node concept="l8MVK" id="7_f$JNxAfz0" role="lcghm" />
             </node>
             <node concept="1bpajm" id="7_f$JNxA4sy" role="3cqZAp" />
+            <node concept="lc7rE" id="7eXB7kk_y8o" role="3cqZAp">
+              <node concept="la8eA" id="7eXB7kk_ydn" role="lcghm">
+                <property role="lacIc" value="boolean guard = millis() - time &gt; debounce;" />
+              </node>
+              <node concept="l8MVK" id="7eXB7kk_yeI" role="lcghm" />
+            </node>
+            <node concept="1bpajm" id="7eXB7kk_ypR" role="3cqZAp" />
             <node concept="lc7rE" id="C0N_wVbZch" role="3cqZAp">
               <node concept="l9S2W" id="7eXB7kk$oIZ" role="lcghm">
                 <node concept="2OqwBi" id="7eXB7kk$oPM" role="lbANJ">
@@ -710,13 +717,6 @@
     <ref role="WuzLi" to="c1p6:C0N_wVa3aq" resolve="Transition" />
     <node concept="11bSqf" id="C0N_wVbsJl" role="11c4hB">
       <node concept="3clFbS" id="C0N_wVbsJm" role="2VODD2">
-        <node concept="lc7rE" id="4lTE7Bn81bB" role="3cqZAp">
-          <node concept="la8eA" id="4lTE7Bn81dF" role="lcghm">
-            <property role="lacIc" value="boolean guard = millis() - time &gt; debounce;" />
-          </node>
-          <node concept="l8MVK" id="4lTE7Bn8HPk" role="lcghm" />
-        </node>
-        <node concept="1bpajm" id="4lTE7Bn8SLt" role="3cqZAp" />
         <node concept="lc7rE" id="C0N_wVbDB2" role="3cqZAp">
           <node concept="la8eA" id="C0N_wVbKTs" role="lcghm">
             <property role="lacIc" value="if (" />
@@ -793,7 +793,7 @@
         <node concept="1bpajm" id="C0N_wVcuiD" role="3cqZAp" />
         <node concept="lc7rE" id="C0N_wVbOdS" role="3cqZAp">
           <node concept="la8eA" id="C0N_wVbOg3" role="lcghm">
-            <property role="lacIc" value="}" />
+            <property role="lacIc" value="} " />
           </node>
         </node>
       </node>
@@ -805,7 +805,7 @@
       <node concept="3clFbS" id="4lTE7Bn9mEX" role="2VODD2">
         <node concept="lc7rE" id="4lTE7Bn9mWu" role="3cqZAp">
           <node concept="la8eA" id="4lTE7Bn9mX0" role="lcghm">
-            <property role="lacIc" value="digitalRead(" />
+            <property role="lacIc" value="(digitalRead(" />
           </node>
           <node concept="l9hG8" id="4lTE7Bn9mZI" role="lcghm">
             <node concept="2OqwBi" id="4lTE7Bn9nu6" role="lb14g">

@@ -15,7 +15,7 @@ public class Tuple_TextGen extends TextGenDescriptorBase {
   @Override
   public void generateText(final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
-    tgs.append("digitalRead(");
+    tgs.append("(digitalRead(");
     tgs.append(SPropertyOperations.getString(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.sensor$ACYb), PROPS.name$tAp1));
     tgs.append(") ");
     tgs.append(SPropertyOperations.getString(ctx.getPrimaryInput(), PROPS.operator$ACMz));

@@ -19,9 +19,6 @@ public class Transition_TextGen extends TextGenDescriptorBase {
   @Override
   public void generateText(final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
-    tgs.append("boolean guard = millis() - time > debounce;");
-    tgs.newLine();
-    tgs.indent();
     tgs.append("if (");
     ListSequence.fromList(SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.tuple$SMtV)).visitAll(new IVisitor<SNode>() {
       public void visit(SNode it) {
@@ -42,7 +39,7 @@ public class Transition_TextGen extends TextGenDescriptorBase {
     tgs.append("();");
     tgs.newLine();
     tgs.indent();
-    tgs.append("}");
+    tgs.append("} ");
   }
 
   private static final class LINKS {
