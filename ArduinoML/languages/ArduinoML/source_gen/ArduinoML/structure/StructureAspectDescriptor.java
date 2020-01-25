@@ -18,8 +18,10 @@ import jetbrains.mps.smodel.adapter.ids.PrimitiveTypeId;
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptAction = createDescriptorForAction();
   /*package*/ final ConceptDescriptor myConceptActuator = createDescriptorForActuator();
+  /*package*/ final ConceptDescriptor myConceptAnalogSensor = createDescriptorForAnalogSensor();
   /*package*/ final ConceptDescriptor myConceptApp = createDescriptorForApp();
   /*package*/ final ConceptDescriptor myConceptBrick = createDescriptorForBrick();
+  /*package*/ final ConceptDescriptor myConceptDigitalSensor = createDescriptorForDigitalSensor();
   /*package*/ final ConceptDescriptor myConceptSensor = createDescriptorForSensor();
   /*package*/ final ConceptDescriptor myConceptState = createDescriptorForState();
   /*package*/ final ConceptDescriptor myConceptTransition = createDescriptorForTransition();
@@ -40,7 +42,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAction, myConceptActuator, myConceptApp, myConceptBrick, myConceptSensor, myConceptState, myConceptTransition, myConceptTuple);
+    return Arrays.asList(myConceptAction, myConceptActuator, myConceptAnalogSensor, myConceptApp, myConceptBrick, myConceptDigitalSensor, myConceptSensor, myConceptState, myConceptTransition, myConceptTuple);
   }
 
   @Override
@@ -51,10 +53,14 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptAction;
       case LanguageConceptSwitch.Actuator:
         return myConceptActuator;
+      case LanguageConceptSwitch.AnalogSensor:
+        return myConceptAnalogSensor;
       case LanguageConceptSwitch.App:
         return myConceptApp;
       case LanguageConceptSwitch.Brick:
         return myConceptBrick;
+      case LanguageConceptSwitch.DigitalSensor:
+        return myConceptDigitalSensor;
       case LanguageConceptSwitch.Sensor:
         return myConceptSensor;
       case LanguageConceptSwitch.State:
@@ -94,6 +100,14 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(2);
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForAnalogSensor() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ArduinoML", "AnalogSensor", 0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x411d9e4df106abf7L);
+    b.class_(false, false, false);
+    b.super_("ArduinoML.structure.Sensor", 0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x268865f2b20c7819L);
+    b.origin("r:1e4e32fc-e42a-4b05-84e5-5f0ea797c86d(ArduinoML.structure)/4692080444383341559");
+    b.version(2);
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForApp() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ArduinoML", "App", 0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469f7L);
     b.class_(false, false, true);
@@ -114,9 +128,17 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("pin", 0x268865f2b20c7813L).type(PrimitiveTypeId.INTEGER).origin("2776581263317563411").done();
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForDigitalSensor() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ArduinoML", "DigitalSensor", 0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x411d9e4df106abf6L);
+    b.class_(false, false, false);
+    b.super_("ArduinoML.structure.Sensor", 0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x268865f2b20c7819L);
+    b.origin("r:1e4e32fc-e42a-4b05-84e5-5f0ea797c86d(ArduinoML.structure)/4692080444383341558");
+    b.version(2);
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForSensor() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ArduinoML", "Sensor", 0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x268865f2b20c7819L);
-    b.class_(false, false, false);
+    b.class_(false, true, false);
     b.super_("ArduinoML.structure.Brick", 0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x268865f2b20c7810L);
     b.origin("r:1e4e32fc-e42a-4b05-84e5-5f0ea797c86d(ArduinoML.structure)/2776581263317563417");
     b.version(2);

@@ -14,7 +14,7 @@
       <concept id="2776581263317563408" name="ArduinoML.structure.Brick" flags="ng" index="2kx1Ry">
         <property id="2776581263317563411" name="pin" index="2kx1Rx" />
       </concept>
-      <concept id="2776581263317563417" name="ArduinoML.structure.Sensor" flags="ng" index="2kx1RF" />
+      <concept id="4692080444383341558" name="ArduinoML.structure.DigitalSensor" flags="ng" index="2K6NmV" />
       <concept id="720802818724213402" name="ArduinoML.structure.Transition" flags="ng" index="LafN2">
         <reference id="720802818724213403" name="next" index="LafN3" />
         <child id="5006217702052999797" name="tuple" index="2inpCc" />
@@ -50,10 +50,6 @@
       <property role="TrG5h" value="theBuzzer" />
       <property role="2kx1Rx" value="11" />
     </node>
-    <node concept="2kx1RF" id="2q8pvaM3HwS" role="2kxaQz">
-      <property role="TrG5h" value="theButton" />
-      <property role="2kx1Rx" value="10" />
-    </node>
     <node concept="LFDlY" id="7eXB7kk$4Jg" role="LFDlF">
       <property role="TrG5h" value="on" />
       <node concept="LFDlf" id="7eXB7kk$4Jo" role="LFDlz">
@@ -64,9 +60,9 @@
       </node>
       <node concept="LafN2" id="7eXB7kk$4Ji" role="LafNU">
         <ref role="LafN3" node="7eXB7kk$4JD" resolve="off" />
-        <node concept="2inpCr" id="7eXB7kk$4JA" role="2inpCc">
+        <node concept="2inpCr" id="7eXB7kkAG_f" role="2inpCc">
           <property role="2inpCs" value="3qUZ94756B_/LOW" />
-          <ref role="2inpCn" node="2q8pvaM3HwS" resolve="theButton" />
+          <ref role="2inpCn" node="46mat8MdxYj" resolve="theButton" />
         </node>
       </node>
     </node>
@@ -83,10 +79,14 @@
       </node>
       <node concept="LafN2" id="7eXB7kk$4JF" role="LafNU">
         <ref role="LafN3" node="7eXB7kk$4Jg" resolve="on" />
-        <node concept="2inpCr" id="7eXB7kk$4K4" role="2inpCc">
-          <ref role="2inpCn" node="2q8pvaM3HwS" resolve="theButton" />
+        <node concept="2inpCr" id="7eXB7kkAG_w" role="2inpCc">
+          <ref role="2inpCn" node="46mat8MdxYj" resolve="theButton" />
         </node>
       </node>
+    </node>
+    <node concept="2K6NmV" id="46mat8MdxYj" role="2kxaQz">
+      <property role="TrG5h" value="theButton" />
+      <property role="2kx1Rx" value="10" />
     </node>
   </node>
   <node concept="LFDlA" id="4zRErOldMe8">
@@ -95,10 +95,6 @@
       <property role="TrG5h" value="theLed3" />
       <property role="2kx1Rx" value="12" />
     </node>
-    <node concept="2kx1RF" id="4zRErOldMej" role="2kxaQz">
-      <property role="TrG5h" value="theButton3" />
-      <property role="2kx1Rx" value="10" />
-    </node>
     <node concept="LFDlY" id="7eXB7kk$4Ka" role="LFDlF">
       <property role="TrG5h" value="on3" />
       <node concept="LFDlf" id="7eXB7kk$4Ko" role="LFDlz">
@@ -106,8 +102,8 @@
       </node>
       <node concept="LafN2" id="7eXB7kk$4Kc" role="LafNU">
         <ref role="LafN3" node="7eXB7kk$4Ku" resolve="off3" />
-        <node concept="2inpCr" id="7eXB7kk$4Kr" role="2inpCc">
-          <ref role="2inpCn" node="4zRErOldMej" resolve="theButton3" />
+        <node concept="2inpCr" id="7eXB7kkAGAX" role="2inpCc">
+          <ref role="2inpCn" node="46mat8MdxYf" resolve="theButton3" />
         </node>
       </node>
     </node>
@@ -120,10 +116,14 @@
       </node>
       <node concept="LafN2" id="7eXB7kk$4Kw" role="LafNU">
         <ref role="LafN3" node="7eXB7kk$4Ka" resolve="on3" />
-        <node concept="2inpCr" id="7eXB7kk$4KH" role="2inpCc">
-          <ref role="2inpCn" node="4zRErOldMej" resolve="theButton3" />
+        <node concept="2inpCr" id="7eXB7kkAGB0" role="2inpCc">
+          <ref role="2inpCn" node="46mat8MdxYf" resolve="theButton3" />
         </node>
       </node>
+    </node>
+    <node concept="2K6NmV" id="46mat8MdxYf" role="2kxaQz">
+      <property role="TrG5h" value="theButton3" />
+      <property role="2kx1Rx" value="10" />
     </node>
   </node>
   <node concept="LFDlA" id="4lTE7Bn8HNO">
@@ -136,10 +136,6 @@
       <property role="TrG5h" value="theBuzzer4" />
       <property role="2kx1Rx" value="11" />
     </node>
-    <node concept="2kx1RF" id="4lTE7Bn8HO7" role="2kxaQz">
-      <property role="TrG5h" value="theButton4" />
-      <property role="2kx1Rx" value="10" />
-    </node>
     <node concept="LFDlY" id="7eXB7kk$4KW" role="LFDlF">
       <property role="TrG5h" value="buzzerOn4" />
       <node concept="LFDlf" id="7eXB7kk$4L4" role="LFDlz">
@@ -151,8 +147,8 @@
       </node>
       <node concept="LafN2" id="7eXB7kk$4KY" role="LafNU">
         <ref role="LafN3" node="7eXB7kk$4Lh" resolve="ledOn" />
-        <node concept="2inpCr" id="7eXB7kk$4Le" role="2inpCc">
-          <ref role="2inpCn" node="4lTE7Bn8HO7" resolve="theButton4" />
+        <node concept="2inpCr" id="7eXB7kkAGB3" role="2inpCc">
+          <ref role="2inpCn" node="46mat8MdxYa" resolve="theButton4" />
         </node>
       </node>
     </node>
@@ -167,8 +163,8 @@
       </node>
       <node concept="LafN2" id="7eXB7kk$4Lj" role="LafNU">
         <ref role="LafN3" node="7eXB7kk$4LJ" resolve="standBy" />
-        <node concept="2inpCr" id="7eXB7kk$4LG" role="2inpCc">
-          <ref role="2inpCn" node="4lTE7Bn8HO7" resolve="theButton4" />
+        <node concept="2inpCr" id="7eXB7kkAGB6" role="2inpCc">
+          <ref role="2inpCn" node="46mat8MdxYa" resolve="theButton4" />
         </node>
       </node>
     </node>
@@ -185,10 +181,14 @@
       </node>
       <node concept="LafN2" id="7eXB7kk$4LL" role="LafNU">
         <ref role="LafN3" node="7eXB7kk$4KW" resolve="buzzerOn4" />
-        <node concept="2inpCr" id="7eXB7kk$4Mb" role="2inpCc">
-          <ref role="2inpCn" node="4lTE7Bn8HO7" resolve="theButton4" />
+        <node concept="2inpCr" id="7eXB7kkAGB9" role="2inpCc">
+          <ref role="2inpCn" node="46mat8MdxYa" resolve="theButton4" />
         </node>
       </node>
+    </node>
+    <node concept="2K6NmV" id="46mat8MdxYa" role="2kxaQz">
+      <property role="TrG5h" value="theButton4" />
+      <property role="2kx1Rx" value="10" />
     </node>
   </node>
   <node concept="LFDlA" id="7eXB7kk$hbK">
@@ -202,31 +202,31 @@
       </node>
       <node concept="LafN2" id="7eXB7kk$hbN" role="LafNU">
         <ref role="LafN3" node="7eXB7kk$hcx" resolve="oneButtonPressed" />
-        <node concept="2inpCr" id="7eXB7kk$hdq" role="2inpCc">
-          <ref role="2inpCn" node="7eXB7kk$hc4" resolve="theButton2_1" />
+        <node concept="2inpCr" id="7eXB7kkAG_y" role="2inpCc">
+          <ref role="2inpCn" node="7eXB7kkAF7s" resolve="theButton2_1" />
         </node>
-        <node concept="2inpCr" id="7eXB7kk$hdw" role="2inpCc">
+        <node concept="2inpCr" id="7eXB7kkAGAu" role="2inpCc">
           <property role="2inpCs" value="3qUZ94756B_/LOW" />
-          <ref role="2inpCn" node="7eXB7kk$hcl" resolve="theButton2_2" />
+          <ref role="2inpCn" node="7eXB7kkAF7$" resolve="theButton2_2" />
         </node>
       </node>
       <node concept="LafN2" id="7eXB7kk_hkR" role="LafNU">
         <ref role="LafN3" node="7eXB7kk$hcx" resolve="oneButtonPressed" />
-        <node concept="2inpCr" id="7eXB7kk_hmi" role="2inpCc">
+        <node concept="2inpCr" id="7eXB7kkAGAy" role="2inpCc">
           <property role="2inpCs" value="3qUZ94756B_/LOW" />
-          <ref role="2inpCn" node="7eXB7kk$hc4" resolve="theButton2_1" />
+          <ref role="2inpCn" node="7eXB7kkAF7s" resolve="theButton2_1" />
         </node>
-        <node concept="2inpCr" id="7eXB7kk_hmo" role="2inpCc">
-          <ref role="2inpCn" node="7eXB7kk$hcl" resolve="theButton2_2" />
+        <node concept="2inpCr" id="7eXB7kkAGAA" role="2inpCc">
+          <ref role="2inpCn" node="7eXB7kkAF7$" resolve="theButton2_2" />
         </node>
       </node>
       <node concept="LafN2" id="7eXB7kk_hms" role="LafNU">
         <ref role="LafN3" node="7eXB7kk$hcX" resolve="buzzerOn2" />
-        <node concept="2inpCr" id="7eXB7kk_hmA" role="2inpCc">
-          <ref role="2inpCn" node="7eXB7kk$hc4" resolve="theButton2_1" />
+        <node concept="2inpCr" id="7eXB7kkAGAE" role="2inpCc">
+          <ref role="2inpCn" node="7eXB7kkAF7s" resolve="theButton2_1" />
         </node>
-        <node concept="2inpCr" id="7eXB7kk_hmG" role="2inpCc">
-          <ref role="2inpCn" node="7eXB7kk$hcl" resolve="theButton2_2" />
+        <node concept="2inpCr" id="7eXB7kkAGAM" role="2inpCc">
+          <ref role="2inpCn" node="7eXB7kkAF7$" resolve="theButton2_2" />
         </node>
       </node>
     </node>
@@ -238,22 +238,22 @@
       </node>
       <node concept="LafN2" id="7eXB7kk$hcz" role="LafNU">
         <ref role="LafN3" node="7eXB7kk$hcX" resolve="buzzerOn2" />
-        <node concept="2inpCr" id="7eXB7kk_hmK" role="2inpCc">
-          <ref role="2inpCn" node="7eXB7kk$hc4" resolve="theButton2_1" />
+        <node concept="2inpCr" id="7eXB7kkAGA8" role="2inpCc">
+          <ref role="2inpCn" node="7eXB7kkAF7s" resolve="theButton2_1" />
         </node>
-        <node concept="2inpCr" id="7eXB7kk_hmQ" role="2inpCc">
-          <ref role="2inpCn" node="7eXB7kk$hcl" resolve="theButton2_2" />
+        <node concept="2inpCr" id="7eXB7kkAGAc" role="2inpCc">
+          <ref role="2inpCn" node="7eXB7kkAF7$" resolve="theButton2_2" />
         </node>
       </node>
       <node concept="LafN2" id="7eXB7kk_hmU" role="LafNU">
         <ref role="LafN3" node="7eXB7kk$hbL" resolve="buzzerOff" />
-        <node concept="2inpCr" id="7eXB7kk_hn1" role="2inpCc">
+        <node concept="2inpCr" id="7eXB7kkAGAg" role="2inpCc">
           <property role="2inpCs" value="3qUZ94756B_/LOW" />
-          <ref role="2inpCn" node="7eXB7kk$hc4" resolve="theButton2_1" />
+          <ref role="2inpCn" node="7eXB7kkAF7s" resolve="theButton2_1" />
         </node>
-        <node concept="2inpCr" id="7eXB7kk_hn7" role="2inpCc">
+        <node concept="2inpCr" id="7eXB7kkAGAq" role="2inpCc">
           <property role="2inpCs" value="3qUZ94756B_/LOW" />
-          <ref role="2inpCn" node="7eXB7kk$hcl" resolve="theButton2_2" />
+          <ref role="2inpCn" node="7eXB7kkAF7$" resolve="theButton2_2" />
         </node>
       </node>
     </node>
@@ -264,33 +264,33 @@
       </node>
       <node concept="LafN2" id="7eXB7kk$hcZ" role="LafNU">
         <ref role="LafN3" node="7eXB7kk$hcx" resolve="oneButtonPressed" />
-        <node concept="2inpCr" id="7eXB7kk_hnG" role="2inpCc">
-          <ref role="2inpCn" node="7eXB7kk$hc4" resolve="theButton2_1" />
+        <node concept="2inpCr" id="7eXB7kkAG_Z" role="2inpCc">
+          <ref role="2inpCn" node="7eXB7kkAF7s" resolve="theButton2_1" />
         </node>
-        <node concept="2inpCr" id="7eXB7kk_hnM" role="2inpCc">
+        <node concept="2inpCr" id="7eXB7kkAGA4" role="2inpCc">
           <property role="2inpCs" value="3qUZ94756B_/LOW" />
-          <ref role="2inpCn" node="7eXB7kk$hcl" resolve="theButton2_2" />
+          <ref role="2inpCn" node="7eXB7kkAF7$" resolve="theButton2_2" />
         </node>
       </node>
       <node concept="LafN2" id="7eXB7kk_hnQ" role="LafNU">
         <ref role="LafN3" node="7eXB7kk$hcx" resolve="oneButtonPressed" />
-        <node concept="2inpCr" id="7eXB7kk_hnX" role="2inpCc">
+        <node concept="2inpCr" id="7eXB7kkAG_P" role="2inpCc">
           <property role="2inpCs" value="3qUZ94756B_/LOW" />
-          <ref role="2inpCn" node="7eXB7kk$hc4" resolve="theButton2_1" />
+          <ref role="2inpCn" node="7eXB7kkAF7s" resolve="theButton2_1" />
         </node>
-        <node concept="2inpCr" id="7eXB7kk_ho3" role="2inpCc">
-          <ref role="2inpCn" node="7eXB7kk$hcl" resolve="theButton2_2" />
+        <node concept="2inpCr" id="7eXB7kkAG_U" role="2inpCc">
+          <ref role="2inpCn" node="7eXB7kkAF7$" resolve="theButton2_2" />
         </node>
       </node>
       <node concept="LafN2" id="7eXB7kk_ho7" role="LafNU">
         <ref role="LafN3" node="7eXB7kk$hbL" resolve="buzzerOff" />
-        <node concept="2inpCr" id="7eXB7kk_hoh" role="2inpCc">
+        <node concept="2inpCr" id="7eXB7kkAG_B" role="2inpCc">
           <property role="2inpCs" value="3qUZ94756B_/LOW" />
-          <ref role="2inpCn" node="7eXB7kk$hc4" resolve="theButton2_1" />
+          <ref role="2inpCn" node="7eXB7kkAF7s" resolve="theButton2_1" />
         </node>
-        <node concept="2inpCr" id="7eXB7kk_hor" role="2inpCc">
+        <node concept="2inpCr" id="7eXB7kkAG_G" role="2inpCc">
           <property role="2inpCs" value="3qUZ94756B_/LOW" />
-          <ref role="2inpCn" node="7eXB7kk$hcl" resolve="theButton2_2" />
+          <ref role="2inpCn" node="7eXB7kkAF7$" resolve="theButton2_2" />
         </node>
       </node>
     </node>
@@ -298,11 +298,11 @@
       <property role="TrG5h" value="theBuzzer2" />
       <property role="2kx1Rx" value="11" />
     </node>
-    <node concept="2kx1RF" id="7eXB7kk$hc4" role="2kxaQz">
+    <node concept="2K6NmV" id="7eXB7kkAF7s" role="2kxaQz">
       <property role="TrG5h" value="theButton2_1" />
       <property role="2kx1Rx" value="10" />
     </node>
-    <node concept="2kx1RF" id="7eXB7kk$hcl" role="2kxaQz">
+    <node concept="2K6NmV" id="7eXB7kkAF7$" role="2kxaQz">
       <property role="TrG5h" value="theButton2_2" />
       <property role="2kx1Rx" value="9" />
     </node>

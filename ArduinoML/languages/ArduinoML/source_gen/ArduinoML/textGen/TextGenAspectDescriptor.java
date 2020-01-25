@@ -27,10 +27,12 @@ public class TextGenAspectDescriptor extends TextGenAspectBase {
         return new Action_TextGen();
       case LanguageConceptSwitch.Actuator:
         return new Actuator_TextGen();
+      case LanguageConceptSwitch.AnalogSensor:
+        return new AnalogSensor_TextGen();
       case LanguageConceptSwitch.App:
         return new App_TextGen();
-      case LanguageConceptSwitch.Sensor:
-        return new Sensor_TextGen();
+      case LanguageConceptSwitch.DigitalSensor:
+        return new DigitalSensor_TextGen();
       case LanguageConceptSwitch.State:
         return new State_TextGen();
       case LanguageConceptSwitch.Transition:

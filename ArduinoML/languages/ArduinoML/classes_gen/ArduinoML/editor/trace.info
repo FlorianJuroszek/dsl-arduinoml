@@ -20,7 +20,7 @@
       <unit at="26,0,98,0" name="ArduinoML.editor.Action_SubstituteMenu" />
     </file>
     <file name="EditorAspectDescriptorImpl.java">
-      <unit at="17,0,77,0" name="ArduinoML.editor.EditorAspectDescriptorImpl" />
+      <unit at="17,0,79,0" name="ArduinoML.editor.EditorAspectDescriptorImpl" />
     </file>
     <file name="Transition_SubstituteMenu.java">
       <unit at="90,0,93,0" name="ArduinoML.editor.Transition_SubstituteMenu$CONCEPTS" />
@@ -178,66 +178,6 @@
       <unit id="2776581263317563505" at="106,102,110,7" name="ArduinoML.editor.CommonBrickProperties_ComponentBuilder_a$2" />
       <unit id="2776581263317563418" at="121,0,125,0" name="ArduinoML.editor.CommonBrickProperties_ComponentBuilder_a$PROPS" />
       <unit id="2776581263317563418" at="30,0,130,0" name="ArduinoML.editor.CommonBrickProperties_ComponentBuilder_a" />
-    </file>
-  </root>
-  <root nodeRef="r:db448323-31f6-437e-a2cc-e81f7d6fec90(ArduinoML.editor)/2776581263317563511">
-    <file name="Sensor_Editor.java">
-      <node id="2776581263317563511" at="11,79,12,72" concept="6" />
-      <node id="2776581263317563511" at="11,0,14,0" concept="4" trace="createEditorCell#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
-      <scope id="2776581263317563511" at="11,79,12,72" />
-      <scope id="2776581263317563511" at="11,0,14,0">
-        <var name="editorContext" id="2776581263317563511" />
-        <var name="node" id="2776581263317563511" />
-      </scope>
-      <unit id="2776581263317563511" at="10,0,15,0" name="ArduinoML.editor.Sensor_Editor" />
-    </file>
-    <file name="Sensor_EditorBuilder_a.java">
-      <node id="2776581263317563511" at="18,86,19,19" concept="9" />
-      <node id="2776581263317563511" at="19,19,20,18" concept="1" />
-      <node id="2776581263317563511" at="25,26,26,18" concept="6" />
-      <node id="2776581263317563511" at="29,39,30,32" concept="6" />
-      <node id="2776581263317563511" at="33,43,34,118" concept="5" />
-      <node id="2776581263317563511" at="34,118,35,48" concept="1" />
-      <node id="2776581263317563511" at="35,48,36,28" concept="1" />
-      <node id="2776581263317563511" at="36,28,37,31" concept="1" />
-      <node id="2776581263317563520" at="37,31,38,49" concept="1" />
-      <node id="2776581263317563526" at="38,49,39,50" concept="1" />
-      <node id="2776581263317563511" at="39,50,40,22" concept="6" />
-      <node id="2776581263317563520" at="42,41,43,99" concept="5" />
-      <node id="2776581263317563520" at="43,99,44,47" concept="1" />
-      <node id="2776581263317563520" at="44,47,45,34" concept="1" />
-      <node id="2776581263317563520" at="45,34,46,22" concept="6" />
-      <node id="2776581263317563526" at="48,42,49,121" concept="5" />
-      <node id="2776581263317563526" at="49,121,50,22" concept="6" />
-      <node id="2776581263317563511" at="15,0,17,0" concept="2" trace="myNode" />
-      <node id="2776581263317563511" at="29,0,32,0" concept="4" trace="createCell#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
-      <node id="2776581263317563511" at="18,0,22,0" concept="0" trace="Sensor_EditorBuilder_a#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)V" />
-      <node id="2776581263317563526" at="48,0,52,0" concept="4" trace="createComponent_0#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
-      <node id="2776581263317563511" at="23,0,28,0" concept="4" trace="getNode#()Lorg/jetbrains/mps/openapi/model/SNode;" />
-      <node id="2776581263317563520" at="42,0,48,0" concept="4" trace="createConstant_0#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
-      <node id="2776581263317563511" at="33,0,42,0" concept="4" trace="createCollection_0#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
-      <scope id="2776581263317563511" at="25,26,26,18" />
-      <scope id="2776581263317563511" at="29,39,30,32" />
-      <scope id="2776581263317563511" at="18,86,20,18" />
-      <scope id="2776581263317563526" at="48,42,50,22">
-        <var name="editorCell" id="2776581263317563526" />
-      </scope>
-      <scope id="2776581263317563511" at="29,0,32,0" />
-      <scope id="2776581263317563511" at="18,0,22,0">
-        <var name="context" id="2776581263317563511" />
-        <var name="node" id="2776581263317563511" />
-      </scope>
-      <scope id="2776581263317563520" at="42,41,46,22">
-        <var name="editorCell" id="2776581263317563520" />
-      </scope>
-      <scope id="2776581263317563526" at="48,0,52,0" />
-      <scope id="2776581263317563511" at="23,0,28,0" />
-      <scope id="2776581263317563520" at="42,0,48,0" />
-      <scope id="2776581263317563511" at="33,43,40,22">
-        <var name="editorCell" id="2776581263317563511" />
-      </scope>
-      <scope id="2776581263317563511" at="33,0,42,0" />
-      <unit id="2776581263317563511" at="14,0,53,0" name="ArduinoML.editor.Sensor_EditorBuilder_a" />
     </file>
   </root>
   <root nodeRef="r:db448323-31f6-437e-a2cc-e81f7d6fec90(ArduinoML.editor)/3943742123535533508">
@@ -897,6 +837,126 @@
       <unit id="3943742123535534331" at="157,0,214,0" name="ArduinoML.editor.App_EditorBuilder_a$bricksListHandler_g38wqt_b3a" />
       <unit id="3943742123535534331" at="251,0,308,0" name="ArduinoML.editor.App_EditorBuilder_a$statesListHandler_g38wqt_b6a" />
       <unit id="3943742123535534331" at="46,0,324,0" name="ArduinoML.editor.App_EditorBuilder_a" />
+    </file>
+  </root>
+  <root nodeRef="r:db448323-31f6-437e-a2cc-e81f7d6fec90(ArduinoML.editor)/4692080444383356701">
+    <file name="DigitalSensor_Editor.java">
+      <node id="4692080444383356701" at="11,79,12,79" concept="6" />
+      <node id="4692080444383356701" at="11,0,14,0" concept="4" trace="createEditorCell#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <scope id="4692080444383356701" at="11,79,12,79" />
+      <scope id="4692080444383356701" at="11,0,14,0">
+        <var name="editorContext" id="4692080444383356701" />
+        <var name="node" id="4692080444383356701" />
+      </scope>
+      <unit id="4692080444383356701" at="10,0,15,0" name="ArduinoML.editor.DigitalSensor_Editor" />
+    </file>
+    <file name="DigitalSensor_EditorBuilder_a.java">
+      <node id="4692080444383356701" at="18,93,19,19" concept="9" />
+      <node id="4692080444383356701" at="19,19,20,18" concept="1" />
+      <node id="4692080444383356701" at="25,26,26,18" concept="6" />
+      <node id="4692080444383356701" at="29,39,30,32" concept="6" />
+      <node id="4692080444383356701" at="33,43,34,118" concept="5" />
+      <node id="4692080444383356701" at="34,118,35,48" concept="1" />
+      <node id="4692080444383356701" at="35,48,36,28" concept="1" />
+      <node id="4692080444383356701" at="36,28,37,31" concept="1" />
+      <node id="4692080444383356710" at="37,31,38,49" concept="1" />
+      <node id="4692080444383356716" at="38,49,39,50" concept="1" />
+      <node id="4692080444383356701" at="39,50,40,22" concept="6" />
+      <node id="4692080444383356710" at="42,41,43,101" concept="5" />
+      <node id="4692080444383356710" at="43,101,44,47" concept="1" />
+      <node id="4692080444383356710" at="44,47,45,34" concept="1" />
+      <node id="4692080444383356710" at="45,34,46,22" concept="6" />
+      <node id="4692080444383356716" at="48,42,49,121" concept="5" />
+      <node id="4692080444383356716" at="49,121,50,22" concept="6" />
+      <node id="4692080444383356701" at="15,0,17,0" concept="2" trace="myNode" />
+      <node id="4692080444383356701" at="29,0,32,0" concept="4" trace="createCell#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <node id="4692080444383356701" at="18,0,22,0" concept="0" trace="DigitalSensor_EditorBuilder_a#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="4692080444383356716" at="48,0,52,0" concept="4" trace="createComponent_0#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <node id="4692080444383356701" at="23,0,28,0" concept="4" trace="getNode#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="4692080444383356710" at="42,0,48,0" concept="4" trace="createConstant_0#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <node id="4692080444383356701" at="33,0,42,0" concept="4" trace="createCollection_0#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <scope id="4692080444383356701" at="25,26,26,18" />
+      <scope id="4692080444383356701" at="29,39,30,32" />
+      <scope id="4692080444383356701" at="18,93,20,18" />
+      <scope id="4692080444383356716" at="48,42,50,22">
+        <var name="editorCell" id="4692080444383356716" />
+      </scope>
+      <scope id="4692080444383356701" at="29,0,32,0" />
+      <scope id="4692080444383356701" at="18,0,22,0">
+        <var name="context" id="4692080444383356701" />
+        <var name="node" id="4692080444383356701" />
+      </scope>
+      <scope id="4692080444383356710" at="42,41,46,22">
+        <var name="editorCell" id="4692080444383356710" />
+      </scope>
+      <scope id="4692080444383356716" at="48,0,52,0" />
+      <scope id="4692080444383356701" at="23,0,28,0" />
+      <scope id="4692080444383356710" at="42,0,48,0" />
+      <scope id="4692080444383356701" at="33,43,40,22">
+        <var name="editorCell" id="4692080444383356701" />
+      </scope>
+      <scope id="4692080444383356701" at="33,0,42,0" />
+      <unit id="4692080444383356701" at="14,0,53,0" name="ArduinoML.editor.DigitalSensor_EditorBuilder_a" />
+    </file>
+  </root>
+  <root nodeRef="r:db448323-31f6-437e-a2cc-e81f7d6fec90(ArduinoML.editor)/4692080444383356729">
+    <file name="AnalogSensor_Editor.java">
+      <node id="4692080444383356729" at="11,79,12,78" concept="6" />
+      <node id="4692080444383356729" at="11,0,14,0" concept="4" trace="createEditorCell#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <scope id="4692080444383356729" at="11,79,12,78" />
+      <scope id="4692080444383356729" at="11,0,14,0">
+        <var name="editorContext" id="4692080444383356729" />
+        <var name="node" id="4692080444383356729" />
+      </scope>
+      <unit id="4692080444383356729" at="10,0,15,0" name="ArduinoML.editor.AnalogSensor_Editor" />
+    </file>
+    <file name="AnalogSensor_EditorBuilder_a.java">
+      <node id="4692080444383356729" at="18,92,19,19" concept="9" />
+      <node id="4692080444383356729" at="19,19,20,18" concept="1" />
+      <node id="4692080444383356729" at="25,26,26,18" concept="6" />
+      <node id="4692080444383356729" at="29,39,30,32" concept="6" />
+      <node id="4692080444383356729" at="33,43,34,118" concept="5" />
+      <node id="4692080444383356729" at="34,118,35,48" concept="1" />
+      <node id="4692080444383356729" at="35,48,36,28" concept="1" />
+      <node id="4692080444383356729" at="36,28,37,31" concept="1" />
+      <node id="4692080444383356738" at="37,31,38,49" concept="1" />
+      <node id="4692080444383356744" at="38,49,39,50" concept="1" />
+      <node id="4692080444383356729" at="39,50,40,22" concept="6" />
+      <node id="4692080444383356738" at="42,41,43,101" concept="5" />
+      <node id="4692080444383356738" at="43,101,44,47" concept="1" />
+      <node id="4692080444383356738" at="44,47,45,34" concept="1" />
+      <node id="4692080444383356738" at="45,34,46,22" concept="6" />
+      <node id="4692080444383356744" at="48,42,49,121" concept="5" />
+      <node id="4692080444383356744" at="49,121,50,22" concept="6" />
+      <node id="4692080444383356729" at="15,0,17,0" concept="2" trace="myNode" />
+      <node id="4692080444383356729" at="29,0,32,0" concept="4" trace="createCell#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <node id="4692080444383356729" at="18,0,22,0" concept="0" trace="AnalogSensor_EditorBuilder_a#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="4692080444383356744" at="48,0,52,0" concept="4" trace="createComponent_0#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <node id="4692080444383356729" at="23,0,28,0" concept="4" trace="getNode#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="4692080444383356738" at="42,0,48,0" concept="4" trace="createConstant_0#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <node id="4692080444383356729" at="33,0,42,0" concept="4" trace="createCollection_0#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <scope id="4692080444383356729" at="25,26,26,18" />
+      <scope id="4692080444383356729" at="29,39,30,32" />
+      <scope id="4692080444383356729" at="18,92,20,18" />
+      <scope id="4692080444383356744" at="48,42,50,22">
+        <var name="editorCell" id="4692080444383356744" />
+      </scope>
+      <scope id="4692080444383356729" at="29,0,32,0" />
+      <scope id="4692080444383356729" at="18,0,22,0">
+        <var name="context" id="4692080444383356729" />
+        <var name="node" id="4692080444383356729" />
+      </scope>
+      <scope id="4692080444383356738" at="42,41,46,22">
+        <var name="editorCell" id="4692080444383356738" />
+      </scope>
+      <scope id="4692080444383356744" at="48,0,52,0" />
+      <scope id="4692080444383356729" at="23,0,28,0" />
+      <scope id="4692080444383356738" at="42,0,48,0" />
+      <scope id="4692080444383356729" at="33,43,40,22">
+        <var name="editorCell" id="4692080444383356729" />
+      </scope>
+      <scope id="4692080444383356729" at="33,0,42,0" />
+      <unit id="4692080444383356729" at="14,0,53,0" name="ArduinoML.editor.AnalogSensor_EditorBuilder_a" />
     </file>
   </root>
   <root nodeRef="r:db448323-31f6-437e-a2cc-e81f7d6fec90(ArduinoML.editor)/5006217702052999808">

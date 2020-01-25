@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <product version="3" modelHash="1bbm2jrl197qnmj3l32f7jl7tv0flh7">
+=======
+<product version="3" modelHash="3itndb5esra9vq6infep8gw4n0sooja">
+>>>>>>> 94fdb44a47437aa60384b04d2c64f112000ec42f
   <files names="main.c" />
 </product>
 

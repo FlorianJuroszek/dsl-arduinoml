@@ -162,18 +162,6 @@
       <node concept="l2Vlx" id="2q8pvaM37wv" role="2iSdaV" />
     </node>
   </node>
-  <node concept="24kQdi" id="2q8pvaM37xR">
-    <ref role="1XX52x" to="c1p6:2q8pvaM37wp" resolve="Sensor" />
-    <node concept="3EZMnI" id="2q8pvaM37xT" role="2wV5jI">
-      <node concept="3F0ifn" id="2q8pvaM37y0" role="3EZMnx">
-        <property role="3F0ifm" value="sensor" />
-      </node>
-      <node concept="PMmxH" id="2q8pvaM37y6" role="3EZMnx">
-        <ref role="PMmxG" node="2q8pvaM37wq" resolve="CommonBrickProperties" />
-      </node>
-      <node concept="l2Vlx" id="2q8pvaM37xW" role="2iSdaV" />
-    </node>
-  </node>
   <node concept="24kQdi" id="C0N_wVa6iw">
     <ref role="1XX52x" to="c1p6:C0N_wVa3aq" resolve="Transition" />
     <node concept="3EZMnI" id="4lTE7Bn9Zdz" role="2wV5jI">
@@ -245,6 +233,7 @@
         </node>
         <node concept="l2Vlx" id="C0N_wVbjWr" role="2iSdaV" />
       </node>
+      <node concept="2iRkQZ" id="C0N_wVb2u2" role="2iSdaV" />
       <node concept="3F0ifn" id="7eXB7kk_86D" role="3EZMnx">
         <property role="3F0ifm" value="transitions:" />
       </node>
@@ -261,7 +250,6 @@
         <node concept="l2Vlx" id="7eXB7kk$hM0" role="2iSdaV" />
       </node>
       <node concept="35HoNQ" id="7eXB7kk$YUJ" role="3EZMnx" />
-      <node concept="2iRkQZ" id="C0N_wVb2u2" role="2iSdaV" />
     </node>
   </node>
   <node concept="24kQdi" id="4lTE7Bn93a0">
@@ -283,6 +271,30 @@
       <node concept="3F0A7n" id="4lTE7Bn93bj" role="3EZMnx">
         <ref role="1NtTu8" to="c1p6:4lTE7Bn939_" resolve="signal" />
       </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="44tB$RL1Ist">
+    <ref role="1XX52x" to="c1p6:44tB$RL1EJQ" resolve="DigitalSensor" />
+    <node concept="3EZMnI" id="44tB$RL1Isv" role="2wV5jI">
+      <node concept="3F0ifn" id="44tB$RL1IsA" role="3EZMnx">
+        <property role="3F0ifm" value="d_sensor" />
+      </node>
+      <node concept="PMmxH" id="44tB$RL1IsG" role="3EZMnx">
+        <ref role="PMmxG" node="2q8pvaM37wq" resolve="CommonBrickProperties" />
+      </node>
+      <node concept="l2Vlx" id="44tB$RL1Isy" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="44tB$RL1IsT">
+    <ref role="1XX52x" to="c1p6:44tB$RL1EJR" resolve="AnalogSensor" />
+    <node concept="3EZMnI" id="44tB$RL1IsV" role="2wV5jI">
+      <node concept="3F0ifn" id="44tB$RL1It2" role="3EZMnx">
+        <property role="3F0ifm" value="a_sensor" />
+      </node>
+      <node concept="PMmxH" id="44tB$RL1It8" role="3EZMnx">
+        <ref role="PMmxG" node="2q8pvaM37wq" resolve="CommonBrickProperties" />
+      </node>
+      <node concept="l2Vlx" id="44tB$RL1IsY" role="2iSdaV" />
     </node>
   </node>
 </model>
