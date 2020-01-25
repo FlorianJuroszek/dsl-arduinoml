@@ -16,6 +16,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Sensor;
   private ConceptPresentation props_State;
   private ConceptPresentation props_Transition;
+  private ConceptPresentation props_Tuple;
 
   @Override
   @Nullable
@@ -70,6 +71,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Transition = cpb.create();
         }
         return props_Transition;
+      case LanguageConceptSwitch.Tuple:
+        if (props_Tuple == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_Tuple = cpb.create();
+        }
+        return props_Tuple;
     }
     return null;
   }

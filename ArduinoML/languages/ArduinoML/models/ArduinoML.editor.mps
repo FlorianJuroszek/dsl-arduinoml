@@ -177,35 +177,36 @@
   </node>
   <node concept="24kQdi" id="C0N_wVa6iw">
     <ref role="1XX52x" to="c1p6:C0N_wVa3aq" resolve="Transition" />
-    <node concept="3EZMnI" id="C0N_wVa6iy" role="2wV5jI">
-      <node concept="1iCGBv" id="C0N_wVa6iD" role="3EZMnx">
-        <ref role="1NtTu8" to="c1p6:C0N_wVa3a_" resolve="sensor" />
-        <node concept="1sVBvm" id="C0N_wVa6iF" role="1sWHZn">
-          <node concept="3F0A7n" id="C0N_wVamx$" role="2wV5jI">
-            <property role="1Intyy" value="true" />
-            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+    <node concept="3EZMnI" id="4lTE7Bn9Zdz" role="2wV5jI">
+      <node concept="2iRkQZ" id="4lTE7Bn9Zd$" role="2iSdaV" />
+      <node concept="3EZMnI" id="4lTE7Bn9ZqT" role="3EZMnx">
+        <node concept="VPM3Z" id="4lTE7Bn9ZqV" role="3F10Kt" />
+        <node concept="3F2HdR" id="4lTE7Bn9Zr4" role="3EZMnx">
+          <ref role="1NtTu8" to="c1p6:4lTE7Bn939P" resolve="tuple" />
+          <node concept="2iRkQZ" id="4lTE7Bn9Zr7" role="2czzBx" />
+          <node concept="VPM3Z" id="4lTE7Bn9Zr8" role="3F10Kt" />
+          <node concept="3F0ifn" id="4lTE7Bn9Zrc" role="2czzBI">
+            <property role="3F0ifm" value="no tuple defined" />
           </node>
         </node>
+        <node concept="l2Vlx" id="4lTE7Bn9ZqY" role="2iSdaV" />
       </node>
-      <node concept="3F0ifn" id="C0N_wVaDtQ" role="3EZMnx">
-        <property role="3F0ifm" value="is" />
-      </node>
-      <node concept="3F0A7n" id="C0N_wVamxJ" role="3EZMnx">
-        <ref role="1NtTu8" to="c1p6:C0N_wVa3aC" resolve="value" />
-      </node>
-      <node concept="3F0ifn" id="C0N_wVadnV" role="3EZMnx">
-        <property role="3F0ifm" value="=&gt;" />
-      </node>
-      <node concept="1iCGBv" id="C0N_wVbbqB" role="3EZMnx">
-        <ref role="1NtTu8" to="c1p6:C0N_wVa3ar" resolve="next" />
-        <node concept="1sVBvm" id="C0N_wVbbqD" role="1sWHZn">
-          <node concept="3F0A7n" id="C0N_wVbbqQ" role="2wV5jI">
-            <property role="1Intyy" value="true" />
-            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+      <node concept="3EZMnI" id="4lTE7Bn9Zrn" role="3EZMnx">
+        <node concept="VPM3Z" id="4lTE7Bn9Zrp" role="3F10Kt" />
+        <node concept="3F0ifn" id="4lTE7Bn9Zrr" role="3EZMnx">
+          <property role="3F0ifm" value="=&gt;" />
+        </node>
+        <node concept="1iCGBv" id="4lTE7Bn9ZrG" role="3EZMnx">
+          <ref role="1NtTu8" to="c1p6:C0N_wVa3ar" resolve="next" />
+          <node concept="1sVBvm" id="4lTE7Bn9ZrI" role="1sWHZn">
+            <node concept="3F0A7n" id="4lTE7Bn9ZrQ" role="2wV5jI">
+              <property role="1Intyy" value="true" />
+              <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+            </node>
           </node>
         </node>
+        <node concept="l2Vlx" id="4lTE7Bn9Zrs" role="2iSdaV" />
       </node>
-      <node concept="2iRfu4" id="C0N_wVa6i_" role="2iSdaV" />
     </node>
   </node>
   <node concept="24kQdi" id="C0N_wVb2tX">
@@ -254,6 +255,27 @@
       </node>
       <node concept="35HoNQ" id="C0N_wVbjUP" role="3EZMnx" />
       <node concept="2iRkQZ" id="C0N_wVb2u2" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="4lTE7Bn93a0">
+    <ref role="1XX52x" to="c1p6:4lTE7Bn939y" resolve="Tuple" />
+    <node concept="3EZMnI" id="4lTE7Bn93a2" role="2wV5jI">
+      <node concept="2iRfu4" id="4lTE7Bn93a5" role="2iSdaV" />
+      <node concept="1iCGBv" id="4lTE7Bn93as" role="3EZMnx">
+        <ref role="1NtTu8" to="c1p6:4lTE7Bn939I" resolve="sensor" />
+        <node concept="1sVBvm" id="4lTE7Bn93au" role="1sWHZn">
+          <node concept="3F0A7n" id="4lTE7Bn93aD" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
+      <node concept="3F0A7n" id="4lTE7Bn93bP" role="3EZMnx">
+        <ref role="1NtTu8" to="c1p6:4lTE7Bn939F" resolve="operator" />
+      </node>
+      <node concept="3F0A7n" id="4lTE7Bn93bj" role="3EZMnx">
+        <ref role="1NtTu8" to="c1p6:4lTE7Bn939_" resolve="signal" />
+      </node>
     </node>
   </node>
 </model>

@@ -169,19 +169,67 @@
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="3qUZ94756BJ" resolve="State" />
     </node>
-    <node concept="1TJgyj" id="C0N_wVa3a_" role="1TKVEi">
-      <property role="IQ2ns" value="720802818724213413" />
+    <node concept="PrWs8" id="C0N_wVad0d" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="PrWs8" id="7QdPs2MWgdF" role="PzmwI">
+      <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
+    </node>
+    <node concept="1TJgyj" id="4lTE7Bn939P" role="1TKVEi">
+      <property role="IQ2ns" value="5006217702052999797" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="tuple" />
+      <property role="20lbJX" value="fLJekj6/_1__n" />
+      <ref role="20lvS9" node="4lTE7Bn939y" resolve="Tuple" />
+    </node>
+  </node>
+  <node concept="AxPO7" id="4lTE7Bn9392">
+    <property role="3F6X1D" value="5006217702052999746" />
+    <property role="TrG5h" value="OPERATOR" />
+    <ref role="M4eZT" to="tpck:fKAOsGN" resolve="string" />
+    <node concept="M4N5e" id="4lTE7Bn9394" role="M5hS2">
+      <property role="1uS6qo" value="equals" />
+      <property role="1uS6qv" value="==" />
+    </node>
+    <node concept="M4N5e" id="4lTE7Bn9393" role="M5hS2">
+      <property role="1uS6qo" value="greater" />
+      <property role="1uS6qv" value="&gt;" />
+    </node>
+    <node concept="M4N5e" id="4lTE7Bn9397" role="M5hS2">
+      <property role="1uS6qo" value="greater_or_equals" />
+      <property role="1uS6qv" value="&gt;=" />
+    </node>
+    <node concept="M4N5e" id="4lTE7Bn939b" role="M5hS2">
+      <property role="1uS6qo" value="lower" />
+      <property role="1uS6qv" value="&lt;" />
+    </node>
+    <node concept="M4N5e" id="4lTE7Bn939g" role="M5hS2">
+      <property role="1uS6qo" value="lower_or_equals" />
+      <property role="1uS6qv" value="&lt;=" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4lTE7Bn939y">
+    <property role="EcuMT" value="5006217702052999778" />
+    <property role="TrG5h" value="Tuple" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="4lTE7Bn939z" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="1TJgyi" id="4lTE7Bn939_" role="1TKVEl">
+      <property role="IQ2nx" value="5006217702052999781" />
+      <property role="TrG5h" value="signal" />
+      <ref role="AX2Wp" node="3qUZ94756Bz" resolve="SIGNAL" />
+    </node>
+    <node concept="1TJgyi" id="4lTE7Bn939F" role="1TKVEl">
+      <property role="IQ2nx" value="5006217702052999787" />
+      <property role="TrG5h" value="operator" />
+      <ref role="AX2Wp" node="4lTE7Bn9392" resolve="OPERATOR" />
+    </node>
+    <node concept="1TJgyj" id="4lTE7Bn939I" role="1TKVEi">
+      <property role="IQ2ns" value="5006217702052999790" />
       <property role="20kJfa" value="sensor" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="2q8pvaM37wp" resolve="Sensor" />
-    </node>
-    <node concept="1TJgyi" id="C0N_wVa3aC" role="1TKVEl">
-      <property role="IQ2nx" value="720802818724213416" />
-      <property role="TrG5h" value="value" />
-      <ref role="AX2Wp" node="3qUZ94756Bz" resolve="SIGNAL" />
-    </node>
-    <node concept="PrWs8" id="C0N_wVad0d" role="PzmwI">
-      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
   </node>
 </model>

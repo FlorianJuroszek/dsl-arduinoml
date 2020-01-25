@@ -35,6 +35,8 @@ public class TextGenAspectDescriptor extends TextGenAspectBase {
         return new State_TextGen();
       case LanguageConceptSwitch.Transition:
         return new Transition_TextGen();
+      case LanguageConceptSwitch.Tuple:
+        return new Tuple_TextGen();
     }
     return null;
   }

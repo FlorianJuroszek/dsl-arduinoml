@@ -719,36 +719,44 @@
         <node concept="1bpajm" id="4lTE7Bn8SLt" role="3cqZAp" />
         <node concept="lc7rE" id="C0N_wVbDB2" role="3cqZAp">
           <node concept="la8eA" id="C0N_wVbKTs" role="lcghm">
-            <property role="lacIc" value="if (digitalRead(" />
+            <property role="lacIc" value="if (" />
           </node>
-          <node concept="l9hG8" id="C0N_wVbKZa" role="lcghm">
-            <node concept="2OqwBi" id="C0N_wVbLv0" role="lb14g">
-              <node concept="2OqwBi" id="C0N_wVbL9C" role="2Oq$k0">
-                <node concept="117lpO" id="C0N_wVbL0f" role="2Oq$k0" />
-                <node concept="3TrEf2" id="C0N_wVbLiy" role="2OqNvi">
-                  <ref role="3Tt5mk" to="c1p6:C0N_wVa3a_" resolve="sensor" />
+        </node>
+        <node concept="3clFbF" id="4lTE7Bn9psO" role="3cqZAp">
+          <node concept="2OqwBi" id="4lTE7Bn9r0b" role="3clFbG">
+            <node concept="2OqwBi" id="4lTE7Bn9p$6" role="2Oq$k0">
+              <node concept="117lpO" id="4lTE7Bn9psM" role="2Oq$k0" />
+              <node concept="3Tsc0h" id="4lTE7Bn9pH3" role="2OqNvi">
+                <ref role="3TtcxE" to="c1p6:4lTE7Bn939P" resolve="tuple" />
+              </node>
+            </node>
+            <node concept="2es0OD" id="4lTE7Bn9ss5" role="2OqNvi">
+              <node concept="1bVj0M" id="4lTE7Bn9ss7" role="23t8la">
+                <node concept="3clFbS" id="4lTE7Bn9ss8" role="1bW5cS">
+                  <node concept="lc7rE" id="4lTE7Bn9uap" role="3cqZAp">
+                    <node concept="l9hG8" id="4lTE7Bn9uiZ" role="lcghm">
+                      <node concept="37vLTw" id="4lTE7Bn9unU" role="lb14g">
+                        <ref role="3cqZAo" node="4lTE7Bn9ss9" resolve="it" />
+                      </node>
+                    </node>
+                    <node concept="la8eA" id="4lTE7Bn9u$S" role="lcghm">
+                      <property role="lacIc" value=" &amp;&amp; " />
+                    </node>
+                  </node>
+                </node>
+                <node concept="Rh6nW" id="4lTE7Bn9ss9" role="1bW2Oz">
+                  <property role="TrG5h" value="it" />
+                  <node concept="2jxLKc" id="4lTE7Bn9ssa" role="1tU5fm" />
                 </node>
               </node>
-              <node concept="3TrcHB" id="C0N_wVbLFf" role="2OqNvi">
-                <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
-              </node>
             </node>
           </node>
-          <node concept="la8eA" id="C0N_wVbLQ7" role="lcghm">
-            <property role="lacIc" value=") == " />
+        </node>
+        <node concept="lc7rE" id="4lTE7Bn9tcb" role="3cqZAp">
+          <node concept="la8eA" id="4lTE7Bn9tfX" role="lcghm">
+            <property role="lacIc" value=" guard) {" />
           </node>
-          <node concept="l9hG8" id="C0N_wVbLUk" role="lcghm">
-            <node concept="2OqwBi" id="C0N_wVbMhk" role="lb14g">
-              <node concept="117lpO" id="C0N_wVbM8J" role="2Oq$k0" />
-              <node concept="3TrcHB" id="C0N_wVbM$d" role="2OqNvi">
-                <ref role="3TsBF5" to="c1p6:C0N_wVa3aC" resolve="value" />
-              </node>
-            </node>
-          </node>
-          <node concept="la8eA" id="C0N_wVbME$" role="lcghm">
-            <property role="lacIc" value=" &amp;&amp; guard) {" />
-          </node>
-          <node concept="l8MVK" id="C0N_wVbMIo" role="lcghm" />
+          <node concept="l8MVK" id="4lTE7Bn9thM" role="lcghm" />
         </node>
         <node concept="1bpajm" id="C0N_wVcueI" role="3cqZAp" />
         <node concept="1bpajm" id="C0N_wVcDLZ" role="3cqZAp" />
@@ -788,7 +796,56 @@
             <property role="lacIc" value="}" />
           </node>
         </node>
-        <node concept="3clFbH" id="C0N_wVbKVj" role="3cqZAp" />
+      </node>
+    </node>
+  </node>
+  <node concept="WtQ9Q" id="4lTE7Bn9mEV">
+    <ref role="WuzLi" to="c1p6:4lTE7Bn939y" resolve="Tuple" />
+    <node concept="11bSqf" id="4lTE7Bn9mEW" role="11c4hB">
+      <node concept="3clFbS" id="4lTE7Bn9mEX" role="2VODD2">
+        <node concept="lc7rE" id="4lTE7Bn9mWu" role="3cqZAp">
+          <node concept="la8eA" id="4lTE7Bn9mX0" role="lcghm">
+            <property role="lacIc" value="digitalRead(" />
+          </node>
+          <node concept="l9hG8" id="4lTE7Bn9mZI" role="lcghm">
+            <node concept="2OqwBi" id="4lTE7Bn9nu6" role="lb14g">
+              <node concept="2OqwBi" id="4lTE7Bn9n9x" role="2Oq$k0">
+                <node concept="117lpO" id="4lTE7Bn9n0N" role="2Oq$k0" />
+                <node concept="3TrEf2" id="4lTE7Bn9nir" role="2OqNvi">
+                  <ref role="3Tt5mk" to="c1p6:4lTE7Bn939I" resolve="sensor" />
+                </node>
+              </node>
+              <node concept="3TrcHB" id="4lTE7Bn9nEd" role="2OqNvi">
+                <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+              </node>
+            </node>
+          </node>
+          <node concept="la8eA" id="4lTE7Bn9nM3" role="lcghm">
+            <property role="lacIc" value=") " />
+          </node>
+          <node concept="l9hG8" id="4lTE7Bn9oaS" role="lcghm">
+            <node concept="2OqwBi" id="4lTE7Bn9ojH" role="lb14g">
+              <node concept="117lpO" id="4lTE7Bn9ocU" role="2Oq$k0" />
+              <node concept="3TrcHB" id="4lTE7Bn9osB" role="2OqNvi">
+                <ref role="3TsBF5" to="c1p6:4lTE7Bn939F" resolve="operator" />
+              </node>
+            </node>
+          </node>
+          <node concept="la8eA" id="4lTE7Bn9ozh" role="lcghm">
+            <property role="lacIc" value=" " />
+          </node>
+          <node concept="l9hG8" id="4lTE7Bn9nO$" role="lcghm">
+            <node concept="2OqwBi" id="4lTE7Bn9nYK" role="lb14g">
+              <node concept="117lpO" id="4lTE7Bn9nQb" role="2Oq$k0" />
+              <node concept="3TrcHB" id="4lTE7Bn9o7E" role="2OqNvi">
+                <ref role="3TsBF5" to="c1p6:4lTE7Bn939_" resolve="signal" />
+              </node>
+            </node>
+          </node>
+          <node concept="la8eA" id="4lTE7Bn9oBw" role="lcghm">
+            <property role="lacIc" value=") " />
+          </node>
+        </node>
       </node>
     </node>
   </node>
