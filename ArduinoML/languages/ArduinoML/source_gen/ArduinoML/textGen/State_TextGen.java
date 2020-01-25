@@ -44,7 +44,9 @@ public class State_TextGen extends TextGenDescriptorBase {
     tgs.append(" \\n\");");
     tgs.newLine();
     tgs.indent();
-    tgs.appendNode(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.transition$rzLd));
+    for (SNode item : SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.transitions$rzLd)) {
+      tgs.appendNode(item);
+    }
     tgs.newLine();
     tgs.indent();
     tgs.append("else {");
@@ -71,6 +73,6 @@ public class State_TextGen extends TextGenDescriptorBase {
   private static final class LINKS {
     /*package*/ static final SContainmentLink actions$LK_u = MetaAdapterFactory.getContainmentLink(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469efL, 0x36bafc91071469f2L, "actions");
     /*package*/ static final SReferenceLink target$LKy8 = MetaAdapterFactory.getReferenceLink(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469deL, 0x36bafc91071469edL, "target");
-    /*package*/ static final SContainmentLink transition$rzLd = MetaAdapterFactory.getContainmentLink(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469efL, 0xa00ce583b2832a2L, "transition");
+    /*package*/ static final SContainmentLink transitions$rzLd = MetaAdapterFactory.getContainmentLink(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469efL, 0xa00ce583b2832a2L, "transitions");
   }
 }

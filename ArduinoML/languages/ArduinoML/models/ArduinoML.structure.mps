@@ -104,8 +104,8 @@
     <node concept="1TJgyj" id="C0N_wVa3ay" role="1TKVEi">
       <property role="IQ2ns" value="720802818724213410" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="transition" />
-      <property role="20lbJX" value="fLJekj4/_1" />
+      <property role="20kJfa" value="transitions" />
+      <property role="20lbJX" value="fLJekj6/_1__n" />
       <ref role="20lvS9" node="C0N_wVa3aq" resolve="Transition" />
     </node>
     <node concept="1TJgyi" id="C0N_wVa6hD" role="1TKVEl">

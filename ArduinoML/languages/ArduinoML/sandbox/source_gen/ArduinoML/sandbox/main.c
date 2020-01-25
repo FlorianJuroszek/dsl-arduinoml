@@ -2,50 +2,92 @@
 #include <util/delay.h>
 #include <Arduino.h>
 
-/** Generating code for application Scenario3**/
+/** Generating code for application Scenario2**/
 
 // Declaring states function headers 
-void state_on3();
-void state_off3();
+void state_buzzerOff();
+void state_oneButtonPressed();
+void state_buzzerOn2();
 
 // Declaring available actuators 
-int theLed3 = 12;
-int theButton3 = 10;
+int theBuzzer2 = 11;
+int theButton2_1 = 10;
+int theButton2_2 = 9;
+
+long time = 0;
+long debounce = 200;
 
 // Declaring states 
-void state_on3()
+void state_buzzerOff()
 {
-  digitalWrite(theLed3, HIGH);
-  Serial.print("on3 \n");
-  boolean guard = millis() - time > debounce;if (digitalRead(theButton3) == HIGH && guard) {
-    state_off3();
+  digitalWrite(theBuzzer2, LOW);
+  Serial.print("buzzerOff \n");
+  boolean guard = millis() - time > debounce;
+  if (digitalRead(theButton2_1) == HIGH)  && digitalRead(theButton2_2) == LOW)  &&  guard) {
+    time = millis();
+    state_oneButtonPressed();
+  }boolean guard = millis() - time > debounce;
+  if (digitalRead(theButton2_1) == LOW)  && digitalRead(theButton2_2) == HIGH)  &&  guard) {
+    time = millis();
+    state_oneButtonPressed();
+  }boolean guard = millis() - time > debounce;
+  if (digitalRead(theButton2_1) == HIGH)  && digitalRead(theButton2_2) == HIGH)  &&  guard) {
+    time = millis();
+    state_buzzerOn2();
   }
   else {
-    state_on3();
+    state_buzzerOff();
   }
 }
 
-void state_off3()
+void state_oneButtonPressed()
 {
-  digitalWrite(theLed3, LOW);
-  Serial.print("off3 \n");
-  boolean guard = millis() - time > debounce;if (digitalRead(theButton3) == HIGH && guard) {
-    state_on3();
+  digitalWrite(theBuzzer2, LOW);
+  Serial.print("oneButtonPressed \n");
+  boolean guard = millis() - time > debounce;
+  if (digitalRead(theButton2_1) == HIGH)  && digitalRead(theButton2_2) == HIGH)  &&  guard) {
+    time = millis();
+    state_buzzerOn2();
+  }boolean guard = millis() - time > debounce;
+  if (digitalRead(theButton2_1) == LOW)  && digitalRead(theButton2_2) == LOW)  &&  guard) {
+    time = millis();
+    state_buzzerOff();
   }
   else {
-    state_off3();
+    state_oneButtonPressed();
+  }
+}
+
+void state_buzzerOn2()
+{
+  digitalWrite(theBuzzer2, HIGH);
+  Serial.print("buzzerOn2 \n");
+  boolean guard = millis() - time > debounce;
+  if (digitalRead(theButton2_1) == HIGH)  && digitalRead(theButton2_2) == LOW)  &&  guard) {
+    time = millis();
+    state_oneButtonPressed();
+  }boolean guard = millis() - time > debounce;
+  if (digitalRead(theButton2_1) == LOW)  && digitalRead(theButton2_2) == HIGH)  &&  guard) {
+    time = millis();
+    state_oneButtonPressed();
+  }boolean guard = millis() - time > debounce;
+  if (digitalRead(theButton2_1) == LOW)  && digitalRead(theButton2_2) == LOW)  &&  guard) {
+    time = millis();
+    state_buzzerOff();
+  }
+  else {
+    state_buzzerOn2();
   }
 }
 
 
 void setup() {
   Serial.begin(9600);
-  pinMode(theLed3, OUTPUT);
-  pinMode(theButton3, INPUT);
+  pinMode(theBuzzer2, OUTPUT);
+  pinMode(theButton2_1, INPUT);
+  pinMode(theButton2_2, INPUT);
 }
 
 void loop() {
-  long time = 0;
-long debounce = 200;
-state_off3();
+  state_buzzerOff();
 }
