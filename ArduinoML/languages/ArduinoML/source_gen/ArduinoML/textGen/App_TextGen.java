@@ -65,6 +65,7 @@ public class App_TextGen extends TextGenDescriptorBase {
     tgs.newLine();
     tgs.append("long debounce = 200;");
     tgs.newLine();
+
     tgs.newLine();
     tgs.append("// Declaring states ");
     tgs.newLine();
@@ -103,10 +104,6 @@ public class App_TextGen extends TextGenDescriptorBase {
             tgs.newLine();
           }
         }
-        if (SNodeOperations.isInstanceOf(it, CONCEPTS.LcdScreen$cj)) {
-          tgs.append("lcd.begin(16,2);");
-          tgs.newLine();
-        }
       }
     });
     ctx.getBuffer().area().decreaseIndent();
@@ -116,8 +113,8 @@ public class App_TextGen extends TextGenDescriptorBase {
     tgs.append("void loop() {");
     tgs.newLine();
     ctx.getBuffer().area().increaseIndent();
-    tgs.indent();
     if (SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.states$LKNY).size() > 0) {
+      tgs.indent();
       tgs.append("state_");
       tgs.append(SPropertyOperations.getString(ListSequence.fromList(SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.states$LKNY)).findFirst(new IWhereFilter<SNode>() {
         public boolean accept(SNode it) {
@@ -144,6 +141,5 @@ public class App_TextGen extends TextGenDescriptorBase {
   private static final class CONCEPTS {
     /*package*/ static final SConcept Actuator$PN = MetaAdapterFactory.getConcept(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469e8L, "ArduinoML.structure.Actuator");
     /*package*/ static final SConcept Sensor$s5 = MetaAdapterFactory.getConcept(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x268865f2b20c7819L, "ArduinoML.structure.Sensor");
-    /*package*/ static final SConcept LcdScreen$cj = MetaAdapterFactory.getConcept(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x5a540d960905d9bdL, "ArduinoML.structure.LcdScreen");
   }
 }

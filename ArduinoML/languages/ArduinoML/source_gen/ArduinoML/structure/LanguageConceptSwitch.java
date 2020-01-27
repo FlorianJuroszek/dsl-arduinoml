@@ -12,23 +12,27 @@ public final class LanguageConceptSwitch {
   public static final int Action = 0;
   public static final int Actuator = 1;
   public static final int AnalogSensor = 2;
-  public static final int App = 3;
-  public static final int Brick = 4;
-  public static final int DigitalSensor = 5;
-  public static final int LcdScreen = 6;
-  public static final int Sensor = 7;
-  public static final int State = 8;
-  public static final int Transition = 9;
-  public static final int Tuple = 10;
+  public static final int AnalogicalTuple = 3;
+  public static final int App = 4;
+  public static final int Brick = 5;
+  public static final int DigitalSensor = 6;
+  public static final int DigitalTuple = 7;
+  public static final int LcdScreen = 8;
+  public static final int Sensor = 9;
+  public static final int State = 10;
+  public static final int Transition = 11;
+  public static final int Tuple = 12;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0xdc4471fe75cf409bL, 0xbf038bc732728db2L);
     builder.put(0x36bafc91071469deL, Action);
     builder.put(0x36bafc91071469e8L, Actuator);
     builder.put(0x411d9e4df106abf7L, AnalogSensor);
+    builder.put(0x59cc86669816610L, AnalogicalTuple);
     builder.put(0x36bafc91071469f7L, App);
     builder.put(0x268865f2b20c7810L, Brick);
     builder.put(0x411d9e4df106abf6L, DigitalSensor);
+    builder.put(0x59cc8666981660fL, DigitalTuple);
     builder.put(0x5a540d960905d9bdL, LcdScreen);
     builder.put(0x268865f2b20c7819L, Sensor);
     builder.put(0x36bafc91071469efL, State);

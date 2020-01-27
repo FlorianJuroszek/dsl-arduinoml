@@ -252,27 +252,6 @@
       <node concept="35HoNQ" id="7eXB7kk$YUJ" role="3EZMnx" />
     </node>
   </node>
-  <node concept="24kQdi" id="4lTE7Bn93a0">
-    <ref role="1XX52x" to="c1p6:4lTE7Bn939y" resolve="Tuple" />
-    <node concept="3EZMnI" id="4lTE7Bn93a2" role="2wV5jI">
-      <node concept="2iRfu4" id="4lTE7Bn93a5" role="2iSdaV" />
-      <node concept="1iCGBv" id="4lTE7Bn93as" role="3EZMnx">
-        <ref role="1NtTu8" to="c1p6:4lTE7Bn939I" resolve="sensor" />
-        <node concept="1sVBvm" id="4lTE7Bn93au" role="1sWHZn">
-          <node concept="3F0A7n" id="4lTE7Bn93aD" role="2wV5jI">
-            <property role="1Intyy" value="true" />
-            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-          </node>
-        </node>
-      </node>
-      <node concept="3F0A7n" id="4lTE7Bn93bP" role="3EZMnx">
-        <ref role="1NtTu8" to="c1p6:4lTE7Bn939F" resolve="operator" />
-      </node>
-      <node concept="3F0A7n" id="4lTE7Bn93bj" role="3EZMnx">
-        <ref role="1NtTu8" to="c1p6:4lTE7Bn939_" resolve="signal" />
-      </node>
-    </node>
-  </node>
   <node concept="24kQdi" id="44tB$RL1Ist">
     <ref role="1XX52x" to="c1p6:44tB$RL1EJQ" resolve="DigitalSensor" />
     <node concept="3EZMnI" id="44tB$RL1Isv" role="2wV5jI">
@@ -359,6 +338,61 @@
         <node concept="2iRfu4" id="5Dk3po91wFQ" role="2iSdaV" />
       </node>
       <node concept="2iRkQZ" id="5Dk3po91wEC" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="PKFIW" id="msM6pDwmp2">
+    <property role="TrG5h" value="CommonTupleProperties" />
+    <ref role="1XX52x" to="c1p6:4lTE7Bn939y" resolve="Tuple" />
+    <node concept="3EZMnI" id="msM6pDwmp4" role="2wV5jI">
+      <node concept="1iCGBv" id="msM6pDwmph" role="3EZMnx">
+        <ref role="1NtTu8" to="c1p6:4lTE7Bn939I" resolve="sensor" />
+        <node concept="1sVBvm" id="msM6pDwmpj" role="1sWHZn">
+          <node concept="3F0A7n" id="msM6pDwmpr" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
+      <node concept="3F0A7n" id="msM6pDwmpI" role="3EZMnx">
+        <ref role="1NtTu8" to="c1p6:4lTE7Bn939F" resolve="operator" />
+      </node>
+      <node concept="l2Vlx" id="msM6pDwmp7" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="msM6pDwmpX">
+    <ref role="1XX52x" to="c1p6:msM6pDwmog" resolve="AnalogicalTuple" />
+    <node concept="3EZMnI" id="msM6pDwmpZ" role="2wV5jI">
+      <node concept="3F0ifn" id="msM6pDwmq6" role="3EZMnx">
+        <property role="3F0ifm" value="analogical_tuple" />
+      </node>
+      <node concept="PMmxH" id="msM6pDwmqc" role="3EZMnx">
+        <ref role="PMmxG" node="msM6pDwmp2" resolve="CommonTupleProperties" />
+      </node>
+      <node concept="3F0ifn" id="msM6pDwmqj" role="3EZMnx">
+        <property role="3F0ifm" value="threshold" />
+      </node>
+      <node concept="3F0A7n" id="msM6pDwmqt" role="3EZMnx">
+        <ref role="1NtTu8" to="c1p6:msM6pDwmoz" resolve="value" />
+      </node>
+      <node concept="l2Vlx" id="msM6pDwmq2" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="msM6pDwmqF">
+    <ref role="1XX52x" to="c1p6:msM6pDwmof" resolve="DigitalTuple" />
+    <node concept="3EZMnI" id="msM6pDwmqH" role="2wV5jI">
+      <node concept="3F0ifn" id="msM6pDwmqO" role="3EZMnx">
+        <property role="3F0ifm" value="digital_tuple" />
+      </node>
+      <node concept="PMmxH" id="msM6pDwmqU" role="3EZMnx">
+        <ref role="PMmxG" node="msM6pDwmp2" resolve="CommonTupleProperties" />
+      </node>
+      <node concept="3F0ifn" id="msM6pDwmr1" role="3EZMnx">
+        <property role="3F0ifm" value="with signal" />
+      </node>
+      <node concept="3F0A7n" id="msM6pDwmrb" role="3EZMnx">
+        <ref role="1NtTu8" to="c1p6:msM6pDwmo_" resolve="value" />
+      </node>
+      <node concept="l2Vlx" id="msM6pDwmqK" role="2iSdaV" />
     </node>
   </node>
 </model>

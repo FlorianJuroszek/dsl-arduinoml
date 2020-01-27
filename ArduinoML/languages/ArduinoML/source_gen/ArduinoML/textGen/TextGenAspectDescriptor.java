@@ -29,18 +29,20 @@ public class TextGenAspectDescriptor extends TextGenAspectBase {
         return new Actuator_TextGen();
       case LanguageConceptSwitch.AnalogSensor:
         return new AnalogSensor_TextGen();
+      case LanguageConceptSwitch.AnalogicalTuple:
+        return new AnalogicalTuple_TextGen();
       case LanguageConceptSwitch.App:
         return new App_TextGen();
       case LanguageConceptSwitch.DigitalSensor:
         return new DigitalSensor_TextGen();
+      case LanguageConceptSwitch.DigitalTuple:
+        return new DigitalTuple_TextGen();
       case LanguageConceptSwitch.LcdScreen:
         return new LcdScreen_TextGen();
       case LanguageConceptSwitch.State:
         return new State_TextGen();
       case LanguageConceptSwitch.Transition:
         return new Transition_TextGen();
-      case LanguageConceptSwitch.Tuple:
-        return new Tuple_TextGen();
     }
     return null;
   }

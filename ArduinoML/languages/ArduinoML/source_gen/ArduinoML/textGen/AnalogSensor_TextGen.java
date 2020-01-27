@@ -18,6 +18,7 @@ public class AnalogSensor_TextGen extends TextGenDescriptorBase {
     tgs.append(" = ");
     tgs.append(String.valueOf(SPropertyOperations.getInteger(ctx.getPrimaryInput(), PROPS.pin$E8DD)));
     tgs.append(";");
+    tgs.newLine();
   }
 
   private static final class PROPS {

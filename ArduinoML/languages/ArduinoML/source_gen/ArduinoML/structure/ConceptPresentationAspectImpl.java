@@ -12,9 +12,11 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Action;
   private ConceptPresentation props_Actuator;
   private ConceptPresentation props_AnalogSensor;
+  private ConceptPresentation props_AnalogicalTuple;
   private ConceptPresentation props_App;
   private ConceptPresentation props_Brick;
   private ConceptPresentation props_DigitalSensor;
+  private ConceptPresentation props_DigitalTuple;
   private ConceptPresentation props_LcdScreen;
   private ConceptPresentation props_Sensor;
   private ConceptPresentation props_State;
@@ -47,6 +49,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_AnalogSensor = cpb.create();
         }
         return props_AnalogSensor;
+      case LanguageConceptSwitch.AnalogicalTuple:
+        if (props_AnalogicalTuple == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_AnalogicalTuple = cpb.create();
+        }
+        return props_AnalogicalTuple;
       case LanguageConceptSwitch.App:
         if (props_App == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -67,6 +76,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_DigitalSensor = cpb.create();
         }
         return props_DigitalSensor;
+      case LanguageConceptSwitch.DigitalTuple:
+        if (props_DigitalTuple == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_DigitalTuple = cpb.create();
+        }
+        return props_DigitalTuple;
       case LanguageConceptSwitch.LcdScreen:
         if (props_LcdScreen == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -97,7 +113,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.Tuple:
         if (props_Tuple == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByName();
           props_Tuple = cpb.create();
         }
         return props_Tuple;

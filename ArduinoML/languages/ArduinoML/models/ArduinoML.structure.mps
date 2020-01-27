@@ -212,14 +212,10 @@
   <node concept="1TIwiD" id="4lTE7Bn939y">
     <property role="EcuMT" value="5006217702052999778" />
     <property role="TrG5h" value="Tuple" />
+    <property role="R5$K7" value="true" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="4lTE7Bn939z" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
-    </node>
-    <node concept="1TJgyi" id="4lTE7Bn939_" role="1TKVEl">
-      <property role="IQ2nx" value="5006217702052999781" />
-      <property role="TrG5h" value="signal" />
-      <ref role="AX2Wp" node="3qUZ94756Bz" resolve="SIGNAL" />
     </node>
     <node concept="1TJgyi" id="4lTE7Bn939F" role="1TKVEl">
       <property role="IQ2nx" value="5006217702052999787" />
@@ -281,6 +277,26 @@
       <property role="IQ2nx" value="6508842299504843239" />
       <property role="TrG5h" value="message" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="msM6pDwmof">
+    <property role="EcuMT" value="404418408738809359" />
+    <property role="TrG5h" value="DigitalTuple" />
+    <ref role="1TJDcQ" node="4lTE7Bn939y" resolve="Tuple" />
+    <node concept="1TJgyi" id="msM6pDwmo_" role="1TKVEl">
+      <property role="IQ2nx" value="404418408738809381" />
+      <property role="TrG5h" value="value" />
+      <ref role="AX2Wp" node="3qUZ94756Bz" resolve="SIGNAL" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="msM6pDwmog">
+    <property role="EcuMT" value="404418408738809360" />
+    <property role="TrG5h" value="AnalogicalTuple" />
+    <ref role="1TJDcQ" node="4lTE7Bn939y" resolve="Tuple" />
+    <node concept="1TJgyi" id="msM6pDwmoz" role="1TKVEl">
+      <property role="IQ2nx" value="404418408738809379" />
+      <property role="TrG5h" value="value" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
   </node>
 </model>
