@@ -1488,7 +1488,7 @@
             </node>
           </node>
           <node concept="Xl_RD" id="85" role="37wK5m">
-            <property role="Xl_RC" value="greater" />
+            <property role="Xl_RC" value="greater than" />
             <node concept="cd27G" id="8b" role="lGtFl">
               <node concept="3u3nmq" id="8c" role="cd27D">
                 <property role="3u3nmv" value="5006217702052999746" />
@@ -1504,7 +1504,7 @@
             </node>
           </node>
           <node concept="Xl_RD" id="87" role="37wK5m">
-            <property role="Xl_RC" value="greater" />
+            <property role="Xl_RC" value="greater than" />
             <node concept="cd27G" id="8f" role="lGtFl">
               <node concept="3u3nmq" id="8g" role="cd27D">
                 <property role="3u3nmv" value="5006217702052999746" />
@@ -1630,7 +1630,7 @@
             </node>
           </node>
           <node concept="Xl_RD" id="8T" role="37wK5m">
-            <property role="Xl_RC" value="lower" />
+            <property role="Xl_RC" value="lower than" />
             <node concept="cd27G" id="8Z" role="lGtFl">
               <node concept="3u3nmq" id="90" role="cd27D">
                 <property role="3u3nmv" value="5006217702052999746" />
@@ -1646,7 +1646,7 @@
             </node>
           </node>
           <node concept="Xl_RD" id="8V" role="37wK5m">
-            <property role="Xl_RC" value="lower" />
+            <property role="Xl_RC" value="lower than" />
             <node concept="cd27G" id="93" role="lGtFl">
               <node concept="3u3nmq" id="94" role="cd27D">
                 <property role="3u3nmv" value="5006217702052999746" />
@@ -3725,7 +3725,7 @@
       <node concept="39e2AG" id="lp" role="39e3Y0">
         <ref role="39e2AK" to="c1p6:4lTE7Bn9393" />
         <node concept="385nmt" id="l$" role="385vvn">
-          <property role="385vuF" value="greater" />
+          <property role="385vuF" value="greater than" />
           <node concept="2$VJBW" id="lA" role="385v07">
             <property role="2$VJBR" value="5006217702052999747" />
             <node concept="2x4n5u" id="lB" role="3iCydw">
@@ -3805,7 +3805,7 @@
       <node concept="39e2AG" id="lt" role="39e3Y0">
         <ref role="39e2AK" to="c1p6:4lTE7Bn939b" />
         <node concept="385nmt" id="lS" role="385vvn">
-          <property role="385vuF" value="lower" />
+          <property role="385vuF" value="lower than" />
           <node concept="2$VJBW" id="lU" role="385v07">
             <property role="2$VJBR" value="5006217702052999755" />
             <node concept="2x4n5u" id="lV" role="3iCydw">

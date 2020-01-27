@@ -68,7 +68,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     return editorCell;
   }
   private EditorCell createConstant_1() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "with signal");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "signal");
     editorCell.setCellId("Constant_8ob666_c0");
     editorCell.setDefaultText("");
     return editorCell;

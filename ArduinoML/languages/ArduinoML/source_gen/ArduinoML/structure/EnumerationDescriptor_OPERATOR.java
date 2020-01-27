@@ -17,9 +17,9 @@ public class EnumerationDescriptor_OPERATOR extends EnumerationDescriptorBase {
   }
 
   private final EnumerationDescriptor.MemberDescriptor myMember__0 = new EnumerationDescriptor.MemberDescriptor("==", "equals", "r:1e4e32fc-e42a-4b05-84e5-5f0ea797c86d(ArduinoML.structure)/5006217702052999748", "equals");
-  private final EnumerationDescriptor.MemberDescriptor myMember__1 = new EnumerationDescriptor.MemberDescriptor(">", "greater", "r:1e4e32fc-e42a-4b05-84e5-5f0ea797c86d(ArduinoML.structure)/5006217702052999747", "greater");
+  private final EnumerationDescriptor.MemberDescriptor myMember__1 = new EnumerationDescriptor.MemberDescriptor(">", "greater than", "r:1e4e32fc-e42a-4b05-84e5-5f0ea797c86d(ArduinoML.structure)/5006217702052999747", "greater than");
   private final EnumerationDescriptor.MemberDescriptor myMember__2 = new EnumerationDescriptor.MemberDescriptor(">=", "greater_or_equals", "r:1e4e32fc-e42a-4b05-84e5-5f0ea797c86d(ArduinoML.structure)/5006217702052999751", "greater_or_equals");
-  private final EnumerationDescriptor.MemberDescriptor myMember__3 = new EnumerationDescriptor.MemberDescriptor("<", "lower", "r:1e4e32fc-e42a-4b05-84e5-5f0ea797c86d(ArduinoML.structure)/5006217702052999755", "lower");
+  private final EnumerationDescriptor.MemberDescriptor myMember__3 = new EnumerationDescriptor.MemberDescriptor("<", "lower than", "r:1e4e32fc-e42a-4b05-84e5-5f0ea797c86d(ArduinoML.structure)/5006217702052999755", "lower than");
   private final EnumerationDescriptor.MemberDescriptor myMember__4 = new EnumerationDescriptor.MemberDescriptor("<=", "lower_or_equals", "r:1e4e32fc-e42a-4b05-84e5-5f0ea797c86d(ArduinoML.structure)/5006217702052999760", "lower_or_equals");
 
   private final EnumerationLiteralsIndex myIndex = EnumerationLiteralsIndex.build(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x4579a879d7243242L, 0x4579a879d7243244L, 0x4579a879d7243243L, 0x4579a879d7243247L, 0x4579a879d724324bL, 0x4579a879d7243250L);

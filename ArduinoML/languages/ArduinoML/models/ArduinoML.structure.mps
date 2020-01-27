@@ -193,7 +193,7 @@
       <property role="1uS6qv" value="==" />
     </node>
     <node concept="M4N5e" id="4lTE7Bn9393" role="M5hS2">
-      <property role="1uS6qo" value="greater" />
+      <property role="1uS6qo" value="greater than" />
       <property role="1uS6qv" value="&gt;" />
     </node>
     <node concept="M4N5e" id="4lTE7Bn9397" role="M5hS2">
@@ -201,7 +201,7 @@
       <property role="1uS6qv" value="&gt;=" />
     </node>
     <node concept="M4N5e" id="4lTE7Bn939b" role="M5hS2">
-      <property role="1uS6qo" value="lower" />
+      <property role="1uS6qo" value="lower than" />
       <property role="1uS6qv" value="&lt;" />
     </node>
     <node concept="M4N5e" id="4lTE7Bn939g" role="M5hS2">
