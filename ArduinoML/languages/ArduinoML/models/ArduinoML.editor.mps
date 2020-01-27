@@ -387,7 +387,7 @@
         <ref role="PMmxG" node="msM6pDwmp2" resolve="CommonTupleProperties" />
       </node>
       <node concept="3F0ifn" id="msM6pDwmr1" role="3EZMnx">
-        <property role="3F0ifm" value="with signal" />
+        <property role="3F0ifm" value="with" />
       </node>
       <node concept="3F0A7n" id="msM6pDwmrb" role="3EZMnx">
         <ref role="1NtTu8" to="c1p6:msM6pDwmo_" resolve="value" />
