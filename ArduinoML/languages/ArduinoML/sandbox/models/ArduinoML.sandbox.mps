@@ -33,6 +33,15 @@
         <child id="720802818724213410" name="transitions" index="LafNU" />
         <child id="3943742123535526386" name="actions" index="LFDlz" />
       </concept>
+      <concept id="6508842299504843197" name="ArduinoML.structure.LcdScreen" flags="ng" index="1jktgF">
+        <property id="6508842299504843218" name="d5" index="1jkth4" />
+        <property id="6508842299504843231" name="d7" index="1jkth9" />
+        <property id="6508842299504843224" name="d6" index="1jkthe" />
+        <property id="6508842299504843206" name="rw" index="1jkthg" />
+        <property id="6508842299504843204" name="rs" index="1jkthi" />
+        <property id="6508842299504843213" name="d4" index="1jkthr" />
+        <property id="6508842299504843239" name="message" index="1jkthL" />
+      </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
@@ -305,6 +314,25 @@
     <node concept="2K6NmV" id="7eXB7kkAF7$" role="2kxaQz">
       <property role="TrG5h" value="theButton2_2" />
       <property role="2kx1Rx" value="9" />
+    </node>
+  </node>
+  <node concept="LFDlA" id="1PAkTqypIZI">
+    <property role="TrG5h" value="ConstantOnScreen" />
+    <node concept="LFDlY" id="1PAkTqypTuq" role="LFDlF">
+      <node concept="LFDlf" id="1PAkTqypTur" role="LFDlz" />
+      <node concept="LafN2" id="1PAkTqypTus" role="LafNU">
+        <node concept="2inpCr" id="1PAkTqypTut" role="2inpCc" />
+      </node>
+    </node>
+    <node concept="1jktgF" id="1PAkTqypIZK" role="2kxaQz">
+      <property role="1jkthi" value="10" />
+      <property role="1jkthg" value="11" />
+      <property role="2kx1Rx" value="12" />
+      <property role="1jkthr" value="13" />
+      <property role="1jkth4" value="14" />
+      <property role="1jkthe" value="15" />
+      <property role="1jkth9" value="16" />
+      <property role="1jkthL" value="from my dsl" />
     </node>
   </node>
 </model>

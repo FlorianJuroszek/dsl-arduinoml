@@ -129,7 +129,7 @@
       <property role="IQ2ns" value="3943742123535526394" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="states" />
-      <property role="20lbJX" value="fLJekj6/_1__n" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="3qUZ94756BJ" resolve="State" />
     </node>
     <node concept="1TJgyj" id="2q8pvaM3cxh" role="1TKVEi">
@@ -242,6 +242,46 @@
     <property role="EcuMT" value="4692080444383341559" />
     <property role="TrG5h" value="AnalogSensor" />
     <ref role="1TJDcQ" node="2q8pvaM37wp" resolve="Sensor" />
+  </node>
+  <node concept="1TIwiD" id="5Dk3po91tAX">
+    <property role="EcuMT" value="6508842299504843197" />
+    <property role="TrG5h" value="LcdScreen" />
+    <ref role="1TJDcQ" node="2q8pvaM37wg" resolve="Brick" />
+    <node concept="1TJgyi" id="5Dk3po91tB4" role="1TKVEl">
+      <property role="IQ2nx" value="6508842299504843204" />
+      <property role="TrG5h" value="rs" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="5Dk3po91tB6" role="1TKVEl">
+      <property role="IQ2nx" value="6508842299504843206" />
+      <property role="TrG5h" value="rw" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="5Dk3po91tBd" role="1TKVEl">
+      <property role="IQ2nx" value="6508842299504843213" />
+      <property role="TrG5h" value="d4" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="5Dk3po91tBi" role="1TKVEl">
+      <property role="IQ2nx" value="6508842299504843218" />
+      <property role="TrG5h" value="d5" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="5Dk3po91tBo" role="1TKVEl">
+      <property role="IQ2nx" value="6508842299504843224" />
+      <property role="TrG5h" value="d6" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="5Dk3po91tBv" role="1TKVEl">
+      <property role="IQ2nx" value="6508842299504843231" />
+      <property role="TrG5h" value="d7" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="5Dk3po91tBB" role="1TKVEl">
+      <property role="IQ2nx" value="6508842299504843239" />
+      <property role="TrG5h" value="message" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
   </node>
 </model>
 
