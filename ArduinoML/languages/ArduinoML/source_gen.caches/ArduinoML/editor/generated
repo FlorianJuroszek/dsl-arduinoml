@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="3zrs9hb8t9jinw8um6yfac5nj8ke77j">
-  <files names="Action_Editor.java:Action_EditorBuilder_a.java:Action_SubstituteMenu.java:Actuator_Editor.java:Actuator_EditorBuilder_a.java:AnalogSensor_Editor.java:AnalogSensor_EditorBuilder_a.java:App_Editor.java:App_EditorBuilder_a.java:CommonBrickProperties.java:CommonBrickProperties_ComponentBuilder_a.java:DigitalSensor_Editor.java:DigitalSensor_EditorBuilder_a.java:EditorAspectDescriptorImpl.java:State_Editor.java:State_EditorBuilder_a.java:Transition_Editor.java:Transition_EditorBuilder_a.java:Transition_SubstituteMenu.java:Tuple_Editor.java:Tuple_EditorBuilder_a.java:Tuple_SubstituteMenu.java" />
+<product version="3" modelHash="6ba1bnuwmrkf6bduwrd3yv4msfolhpg">
+  <files names="Action_Editor.java:Action_EditorBuilder_a.java:Action_SubstituteMenu.java:Actuator_Editor.java:Actuator_EditorBuilder_a.java:AnalogSensor_Editor.java:AnalogSensor_EditorBuilder_a.java:App_Editor.java:App_EditorBuilder_a.java:CommonBrickProperties.java:CommonBrickProperties_ComponentBuilder_a.java:DigitalSensor_Editor.java:DigitalSensor_EditorBuilder_a.java:EditorAspectDescriptorImpl.java:LcdScreen_Editor.java:LcdScreen_EditorBuilder_a.java:State_Editor.java:State_EditorBuilder_a.java:Transition_Editor.java:Transition_EditorBuilder_a.java:Transition_SubstituteMenu.java:Tuple_Editor.java:Tuple_EditorBuilder_a.java:Tuple_SubstituteMenu.java" />
 </product>
 

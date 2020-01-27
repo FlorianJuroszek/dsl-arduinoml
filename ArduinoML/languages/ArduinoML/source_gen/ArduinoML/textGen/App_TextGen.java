@@ -28,6 +28,8 @@ public class App_TextGen extends TextGenDescriptorBase {
     tgs.newLine();
     tgs.append("#include <Arduino.h>");
     tgs.newLine();
+    tgs.append("#include <LiquidCrystal.h>");
+    tgs.newLine();
     tgs.newLine();
     tgs.append("/** Generating code for application ");
     tgs.append(SPropertyOperations.getString(ctx.getPrimaryInput(), PROPS.name$tAp1));
@@ -45,7 +47,7 @@ public class App_TextGen extends TextGenDescriptorBase {
       }
     });
     tgs.newLine();
-    tgs.append("// Declaring available actuators ");
+    tgs.append("// Declaring available bricks ");
     tgs.newLine();
     {
       Iterable<SNode> collection = SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.bricks$XojH);
@@ -84,21 +86,27 @@ public class App_TextGen extends TextGenDescriptorBase {
     tgs.indent();
     tgs.append("Serial.begin(9600);");
     tgs.newLine();
+    tgs.indent();
     ListSequence.fromList(SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.bricks$XojH)).visitAll(new IVisitor<SNode>() {
       public void visit(SNode it) {
         tgs.indent();
-        tgs.append("pinMode(");
-        tgs.append(SPropertyOperations.getString(it, PROPS.name$tAp1));
-        tgs.append(", ");
-        if (SNodeOperations.isInstanceOf(it, CONCEPTS.Actuator$PN)) {
-          tgs.append("OUTPUT);");
+        if (SNodeOperations.isInstanceOf(it, CONCEPTS.Actuator$PN) || SNodeOperations.isInstanceOf(it, CONCEPTS.Sensor$s5)) {
+          tgs.append("pinMode(");
+          tgs.append(SPropertyOperations.getString(it, PROPS.name$tAp1));
+          tgs.append(", ");
+          if (SNodeOperations.isInstanceOf(it, CONCEPTS.Actuator$PN)) {
+            tgs.append("OUTPUT);");
+            tgs.newLine();
+          }
+          if (SNodeOperations.isInstanceOf(it, CONCEPTS.Sensor$s5)) {
+            tgs.append("INPUT);");
+            tgs.newLine();
+          }
+        }
+        if (SNodeOperations.isInstanceOf(it, CONCEPTS.LcdScreen$cj)) {
+          tgs.append("lcd.begin(16,2);");
           tgs.newLine();
         }
-        if (SNodeOperations.isInstanceOf(it, CONCEPTS.Sensor$s5)) {
-          tgs.append("INPUT);");
-          tgs.newLine();
-        }
-
       }
     });
     ctx.getBuffer().area().decreaseIndent();
@@ -109,14 +117,16 @@ public class App_TextGen extends TextGenDescriptorBase {
     tgs.newLine();
     ctx.getBuffer().area().increaseIndent();
     tgs.indent();
-    tgs.append("state_");
-    tgs.append(SPropertyOperations.getString(ListSequence.fromList(SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.states$LKNY)).findFirst(new IWhereFilter<SNode>() {
-      public boolean accept(SNode it) {
-        return SPropertyOperations.getBoolean(it, PROPS.isInitial$j0QN);
-      }
-    }), PROPS.name$tAp1));
-    tgs.append("();");
-    tgs.newLine();
+    if (SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.states$LKNY).size() > 0) {
+      tgs.append("state_");
+      tgs.append(SPropertyOperations.getString(ListSequence.fromList(SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.states$LKNY)).findFirst(new IWhereFilter<SNode>() {
+        public boolean accept(SNode it) {
+          return SPropertyOperations.getBoolean(it, PROPS.isInitial$j0QN);
+        }
+      }), PROPS.name$tAp1));
+      tgs.append("();");
+      tgs.newLine();
+    }
     ctx.getBuffer().area().decreaseIndent();
     tgs.append("}");
   }
@@ -134,5 +144,6 @@ public class App_TextGen extends TextGenDescriptorBase {
   private static final class CONCEPTS {
     /*package*/ static final SConcept Actuator$PN = MetaAdapterFactory.getConcept(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469e8L, "ArduinoML.structure.Actuator");
     /*package*/ static final SConcept Sensor$s5 = MetaAdapterFactory.getConcept(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x268865f2b20c7819L, "ArduinoML.structure.Sensor");
+    /*package*/ static final SConcept LcdScreen$cj = MetaAdapterFactory.getConcept(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x5a540d960905d9bdL, "ArduinoML.structure.LcdScreen");
   }
 }
