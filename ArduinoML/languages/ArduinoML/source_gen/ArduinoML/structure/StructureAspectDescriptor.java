@@ -133,6 +133,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x33d23ee961a0cbf3L);
     b.origin("r:1e4e32fc-e42a-4b05-84e5-5f0ea797c86d(ArduinoML.structure)/3943742123535526391");
     b.version(2);
+    b.associate("initial_state", 0x19a0a7798d8fae1L).target(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469efL).optional(false).origin("115416249233111777").done();
     b.aggregate("states", 0x36bafc91071469faL).target(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469efL).optional(false).ordered(true).multiple(true).origin("3943742123535526394").done();
     b.aggregate("bricks", 0x268865f2b20cc851L).target(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x268865f2b20c7810L).optional(false).ordered(true).multiple(true).origin("2776581263317583953").done();
     return b.create();
@@ -192,7 +193,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:1e4e32fc-e42a-4b05-84e5-5f0ea797c86d(ArduinoML.structure)/3943742123535526383");
     b.version(2);
-    b.property("isInitial", 0xa00ce583b286469L).type(PrimitiveTypeId.BOOLEAN).origin("720802818724226153").done();
     b.aggregate("actions", 0x36bafc91071469f2L).target(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469deL).optional(false).ordered(true).multiple(true).origin("3943742123535526386").done();
     b.aggregate("transitions", 0xa00ce583b2832a2L).target(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0xa00ce583b28329aL).optional(false).ordered(true).multiple(true).origin("720802818724213410").done();
     return b.create();

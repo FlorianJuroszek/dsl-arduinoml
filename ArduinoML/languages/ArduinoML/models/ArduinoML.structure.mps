@@ -108,11 +108,6 @@
       <property role="20lbJX" value="fLJekj6/_1__n" />
       <ref role="20lvS9" node="C0N_wVa3aq" resolve="Transition" />
     </node>
-    <node concept="1TJgyi" id="C0N_wVa6hD" role="1TKVEl">
-      <property role="IQ2nx" value="720802818724226153" />
-      <property role="TrG5h" value="isInitial" />
-      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
-    </node>
   </node>
   <node concept="1TIwiD" id="3qUZ94756BR">
     <property role="EcuMT" value="3943742123535526391" />
@@ -138,6 +133,12 @@
       <property role="20kJfa" value="bricks" />
       <property role="20lbJX" value="fLJekj6/_1__n" />
       <ref role="20lvS9" node="2q8pvaM37wg" resolve="Brick" />
+    </node>
+    <node concept="1TJgyj" id="6q2BuoQfFx" role="1TKVEi">
+      <property role="IQ2ns" value="115416249233111777" />
+      <property role="20kJfa" value="initial_state" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="3qUZ94756BJ" resolve="State" />
     </node>
   </node>
   <node concept="1TIwiD" id="2q8pvaM37wg">
