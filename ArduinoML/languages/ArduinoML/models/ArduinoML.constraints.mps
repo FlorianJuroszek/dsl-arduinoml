@@ -44,9 +44,22 @@
         <child id="1212097481299" name="propertyValidator" index="QCWH9" />
       </concept>
       <concept id="1212096972063" name="jetbrains.mps.lang.constraints.structure.ConstraintFunction_PropertyValidator" flags="in" index="QB0g5" />
+      <concept id="8401916545537438642" name="jetbrains.mps.lang.constraints.structure.InheritedNodeScopeFactory" flags="ng" index="1dDu$B">
+        <reference id="8401916545537438643" name="kind" index="1dDu$A" />
+      </concept>
+      <concept id="1163200368514" name="jetbrains.mps.lang.constraints.structure.ConstraintFunction_ReferentSetHandler" flags="in" index="3k9gUc" />
+      <concept id="1159285995602" name="jetbrains.mps.lang.constraints.structure.NodeDefaultSearchScope" flags="ng" index="3EP7_v">
+        <child id="1159286114227" name="searchScopeFactory" index="3EP$qY" />
+      </concept>
       <concept id="1213093968558" name="jetbrains.mps.lang.constraints.structure.ConceptConstraints" flags="ng" index="1M2fIO">
         <reference id="1213093996982" name="concept" index="1M2myG" />
         <child id="1213098023997" name="property" index="1MhHOB" />
+        <child id="1213100494875" name="referent" index="1Mr941" />
+        <child id="1213101058038" name="defaultScope" index="1MtirG" />
+      </concept>
+      <concept id="1148687176410" name="jetbrains.mps.lang.constraints.structure.NodeReferentConstraint" flags="ng" index="1N5Pfh">
+        <reference id="1148687202698" name="applicableLink" index="1N5Vy1" />
+        <child id="1163203787401" name="referentSetHandler" index="3kmjI7" />
       </concept>
       <concept id="1153138554286" name="jetbrains.mps.lang.constraints.structure.ConstraintsFunctionParameter_propertyValue" flags="nn" index="1Wqviy" />
     </language>
@@ -74,6 +87,41 @@
             </node>
           </node>
         </node>
+      </node>
+    </node>
+    <node concept="3EP7_v" id="2FPwoIXdbAg" role="1MtirG">
+      <node concept="1dDu$B" id="2FPwoIXdbAk" role="3EP$qY">
+        <ref role="1dDu$A" to="c1p6:3qUZ94756BC" resolve="Actuator" />
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="2nvJyCy7HOF">
+    <ref role="1M2myG" to="c1p6:msM6pDwmog" resolve="AnalogicalPredicate" />
+    <node concept="1N5Pfh" id="2nvJyCy7HOG" role="1Mr941">
+      <ref role="1N5Vy1" to="c1p6:4lTE7Bn939I" resolve="sensor" />
+      <node concept="3k9gUc" id="2FPwoIXcSKS" role="3kmjI7">
+        <node concept="3clFbS" id="2FPwoIXcSKT" role="2VODD2" />
+      </node>
+    </node>
+    <node concept="3EP7_v" id="2FPwoIXdbs1" role="1MtirG">
+      <node concept="1dDu$B" id="2FPwoIXdbs5" role="3EP$qY">
+        <ref role="1dDu$A" to="c1p6:msM6pDwmog" resolve="AnalogicalPredicate" />
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="2FPwoIXdtQK">
+    <ref role="1M2myG" to="c1p6:2q8pvaM37wp" resolve="Sensor" />
+    <node concept="3EP7_v" id="2FPwoIXdtQL" role="1MtirG">
+      <node concept="1dDu$B" id="2FPwoIXdtQP" role="3EP$qY">
+        <ref role="1dDu$A" to="c1p6:2q8pvaM37wp" resolve="Sensor" />
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="2FPwoIXdKj7">
+    <ref role="1M2myG" to="c1p6:3qUZ94756BJ" resolve="State" />
+    <node concept="3EP7_v" id="2FPwoIXdKj8" role="1MtirG">
+      <node concept="1dDu$B" id="2FPwoIXdKjc" role="3EP$qY">
+        <ref role="1dDu$A" to="c1p6:3qUZ94756BJ" resolve="State" />
       </node>
     </node>
   </node>
