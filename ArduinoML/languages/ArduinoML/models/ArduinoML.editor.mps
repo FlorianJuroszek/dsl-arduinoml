@@ -147,9 +147,6 @@
     <property role="TrG5h" value="CommonBrickProperties" />
     <ref role="1XX52x" to="c1p6:2q8pvaM37wg" resolve="Brick" />
     <node concept="3EZMnI" id="2q8pvaM37ws" role="2wV5jI">
-      <node concept="3F0ifn" id="2q8pvaM37wz" role="3EZMnx">
-        <property role="3F0ifm" value="name:" />
-      </node>
       <node concept="3F0A7n" id="2q8pvaM37xv" role="3EZMnx">
         <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
       </node>
@@ -256,7 +253,7 @@
     <ref role="1XX52x" to="c1p6:44tB$RL1EJQ" resolve="DigitalSensor" />
     <node concept="3EZMnI" id="44tB$RL1Isv" role="2wV5jI">
       <node concept="3F0ifn" id="44tB$RL1IsA" role="3EZMnx">
-        <property role="3F0ifm" value="d_sensor" />
+        <property role="3F0ifm" value="digital sensor" />
       </node>
       <node concept="PMmxH" id="44tB$RL1IsG" role="3EZMnx">
         <ref role="PMmxG" node="2q8pvaM37wq" resolve="CommonBrickProperties" />
@@ -268,7 +265,7 @@
     <ref role="1XX52x" to="c1p6:44tB$RL1EJR" resolve="AnalogSensor" />
     <node concept="3EZMnI" id="44tB$RL1IsV" role="2wV5jI">
       <node concept="3F0ifn" id="44tB$RL1It2" role="3EZMnx">
-        <property role="3F0ifm" value="a_sensor" />
+        <property role="3F0ifm" value="analogical sensor" />
       </node>
       <node concept="PMmxH" id="44tB$RL1It8" role="3EZMnx">
         <ref role="PMmxG" node="2q8pvaM37wq" resolve="CommonBrickProperties" />
@@ -363,7 +360,7 @@
     <ref role="1XX52x" to="c1p6:msM6pDwmog" resolve="AnalogicalTuple" />
     <node concept="3EZMnI" id="msM6pDwmpZ" role="2wV5jI">
       <node concept="3F0ifn" id="msM6pDwmq6" role="3EZMnx">
-        <property role="3F0ifm" value="analogical_tuple" />
+        <property role="3F0ifm" value="analogical tuple" />
       </node>
       <node concept="PMmxH" id="msM6pDwmqc" role="3EZMnx">
         <ref role="PMmxG" node="msM6pDwmp2" resolve="CommonTupleProperties" />
@@ -381,7 +378,7 @@
     <ref role="1XX52x" to="c1p6:msM6pDwmof" resolve="DigitalTuple" />
     <node concept="3EZMnI" id="msM6pDwmqH" role="2wV5jI">
       <node concept="3F0ifn" id="msM6pDwmqO" role="3EZMnx">
-        <property role="3F0ifm" value="digital_tuple" />
+        <property role="3F0ifm" value="digital tuple" />
       </node>
       <node concept="PMmxH" id="msM6pDwmqU" role="3EZMnx">
         <ref role="PMmxG" node="msM6pDwmp2" resolve="CommonTupleProperties" />

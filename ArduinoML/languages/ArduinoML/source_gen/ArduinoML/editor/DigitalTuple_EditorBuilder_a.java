@@ -58,7 +58,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     return editorCell;
   }
   private EditorCell createConstant_0() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "digital_tuple");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "digital tuple");
     editorCell.setCellId("Constant_8ob666_a0");
     editorCell.setDefaultText("");
     return editorCell;
