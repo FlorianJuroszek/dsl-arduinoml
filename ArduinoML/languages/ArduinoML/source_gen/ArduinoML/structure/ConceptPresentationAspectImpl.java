@@ -12,16 +12,16 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Action;
   private ConceptPresentation props_Actuator;
   private ConceptPresentation props_AnalogSensor;
-  private ConceptPresentation props_AnalogicalTuple;
+  private ConceptPresentation props_AnalogicalPredicate;
   private ConceptPresentation props_App;
   private ConceptPresentation props_Brick;
+  private ConceptPresentation props_DigitalPredicate;
   private ConceptPresentation props_DigitalSensor;
-  private ConceptPresentation props_DigitalTuple;
   private ConceptPresentation props_LcdScreen;
+  private ConceptPresentation props_Predicate;
   private ConceptPresentation props_Sensor;
   private ConceptPresentation props_State;
   private ConceptPresentation props_Transition;
-  private ConceptPresentation props_Tuple;
 
   @Override
   @Nullable
@@ -49,13 +49,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_AnalogSensor = cpb.create();
         }
         return props_AnalogSensor;
-      case LanguageConceptSwitch.AnalogicalTuple:
-        if (props_AnalogicalTuple == null) {
+      case LanguageConceptSwitch.AnalogicalPredicate:
+        if (props_AnalogicalPredicate == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.presentationByName();
-          props_AnalogicalTuple = cpb.create();
+          props_AnalogicalPredicate = cpb.create();
         }
-        return props_AnalogicalTuple;
+        return props_AnalogicalPredicate;
       case LanguageConceptSwitch.App:
         if (props_App == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -69,6 +69,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Brick = cpb.create();
         }
         return props_Brick;
+      case LanguageConceptSwitch.DigitalPredicate:
+        if (props_DigitalPredicate == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_DigitalPredicate = cpb.create();
+        }
+        return props_DigitalPredicate;
       case LanguageConceptSwitch.DigitalSensor:
         if (props_DigitalSensor == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -76,13 +83,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_DigitalSensor = cpb.create();
         }
         return props_DigitalSensor;
-      case LanguageConceptSwitch.DigitalTuple:
-        if (props_DigitalTuple == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByName();
-          props_DigitalTuple = cpb.create();
-        }
-        return props_DigitalTuple;
       case LanguageConceptSwitch.LcdScreen:
         if (props_LcdScreen == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -90,6 +90,12 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_LcdScreen = cpb.create();
         }
         return props_LcdScreen;
+      case LanguageConceptSwitch.Predicate:
+        if (props_Predicate == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_Predicate = cpb.create();
+        }
+        return props_Predicate;
       case LanguageConceptSwitch.Sensor:
         if (props_Sensor == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -110,12 +116,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Transition = cpb.create();
         }
         return props_Transition;
-      case LanguageConceptSwitch.Tuple:
-        if (props_Tuple == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          props_Tuple = cpb.create();
-        }
-        return props_Tuple;
     }
     return null;
   }

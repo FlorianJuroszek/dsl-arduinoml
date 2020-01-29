@@ -19,16 +19,16 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptAction = createDescriptorForAction();
   /*package*/ final ConceptDescriptor myConceptActuator = createDescriptorForActuator();
   /*package*/ final ConceptDescriptor myConceptAnalogSensor = createDescriptorForAnalogSensor();
-  /*package*/ final ConceptDescriptor myConceptAnalogicalTuple = createDescriptorForAnalogicalTuple();
+  /*package*/ final ConceptDescriptor myConceptAnalogicalPredicate = createDescriptorForAnalogicalPredicate();
   /*package*/ final ConceptDescriptor myConceptApp = createDescriptorForApp();
   /*package*/ final ConceptDescriptor myConceptBrick = createDescriptorForBrick();
+  /*package*/ final ConceptDescriptor myConceptDigitalPredicate = createDescriptorForDigitalPredicate();
   /*package*/ final ConceptDescriptor myConceptDigitalSensor = createDescriptorForDigitalSensor();
-  /*package*/ final ConceptDescriptor myConceptDigitalTuple = createDescriptorForDigitalTuple();
   /*package*/ final ConceptDescriptor myConceptLcdScreen = createDescriptorForLcdScreen();
+  /*package*/ final ConceptDescriptor myConceptPredicate = createDescriptorForPredicate();
   /*package*/ final ConceptDescriptor myConceptSensor = createDescriptorForSensor();
   /*package*/ final ConceptDescriptor myConceptState = createDescriptorForState();
   /*package*/ final ConceptDescriptor myConceptTransition = createDescriptorForTransition();
-  /*package*/ final ConceptDescriptor myConceptTuple = createDescriptorForTuple();
   /*package*/ final EnumerationDescriptor myEnumerationOPERATOR = new EnumerationDescriptor_OPERATOR();
   /*package*/ final EnumerationDescriptor myEnumerationSIGNAL = new EnumerationDescriptor_SIGNAL();
   private final LanguageConceptSwitch myIndexSwitch;
@@ -45,7 +45,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAction, myConceptActuator, myConceptAnalogSensor, myConceptAnalogicalTuple, myConceptApp, myConceptBrick, myConceptDigitalSensor, myConceptDigitalTuple, myConceptLcdScreen, myConceptSensor, myConceptState, myConceptTransition, myConceptTuple);
+    return Arrays.asList(myConceptAction, myConceptActuator, myConceptAnalogSensor, myConceptAnalogicalPredicate, myConceptApp, myConceptBrick, myConceptDigitalPredicate, myConceptDigitalSensor, myConceptLcdScreen, myConceptPredicate, myConceptSensor, myConceptState, myConceptTransition);
   }
 
   @Override
@@ -58,26 +58,26 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptActuator;
       case LanguageConceptSwitch.AnalogSensor:
         return myConceptAnalogSensor;
-      case LanguageConceptSwitch.AnalogicalTuple:
-        return myConceptAnalogicalTuple;
+      case LanguageConceptSwitch.AnalogicalPredicate:
+        return myConceptAnalogicalPredicate;
       case LanguageConceptSwitch.App:
         return myConceptApp;
       case LanguageConceptSwitch.Brick:
         return myConceptBrick;
+      case LanguageConceptSwitch.DigitalPredicate:
+        return myConceptDigitalPredicate;
       case LanguageConceptSwitch.DigitalSensor:
         return myConceptDigitalSensor;
-      case LanguageConceptSwitch.DigitalTuple:
-        return myConceptDigitalTuple;
       case LanguageConceptSwitch.LcdScreen:
         return myConceptLcdScreen;
+      case LanguageConceptSwitch.Predicate:
+        return myConceptPredicate;
       case LanguageConceptSwitch.Sensor:
         return myConceptSensor;
       case LanguageConceptSwitch.State:
         return myConceptState;
       case LanguageConceptSwitch.Transition:
         return myConceptTransition;
-      case LanguageConceptSwitch.Tuple:
-        return myConceptTuple;
       default:
         return null;
     }
@@ -117,13 +117,14 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(2);
     return b.create();
   }
-  private static ConceptDescriptor createDescriptorForAnalogicalTuple() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ArduinoML", "AnalogicalTuple", 0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x59cc86669816610L);
+  private static ConceptDescriptor createDescriptorForAnalogicalPredicate() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ArduinoML", "AnalogicalPredicate", 0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x59cc86669816610L);
     b.class_(false, false, false);
-    b.super_("ArduinoML.structure.Tuple", 0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x4579a879d7243262L);
+    b.super_("ArduinoML.structure.Predicate", 0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x4579a879d7243262L);
     b.origin("r:1e4e32fc-e42a-4b05-84e5-5f0ea797c86d(ArduinoML.structure)/404418408738809360");
     b.version(2);
     b.property("value", 0x59cc86669816623L).type(PrimitiveTypeId.INTEGER).origin("404418408738809379").done();
+    b.property("operator", 0x19a0a7798dbb164L).type(MetaIdFactory.dataTypeId(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x4579a879d7243242L)).origin("115416249233289572").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForApp() {
@@ -147,21 +148,21 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("pin", 0x268865f2b20c7813L).type(PrimitiveTypeId.INTEGER).origin("2776581263317563411").done();
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForDigitalPredicate() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ArduinoML", "DigitalPredicate", 0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x59cc8666981660fL);
+    b.class_(false, false, false);
+    b.super_("ArduinoML.structure.Predicate", 0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x4579a879d7243262L);
+    b.origin("r:1e4e32fc-e42a-4b05-84e5-5f0ea797c86d(ArduinoML.structure)/404418408738809359");
+    b.version(2);
+    b.property("value", 0x59cc86669816625L).type(MetaIdFactory.dataTypeId(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469e3L)).origin("404418408738809381").done();
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForDigitalSensor() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ArduinoML", "DigitalSensor", 0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x411d9e4df106abf6L);
     b.class_(false, false, false);
     b.super_("ArduinoML.structure.Sensor", 0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x268865f2b20c7819L);
     b.origin("r:1e4e32fc-e42a-4b05-84e5-5f0ea797c86d(ArduinoML.structure)/4692080444383341558");
     b.version(2);
-    return b.create();
-  }
-  private static ConceptDescriptor createDescriptorForDigitalTuple() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ArduinoML", "DigitalTuple", 0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x59cc8666981660fL);
-    b.class_(false, false, false);
-    b.super_("ArduinoML.structure.Tuple", 0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x4579a879d7243262L);
-    b.origin("r:1e4e32fc-e42a-4b05-84e5-5f0ea797c86d(ArduinoML.structure)/404418408738809359");
-    b.version(2);
-    b.property("value", 0x59cc86669816625L).type(MetaIdFactory.dataTypeId(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469e3L)).origin("404418408738809381").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForLcdScreen() {
@@ -177,6 +178,15 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("d6", 0x5a540d960905d9d8L).type(PrimitiveTypeId.INTEGER).origin("6508842299504843224").done();
     b.property("d7", 0x5a540d960905d9dfL).type(PrimitiveTypeId.INTEGER).origin("6508842299504843231").done();
     b.property("message", 0x5a540d960905d9e7L).type(PrimitiveTypeId.STRING).origin("6508842299504843239").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForPredicate() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ArduinoML", "Predicate", 0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x4579a879d7243262L);
+    b.class_(false, true, false);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.origin("r:1e4e32fc-e42a-4b05-84e5-5f0ea797c86d(ArduinoML.structure)/5006217702052999778");
+    b.version(2);
+    b.associate("sensor", 0x4579a879d724326eL).target(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x268865f2b20c7819L).optional(false).origin("5006217702052999790").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForSensor() {
@@ -206,16 +216,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(2);
     b.associate("next", 0xa00ce583b28329bL).target(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469efL).optional(false).origin("720802818724213403").done();
     b.aggregate("tuple", 0x4579a879d7243275L).target(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x4579a879d7243262L).optional(false).ordered(true).multiple(true).origin("5006217702052999797").done();
-    return b.create();
-  }
-  private static ConceptDescriptor createDescriptorForTuple() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ArduinoML", "Tuple", 0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x4579a879d7243262L);
-    b.class_(false, true, false);
-    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
-    b.origin("r:1e4e32fc-e42a-4b05-84e5-5f0ea797c86d(ArduinoML.structure)/5006217702052999778");
-    b.version(2);
-    b.property("operator", 0x4579a879d724326bL).type(MetaIdFactory.dataTypeId(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x4579a879d7243242L)).origin("5006217702052999787").done();
-    b.associate("sensor", 0x4579a879d724326eL).target(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x268865f2b20c7819L).optional(false).origin("5006217702052999790").done();
     return b.create();
   }
 }

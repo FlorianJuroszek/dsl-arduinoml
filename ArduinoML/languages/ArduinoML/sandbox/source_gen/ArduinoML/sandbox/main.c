@@ -3,56 +3,59 @@
 #include <Arduino.h>
 #include <LiquidCrystal.h>
 
-/** Generating code for application AnalogicalScenario**/
+/** Generating code for application Scenario1**/
 
 // Declaring states function headers 
-void state_alarmOff();
-void state_alarmOn();
+void state_off();
+void state_on();
 
 // Declaring available bricks 
-int theTemperature = 2;
-
-int theAlarm = 10;
+int theLed = 12;
+int theBuzzer = 11;
+int theButton = 10;
 
 long time = 0;
 long debounce = 200;
 
 // Declaring states 
-void state_alarmOff()
+void state_off()
 {
-  digitalWrite(theAlarm, LOW);
-  Serial.print("alarmOff \n");
+  digitalWrite(theBuzzer, LOW);
+  digitalWrite(theLed, LOW);
+  Serial.print("off \n");
   boolean guard = millis() - time > debounce;
-  if ((analogRead(theTemperature) > convertedThreshold)  &&  guard) {
+  if ((digitalRead(theButton) is HIGH)  &&  guard) {
     time = millis();
-    state_alarmOn();
+    state_on();
   } 
   else {
-    state_alarmOff();
+    state_off();
   }
 }
 
-void state_alarmOn()
+void state_on()
 {
-  digitalWrite(theAlarm, HIGH);
-  Serial.print("alarmOn \n");
+  digitalWrite(theLed, HIGH);
+  digitalWrite(theBuzzer, HIGH);
+  Serial.print("on \n");
   boolean guard = millis() - time > debounce;
-  if ((analogRead(theTemperature) <= convertedThreshold)  &&  guard) {
+  if ((digitalRead(theButton) is LOW)  &&  guard) {
     time = millis();
-    state_alarmOff();
+    state_off();
   } 
   else {
-    state_alarmOn();
+    state_on();
   }
 }
 
 
 void setup() {
   Serial.begin(9600);
-    pinMode(theTemperature, INPUT);
-  pinMode(theAlarm, OUTPUT);
+    pinMode(theLed, OUTPUT);
+  pinMode(theBuzzer, OUTPUT);
+  pinMode(theButton, INPUT);
 }
 
 void loop() {
-  state_alarmOff();
+  state_off();
 }

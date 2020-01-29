@@ -182,7 +182,7 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="tuple" />
       <property role="20lbJX" value="fLJekj6/_1__n" />
-      <ref role="20lvS9" node="4lTE7Bn939y" resolve="Tuple" />
+      <ref role="20lvS9" node="4lTE7Bn939y" resolve="Predicate" />
     </node>
   </node>
   <node concept="AxPO7" id="4lTE7Bn9392">
@@ -198,7 +198,7 @@
       <property role="1uS6qv" value="&gt;" />
     </node>
     <node concept="M4N5e" id="4lTE7Bn9397" role="M5hS2">
-      <property role="1uS6qo" value="greater_or_equals" />
+      <property role="1uS6qo" value="greater or equals" />
       <property role="1uS6qv" value="&gt;=" />
     </node>
     <node concept="M4N5e" id="4lTE7Bn939b" role="M5hS2">
@@ -206,22 +206,17 @@
       <property role="1uS6qv" value="&lt;" />
     </node>
     <node concept="M4N5e" id="4lTE7Bn939g" role="M5hS2">
-      <property role="1uS6qo" value="lower_or_equals" />
+      <property role="1uS6qo" value="lower or equals" />
       <property role="1uS6qv" value="&lt;=" />
     </node>
   </node>
   <node concept="1TIwiD" id="4lTE7Bn939y">
     <property role="EcuMT" value="5006217702052999778" />
-    <property role="TrG5h" value="Tuple" />
+    <property role="TrG5h" value="Predicate" />
     <property role="R5$K7" value="true" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="4lTE7Bn939z" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
-    </node>
-    <node concept="1TJgyi" id="4lTE7Bn939F" role="1TKVEl">
-      <property role="IQ2nx" value="5006217702052999787" />
-      <property role="TrG5h" value="operator" />
-      <ref role="AX2Wp" node="4lTE7Bn9392" resolve="OPERATOR" />
     </node>
     <node concept="1TJgyj" id="4lTE7Bn939I" role="1TKVEi">
       <property role="IQ2ns" value="5006217702052999790" />
@@ -282,8 +277,8 @@
   </node>
   <node concept="1TIwiD" id="msM6pDwmof">
     <property role="EcuMT" value="404418408738809359" />
-    <property role="TrG5h" value="DigitalTuple" />
-    <ref role="1TJDcQ" node="4lTE7Bn939y" resolve="Tuple" />
+    <property role="TrG5h" value="DigitalPredicate" />
+    <ref role="1TJDcQ" node="4lTE7Bn939y" resolve="Predicate" />
     <node concept="1TJgyi" id="msM6pDwmo_" role="1TKVEl">
       <property role="IQ2nx" value="404418408738809381" />
       <property role="TrG5h" value="value" />
@@ -292,12 +287,17 @@
   </node>
   <node concept="1TIwiD" id="msM6pDwmog">
     <property role="EcuMT" value="404418408738809360" />
-    <property role="TrG5h" value="AnalogicalTuple" />
-    <ref role="1TJDcQ" node="4lTE7Bn939y" resolve="Tuple" />
+    <property role="TrG5h" value="AnalogicalPredicate" />
+    <ref role="1TJDcQ" node="4lTE7Bn939y" resolve="Predicate" />
     <node concept="1TJgyi" id="msM6pDwmoz" role="1TKVEl">
       <property role="IQ2nx" value="404418408738809379" />
       <property role="TrG5h" value="value" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="6q2BuoQV5$" role="1TKVEl">
+      <property role="IQ2nx" value="115416249233289572" />
+      <property role="TrG5h" value="operator" />
+      <ref role="AX2Wp" node="4lTE7Bn9392" resolve="OPERATOR" />
     </node>
   </node>
 </model>

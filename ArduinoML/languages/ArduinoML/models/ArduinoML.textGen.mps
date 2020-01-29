@@ -998,7 +998,7 @@
     </node>
   </node>
   <node concept="WtQ9Q" id="msM6pDwng7">
-    <ref role="WuzLi" to="c1p6:msM6pDwmog" resolve="AnalogicalTuple" />
+    <ref role="WuzLi" to="c1p6:msM6pDwmog" resolve="AnalogicalPredicate" />
     <node concept="11bSqf" id="msM6pDwng8" role="11c4hB">
       <node concept="3clFbS" id="msM6pDwng9" role="2VODD2">
         <node concept="3clFbH" id="msM6pDxFRm" role="3cqZAp" />
@@ -1025,8 +1025,8 @@
           <node concept="l9hG8" id="msM6pDwoae" role="lcghm">
             <node concept="2OqwBi" id="msM6pDwolA" role="lb14g">
               <node concept="117lpO" id="msM6pDwobD" role="2Oq$k0" />
-              <node concept="3TrcHB" id="msM6pDwoAv" role="2OqNvi">
-                <ref role="3TsBF5" to="c1p6:4lTE7Bn939F" resolve="operator" />
+              <node concept="3TrcHB" id="6q2BuoQXSI" role="2OqNvi">
+                <ref role="3TsBF5" to="c1p6:6q2BuoQV5$" resolve="operator" />
               </node>
             </node>
           </node>
@@ -1038,7 +1038,7 @@
     </node>
   </node>
   <node concept="WtQ9Q" id="msM6pDwqtU">
-    <ref role="WuzLi" to="c1p6:msM6pDwmof" resolve="DigitalTuple" />
+    <ref role="WuzLi" to="c1p6:msM6pDwmof" resolve="DigitalPredicate" />
     <node concept="11bSqf" id="msM6pDwqtV" role="11c4hB">
       <node concept="3clFbS" id="msM6pDwqtW" role="2VODD2">
         <node concept="lc7rE" id="msM6pDwquf" role="3cqZAp">
@@ -1061,13 +1061,8 @@
           <node concept="la8eA" id="msM6pDwqun" role="lcghm">
             <property role="lacIc" value=") " />
           </node>
-          <node concept="l9hG8" id="msM6pDwquo" role="lcghm">
-            <node concept="2OqwBi" id="msM6pDwqup" role="lb14g">
-              <node concept="117lpO" id="msM6pDwquq" role="2Oq$k0" />
-              <node concept="3TrcHB" id="msM6pDwqur" role="2OqNvi">
-                <ref role="3TsBF5" to="c1p6:4lTE7Bn939F" resolve="operator" />
-              </node>
-            </node>
+          <node concept="la8eA" id="6q2BuoQYe4" role="lcghm">
+            <property role="lacIc" value="is" />
           </node>
           <node concept="la8eA" id="msM6pDwqus" role="lcghm">
             <property role="lacIc" value=" " />

@@ -7,8 +7,7 @@
   <imports />
   <registry>
     <language id="dc4471fe-75cf-409b-bf03-8bc732728db2" name="ArduinoML">
-      <concept id="5006217702052999778" name="ArduinoML.structure.Tuple" flags="ng" index="2inpCr">
-        <property id="5006217702052999787" name="operator" index="2inpCi" />
+      <concept id="5006217702052999778" name="ArduinoML.structure.Predicate" flags="ng" index="2inpCr">
         <reference id="5006217702052999790" name="sensor" index="2inpCn" />
       </concept>
       <concept id="2776581263317563408" name="ArduinoML.structure.Brick" flags="ng" index="2kx1Ry">
@@ -25,7 +24,6 @@
         <reference id="3943742123535526381" name="target" index="LFDlW" />
       </concept>
       <concept id="3943742123535526391" name="ArduinoML.structure.App" flags="ng" index="LFDlA">
-        <property id="115416249232904882" name="initial_state" index="2pjXz5" />
         <reference id="115416249233111777" name="initial_state" index="2pgJ2m" />
         <child id="2776581263317583953" name="bricks" index="2kxaQz" />
         <child id="3943742123535526394" name="states" index="LFDlF" />
@@ -35,10 +33,11 @@
         <child id="720802818724213410" name="transitions" index="LafNU" />
         <child id="3943742123535526386" name="actions" index="LFDlz" />
       </concept>
-      <concept id="404418408738809359" name="ArduinoML.structure.DigitalTuple" flags="ng" index="1G7qTD">
+      <concept id="404418408738809359" name="ArduinoML.structure.DigitalPredicate" flags="ng" index="1G7qTD">
         <property id="404418408738809381" name="value" index="1G7qT3" />
       </concept>
-      <concept id="404418408738809360" name="ArduinoML.structure.AnalogicalTuple" flags="ng" index="1G7qTQ">
+      <concept id="404418408738809360" name="ArduinoML.structure.AnalogicalPredicate" flags="ng" index="1G7qTQ">
+        <property id="115416249233289572" name="operator" index="2pgrGj" />
         <property id="404418408738809379" name="value" index="1G7qT5" />
       </concept>
     </language>
@@ -48,56 +47,6 @@
       </concept>
     </language>
   </registry>
-  <node concept="LFDlA" id="2q8pvaM3HwI">
-    <property role="TrG5h" value="Scenario1" />
-    <property role="2pjXz5" value="off" />
-    <ref role="2pgJ2m" node="6q2BuoQRQp" resolve="off" />
-    <node concept="LFDlY" id="6q2BuoQRQp" role="LFDlF">
-      <property role="TrG5h" value="off" />
-      <node concept="LFDlf" id="6q2BuoQRQA" role="LFDlz">
-        <property role="LFDlK" value="3qUZ94756B_/LOW" />
-        <ref role="LFDlW" node="3uNTUJTOzuc" resolve="theBuzzer" />
-      </node>
-      <node concept="LFDlf" id="6q2BuoQRQG" role="LFDlz">
-        <property role="LFDlK" value="3qUZ94756B_/LOW" />
-        <ref role="LFDlW" node="3uNTUJTOzuc" resolve="theBuzzer" />
-      </node>
-      <node concept="LafN2" id="6q2BuoQRQr" role="LafNU">
-        <ref role="LafN3" node="7eXB7kk$4Jg" resolve="on" />
-        <node concept="1G7qTD" id="6q2BuoQRQK" role="2inpCc">
-          <ref role="2inpCn" node="46mat8MdxYj" resolve="theButton" />
-        </node>
-      </node>
-    </node>
-    <node concept="LFDlT" id="2q8pvaM3HwM" role="2kxaQz">
-      <property role="TrG5h" value="theLed" />
-      <property role="2kx1Rx" value="12" />
-    </node>
-    <node concept="LFDlT" id="3uNTUJTOzuc" role="2kxaQz">
-      <property role="TrG5h" value="theBuzzer" />
-      <property role="2kx1Rx" value="11" />
-    </node>
-    <node concept="LFDlY" id="7eXB7kk$4Jg" role="LFDlF">
-      <property role="TrG5h" value="on" />
-      <node concept="LFDlf" id="7eXB7kk$4Jo" role="LFDlz">
-        <ref role="LFDlW" node="2q8pvaM3HwM" resolve="theLed" />
-      </node>
-      <node concept="LFDlf" id="7eXB7kk$4Jy" role="LFDlz">
-        <ref role="LFDlW" node="3uNTUJTOzuc" resolve="theBuzzer" />
-      </node>
-      <node concept="LafN2" id="7eXB7kk$4Ji" role="LafNU">
-        <ref role="LafN3" node="6q2BuoQRQp" resolve="off" />
-        <node concept="1G7qTD" id="msM6pDxWs7" role="2inpCc">
-          <property role="1G7qT3" value="3qUZ94756B_/LOW" />
-          <ref role="2inpCn" node="46mat8MdxYj" resolve="theButton" />
-        </node>
-      </node>
-    </node>
-    <node concept="2K6NmV" id="46mat8MdxYj" role="2kxaQz">
-      <property role="TrG5h" value="theButton" />
-      <property role="2kx1Rx" value="10" />
-    </node>
-  </node>
   <node concept="LFDlA" id="4zRErOldMe8">
     <property role="TrG5h" value="Scenario3" />
     <ref role="2pgJ2m" node="6q2BuoQRQR" resolve="off3" />
@@ -327,9 +276,9 @@
       </node>
       <node concept="LafN2" id="6q2BuoQRRS" role="LafNU">
         <ref role="LafN3" node="msM6pDvICm" resolve="alarmOn" />
-        <node concept="1G7qTQ" id="6q2BuoQRS9" role="2inpCc">
+        <node concept="1G7qTQ" id="6q2BuoUnyJ" role="2inpCc">
           <property role="1G7qT5" value="512" />
-          <property role="2inpCi" value="4lTE7Bn9393/&gt;" />
+          <property role="2pgrGj" value="4lTE7Bn9393/&gt;" />
           <ref role="2inpCn" node="msM6pDx4vX" resolve="theTemperature" />
         </node>
       </node>
@@ -341,9 +290,9 @@
       </node>
       <node concept="LafN2" id="msM6pDvICo" role="LafNU">
         <ref role="LafN3" node="6q2BuoQRRQ" resolve="alarmOff" />
-        <node concept="1G7qTQ" id="msM6pDx4w3" role="2inpCc">
-          <property role="2inpCi" value="4lTE7Bn939g/&lt;=" />
+        <node concept="1G7qTQ" id="6q2BuoUnyL" role="2inpCc">
           <property role="1G7qT5" value="512" />
+          <property role="2pgrGj" value="4lTE7Bn939g/&lt;=" />
           <ref role="2inpCn" node="msM6pDx4vX" resolve="theTemperature" />
         </node>
       </node>
@@ -354,6 +303,55 @@
     </node>
     <node concept="LFDlT" id="msM6pDvvf6" role="2kxaQz">
       <property role="TrG5h" value="theAlarm" />
+      <property role="2kx1Rx" value="10" />
+    </node>
+  </node>
+  <node concept="LFDlA" id="6q2BuoUnxz">
+    <property role="TrG5h" value="Scenario1" />
+    <ref role="2pgJ2m" node="6q2BuoUnx$" resolve="off" />
+    <node concept="LFDlY" id="6q2BuoUnx$" role="LFDlF">
+      <property role="TrG5h" value="off" />
+      <node concept="LFDlf" id="6q2BuoUnxW" role="LFDlz">
+        <property role="LFDlK" value="3qUZ94756B_/LOW" />
+        <ref role="LFDlW" node="6q2BuoUnxJ" resolve="theBuzzer" />
+      </node>
+      <node concept="LFDlf" id="6q2BuoUny2" role="LFDlz">
+        <property role="LFDlK" value="3qUZ94756B_/LOW" />
+        <ref role="LFDlW" node="6q2BuoUnxD" resolve="theLed" />
+      </node>
+      <node concept="LafN2" id="6q2BuoUnxA" role="LafNU">
+        <ref role="LafN3" node="6q2BuoUnyl" resolve="on" />
+        <node concept="1G7qTD" id="6q2BuoUnya" role="2inpCc">
+          <ref role="2inpCn" node="6q2BuoUnxR" resolve="theButton" />
+        </node>
+      </node>
+    </node>
+    <node concept="LFDlY" id="6q2BuoUnyl" role="LFDlF">
+      <property role="TrG5h" value="on" />
+      <node concept="LFDlf" id="6q2BuoUnyy" role="LFDlz">
+        <ref role="LFDlW" node="6q2BuoUnxD" resolve="theLed" />
+      </node>
+      <node concept="LFDlf" id="6q2BuoUnyC" role="LFDlz">
+        <ref role="LFDlW" node="6q2BuoUnxJ" resolve="theBuzzer" />
+      </node>
+      <node concept="LafN2" id="6q2BuoUnyn" role="LafNU">
+        <ref role="LafN3" node="6q2BuoUnx$" resolve="off" />
+        <node concept="1G7qTD" id="6q2BuoUnyG" role="2inpCc">
+          <property role="1G7qT3" value="3qUZ94756B_/LOW" />
+          <ref role="2inpCn" node="6q2BuoUnxR" resolve="theButton" />
+        </node>
+      </node>
+    </node>
+    <node concept="LFDlT" id="6q2BuoUnxD" role="2kxaQz">
+      <property role="TrG5h" value="theLed" />
+      <property role="2kx1Rx" value="12" />
+    </node>
+    <node concept="LFDlT" id="6q2BuoUnxJ" role="2kxaQz">
+      <property role="TrG5h" value="theBuzzer" />
+      <property role="2kx1Rx" value="11" />
+    </node>
+    <node concept="2K6NmV" id="6q2BuoUnxR" role="2kxaQz">
+      <property role="TrG5h" value="theButton" />
       <property role="2kx1Rx" value="10" />
     </node>
   </node>

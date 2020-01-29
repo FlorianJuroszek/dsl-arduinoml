@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="-8dzk0sjqag0t4z85xf6ontbml452mtt">
-  <files names="Action_TextGen.java:Actuator_TextGen.java:AnalogSensor_TextGen.java:AnalogicalTuple_TextGen.java:App_TextGen.java:DigitalSensor_TextGen.java:DigitalTuple_TextGen.java:LcdScreen_TextGen.java:State_TextGen.java:TextGenAspectDescriptor.java:Transition_TextGen.java" />
+<product version="3" modelHash="7q5cryofkbjb0ugdhlhbwjb440yv5vu">
+  <files names="Action_TextGen.java:Actuator_TextGen.java:AnalogSensor_TextGen.java:AnalogicalPredicate_TextGen.java:App_TextGen.java:DigitalPredicate_TextGen.java:DigitalSensor_TextGen.java:LcdScreen_TextGen.java:State_TextGen.java:TextGenAspectDescriptor.java:Transition_TextGen.java" />
 </product>
 
