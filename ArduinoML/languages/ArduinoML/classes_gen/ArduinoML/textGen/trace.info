@@ -292,20 +292,23 @@
       <node id="404418408738813538" at="19,31,20,132" concept="2" />
       <node id="404418408738816529" at="20,132,21,21" concept="2" />
       <node id="404418408738816654" at="21,21,22,90" concept="2" />
-      <node id="404418408739059456" at="22,90,23,40" concept="2" />
-      <node id="404418408738812935" at="27,0,28,0" concept="9" trace="sensor$ACYb" />
-      <node id="404418408738812935" at="31,0,32,0" concept="9" trace="name$tAp1" />
-      <node id="404418408738812935" at="32,0,33,0" concept="9" trace="operator$ni2O" />
-      <node id="404418408738812935" at="15,0,25,0" concept="5" trace="generateText#(Ljetbrains/mps/text/rt/TextGenContext;)V" />
-      <scope id="404418408738812935" at="16,54,23,40">
+      <node id="1858791112136243070" at="22,90,23,20" concept="2" />
+      <node id="1858791112136133483" at="23,20,24,104" concept="2" />
+      <node id="1858791112136283093" at="24,104,25,20" concept="2" />
+      <node id="404418408738812935" at="29,0,30,0" concept="9" trace="sensor$FWmI" />
+      <node id="404418408738812935" at="33,0,34,0" concept="9" trace="name$tAp1" />
+      <node id="404418408738812935" at="34,0,35,0" concept="9" trace="operator$ni2O" />
+      <node id="404418408738812935" at="35,0,36,0" concept="9" trace="value$MqDT" />
+      <node id="404418408738812935" at="15,0,27,0" concept="5" trace="generateText#(Ljetbrains/mps/text/rt/TextGenContext;)V" />
+      <scope id="404418408738812935" at="16,54,25,20">
         <var name="tgs" id="404418408738812935" />
       </scope>
-      <scope id="404418408738812935" at="15,0,25,0">
+      <scope id="404418408738812935" at="15,0,27,0">
         <var name="ctx" id="404418408738812935" />
       </scope>
-      <unit id="404418408738812935" at="26,0,29,0" name="ArduinoML.textGen.AnalogicalPredicate_TextGen$LINKS" />
-      <unit id="404418408738812935" at="30,0,34,0" name="ArduinoML.textGen.AnalogicalPredicate_TextGen$PROPS" />
-      <unit id="404418408738812935" at="14,0,35,0" name="ArduinoML.textGen.AnalogicalPredicate_TextGen" />
+      <unit id="404418408738812935" at="28,0,31,0" name="ArduinoML.textGen.AnalogicalPredicate_TextGen$LINKS" />
+      <unit id="404418408738812935" at="32,0,37,0" name="ArduinoML.textGen.AnalogicalPredicate_TextGen$PROPS" />
+      <unit id="404418408738812935" at="14,0,38,0" name="ArduinoML.textGen.AnalogicalPredicate_TextGen" />
     </file>
     <file name="TextGenAspectDescriptor.java">
       <node id="404418408738812935" at="32,53,33,49" concept="7" />
@@ -318,11 +321,11 @@
       <node id="404418408738826128" at="17,55,18,32" concept="2" />
       <node id="404418408738826129" at="18,32,19,132" concept="2" />
       <node id="404418408738826135" at="19,132,20,21" concept="2" />
-      <node id="115416249233302404" at="20,21,21,21" concept="2" />
-      <node id="404418408738826140" at="21,21,22,20" concept="2" />
+      <node id="115416249233302404" at="20,21,21,23" concept="2" />
+      <node id="404418408738826140" at="21,23,22,20" concept="2" />
       <node id="404418408738826141" at="22,20,23,87" concept="2" />
       <node id="404418408738826145" at="23,87,24,21" concept="2" />
-      <node id="404418408738826106" at="28,0,29,0" concept="9" trace="sensor$ACYb" />
+      <node id="404418408738826106" at="28,0,29,0" concept="9" trace="sensor$FWlq" />
       <node id="404418408738826106" at="32,0,33,0" concept="9" trace="name$tAp1" />
       <node id="404418408738826106" at="33,0,34,0" concept="9" trace="value$MqOG" />
       <node id="404418408738826106" at="15,0,26,0" concept="5" trace="generateText#(Ljetbrains/mps/text/rt/TextGenContext;)V" />

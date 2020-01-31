@@ -50,7 +50,7 @@ public class AnalogicalPredicate_SubstituteMenu extends SubstituteMenuBase {
 
     public SMP_ReferenceScope_n36km3_a() {
       // that cast is needed for prevent the users from https://youtrack.jetbrains.com/issue/MPS-29051 
-      super((SAbstractConcept) CONCEPTS.AnalogicalPredicate$yi, LINKS.sensor$ACYb);
+      super((SAbstractConcept) CONCEPTS.AnalogicalPredicate$yi, LINKS.sensor$FWmI);
     }
     @NotNull
     @Override
@@ -92,6 +92,6 @@ public class AnalogicalPredicate_SubstituteMenu extends SubstituteMenuBase {
   }
 
   private static final class LINKS {
-    /*package*/ static final SReferenceLink sensor$ACYb = MetaAdapterFactory.getReferenceLink(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x4579a879d7243262L, 0x4579a879d724326eL, "sensor");
+    /*package*/ static final SReferenceLink sensor$FWmI = MetaAdapterFactory.getReferenceLink(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x59cc86669816610L, 0x19cbc0ab0e83cad8L, "sensor");
   }
 }

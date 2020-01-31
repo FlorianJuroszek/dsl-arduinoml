@@ -125,6 +125,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(2);
     b.property("value", 0x59cc86669816623L).type(PrimitiveTypeId.INTEGER).origin("404418408738809379").done();
     b.property("operator", 0x19a0a7798dbb164L).type(MetaIdFactory.dataTypeId(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x4579a879d7243242L)).origin("115416249233289572").done();
+    b.associate("sensor", 0x19cbc0ab0e83cad8L).target(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x411d9e4df106abf7L).optional(false).origin("1858791112135920344").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForApp() {
@@ -155,6 +156,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:1e4e32fc-e42a-4b05-84e5-5f0ea797c86d(ArduinoML.structure)/404418408738809359");
     b.version(2);
     b.property("value", 0x59cc86669816625L).type(MetaIdFactory.dataTypeId(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469e3L)).origin("404418408738809381").done();
+    b.associate("sensor", 0x19cbc0ab0e83cad6L).target(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x411d9e4df106abf6L).optional(false).origin("1858791112135920342").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForDigitalSensor() {
@@ -186,7 +188,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:1e4e32fc-e42a-4b05-84e5-5f0ea797c86d(ArduinoML.structure)/5006217702052999778");
     b.version(2);
-    b.associate("sensor", 0x4579a879d724326eL).target(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x268865f2b20c7819L).optional(false).origin("5006217702052999790").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForSensor() {

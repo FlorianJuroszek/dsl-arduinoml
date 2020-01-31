@@ -23,7 +23,7 @@ void state_alarmOff()
   digitalWrite(theAlarm, LOW);
   Serial.print("alarmOff \n");
   boolean guard = millis() - time > debounce;
-  if ((analogRead(theTemperature) > convertedThreshold)  &&  guard) {
+  if ((analogRead(theTemperature) > 512) &&  guard) {
     time = millis();
     state_alarmOn();
   } 
@@ -37,7 +37,7 @@ void state_alarmOn()
   digitalWrite(theAlarm, HIGH);
   Serial.print("alarmOn \n");
   boolean guard = millis() - time > debounce;
-  if ((analogRead(theTemperature) <= convertedThreshold)  &&  guard) {
+  if ((analogRead(theTemperature) <= 512) &&  guard) {
     time = millis();
     state_alarmOff();
   } 

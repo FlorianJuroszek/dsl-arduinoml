@@ -353,22 +353,6 @@
       <node concept="2iRkQZ" id="5Dk3po91wEC" role="2iSdaV" />
     </node>
   </node>
-  <node concept="PKFIW" id="msM6pDwmp2">
-    <property role="TrG5h" value="CommonPredicateProperties" />
-    <ref role="1XX52x" to="c1p6:4lTE7Bn939y" resolve="Predicate" />
-    <node concept="3EZMnI" id="msM6pDwmp4" role="2wV5jI">
-      <node concept="1iCGBv" id="msM6pDwmph" role="3EZMnx">
-        <ref role="1NtTu8" to="c1p6:4lTE7Bn939I" resolve="sensor" />
-        <node concept="1sVBvm" id="msM6pDwmpj" role="1sWHZn">
-          <node concept="3F0A7n" id="msM6pDwmpr" role="2wV5jI">
-            <property role="1Intyy" value="true" />
-            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-          </node>
-        </node>
-      </node>
-      <node concept="l2Vlx" id="msM6pDwmp7" role="2iSdaV" />
-    </node>
-  </node>
   <node concept="24kQdi" id="msM6pDwmpX">
     <ref role="1XX52x" to="c1p6:msM6pDwmog" resolve="AnalogicalPredicate" />
     <node concept="3EZMnI" id="msM6pDwmpZ" role="2wV5jI">
@@ -376,8 +360,14 @@
       <node concept="3F0ifn" id="msM6pDwmq6" role="3EZMnx">
         <property role="3F0ifm" value="[analogical predicate]" />
       </node>
-      <node concept="PMmxH" id="msM6pDwmqc" role="3EZMnx">
-        <ref role="PMmxG" node="msM6pDwmp2" resolve="CommonPredicateProperties" />
+      <node concept="1iCGBv" id="1BbKaGewWGq" role="3EZMnx">
+        <ref role="1NtTu8" to="c1p6:1BbKaGewWFo" resolve="sensor" />
+        <node concept="1sVBvm" id="1BbKaGewWGs" role="1sWHZn">
+          <node concept="3F0A7n" id="1BbKaGewWGC" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
       </node>
       <node concept="3F0A7n" id="6q2BuoRfO6" role="3EZMnx">
         <ref role="1NtTu8" to="c1p6:6q2BuoQV5$" resolve="operator" />
@@ -398,8 +388,14 @@
       <node concept="3F0ifn" id="msM6pDwmqO" role="3EZMnx">
         <property role="3F0ifm" value="[digital predicate]" />
       </node>
-      <node concept="PMmxH" id="msM6pDwmqU" role="3EZMnx">
-        <ref role="PMmxG" node="msM6pDwmp2" resolve="CommonPredicateProperties" />
+      <node concept="1iCGBv" id="1BbKaGewWFY" role="3EZMnx">
+        <ref role="1NtTu8" to="c1p6:1BbKaGewWFm" resolve="sensor" />
+        <node concept="1sVBvm" id="1BbKaGewWG0" role="1sWHZn">
+          <node concept="3F0A7n" id="1BbKaGewWGb" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
       </node>
       <node concept="3F0ifn" id="6q2BuoRoTi" role="3EZMnx">
         <property role="3F0ifm" value="is" />

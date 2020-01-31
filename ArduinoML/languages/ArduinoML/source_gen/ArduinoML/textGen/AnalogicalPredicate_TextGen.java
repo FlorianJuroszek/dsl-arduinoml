@@ -17,18 +17,21 @@ public class AnalogicalPredicate_TextGen extends TextGenDescriptorBase {
     final TextGenSupport tgs = new TextGenSupport(ctx);
 
     tgs.append("(analogRead(");
-    tgs.append(SPropertyOperations.getString(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.sensor$ACYb), PROPS.name$tAp1));
+    tgs.append(SPropertyOperations.getString(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.sensor$FWmI), PROPS.name$tAp1));
     tgs.append(") ");
     tgs.append(SPropertyOperations.getString(ctx.getPrimaryInput(), PROPS.operator$ni2O));
-    tgs.append(" convertedThreshold) ");
+    tgs.append(" ");
+    tgs.append(String.valueOf(SPropertyOperations.getInteger(ctx.getPrimaryInput(), PROPS.value$MqDT)));
+    tgs.append(")");
   }
 
   private static final class LINKS {
-    /*package*/ static final SReferenceLink sensor$ACYb = MetaAdapterFactory.getReferenceLink(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x4579a879d7243262L, 0x4579a879d724326eL, "sensor");
+    /*package*/ static final SReferenceLink sensor$FWmI = MetaAdapterFactory.getReferenceLink(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x59cc86669816610L, 0x19cbc0ab0e83cad8L, "sensor");
   }
 
   private static final class PROPS {
     /*package*/ static final SProperty name$tAp1 = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
     /*package*/ static final SProperty operator$ni2O = MetaAdapterFactory.getProperty(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x59cc86669816610L, 0x19a0a7798dbb164L, "operator");
+    /*package*/ static final SProperty value$MqDT = MetaAdapterFactory.getProperty(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x59cc86669816610L, 0x59cc86669816623L, "value");
   }
 }

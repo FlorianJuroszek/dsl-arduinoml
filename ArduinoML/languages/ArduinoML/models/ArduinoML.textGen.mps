@@ -1007,14 +1007,14 @@
             <property role="lacIc" value="(analogRead(" />
           </node>
           <node concept="l9hG8" id="msM6pDwnpy" role="lcghm">
-            <node concept="2OqwBi" id="msM6pDwnSJ" role="lb14g">
+            <node concept="2OqwBi" id="1BbKaGexu5i" role="lb14g">
               <node concept="2OqwBi" id="msM6pDwnyh" role="2Oq$k0">
                 <node concept="117lpO" id="msM6pDwnqr" role="2Oq$k0" />
-                <node concept="3TrEf2" id="msM6pDwnGl" role="2OqNvi">
-                  <ref role="3Tt5mk" to="c1p6:4lTE7Bn939I" resolve="sensor" />
+                <node concept="3TrEf2" id="1BbKaGextS9" role="2OqNvi">
+                  <ref role="3Tt5mk" to="c1p6:1BbKaGewWFo" resolve="sensor" />
                 </node>
               </node>
-              <node concept="3TrcHB" id="msM6pDwo4C" role="2OqNvi">
+              <node concept="3TrcHB" id="1BbKaGexui$" role="2OqNvi">
                 <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
               </node>
             </node>
@@ -1030,8 +1030,23 @@
               </node>
             </node>
           </node>
-          <node concept="la8eA" id="msM6pDxjs0" role="lcghm">
-            <property role="lacIc" value=" convertedThreshold) " />
+          <node concept="la8eA" id="1BbKaGeybtY" role="lcghm">
+            <property role="lacIc" value=" " />
+          </node>
+          <node concept="l9hG8" id="1BbKaGexKHF" role="lcghm">
+            <node concept="2YIFZM" id="1BbKaGexLsT" role="lb14g">
+              <ref role="1Pybhc" to="wyt6:~String" resolve="String" />
+              <ref role="37wK5l" to="wyt6:~String.valueOf(int)" resolve="valueOf" />
+              <node concept="2OqwBi" id="1BbKaGexLKw" role="37wK5m">
+                <node concept="117lpO" id="1BbKaGexLxM" role="2Oq$k0" />
+                <node concept="3TrcHB" id="1BbKaGexLV0" role="2OqNvi">
+                  <ref role="3TsBF5" to="c1p6:msM6pDwmoz" resolve="value" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="la8eA" id="1BbKaGeylfl" role="lcghm">
+            <property role="lacIc" value=")" />
           </node>
         </node>
       </node>
@@ -1046,14 +1061,14 @@
             <property role="lacIc" value="(digitalRead(" />
           </node>
           <node concept="l9hG8" id="msM6pDwquh" role="lcghm">
-            <node concept="2OqwBi" id="msM6pDwqui" role="lb14g">
+            <node concept="2OqwBi" id="1BbKaGextsG" role="lb14g">
               <node concept="2OqwBi" id="msM6pDwquj" role="2Oq$k0">
                 <node concept="117lpO" id="msM6pDwquk" role="2Oq$k0" />
-                <node concept="3TrEf2" id="msM6pDwqul" role="2OqNvi">
-                  <ref role="3Tt5mk" to="c1p6:4lTE7Bn939I" resolve="sensor" />
+                <node concept="3TrEf2" id="1BbKaGextfz" role="2OqNvi">
+                  <ref role="3Tt5mk" to="c1p6:1BbKaGewWFm" resolve="sensor" />
                 </node>
               </node>
-              <node concept="3TrcHB" id="msM6pDwqum" role="2OqNvi">
+              <node concept="3TrcHB" id="1BbKaGextDY" role="2OqNvi">
                 <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
               </node>
             </node>
@@ -1062,7 +1077,7 @@
             <property role="lacIc" value=") " />
           </node>
           <node concept="la8eA" id="6q2BuoQYe4" role="lcghm">
-            <property role="lacIc" value="is" />
+            <property role="lacIc" value=" == " />
           </node>
           <node concept="la8eA" id="msM6pDwqus" role="lcghm">
             <property role="lacIc" value=" " />

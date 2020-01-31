@@ -218,12 +218,6 @@
     <node concept="PrWs8" id="4lTE7Bn939z" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
-    <node concept="1TJgyj" id="4lTE7Bn939I" role="1TKVEi">
-      <property role="IQ2ns" value="5006217702052999790" />
-      <property role="20kJfa" value="sensor" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="2q8pvaM37wp" resolve="Sensor" />
-    </node>
   </node>
   <node concept="1TIwiD" id="44tB$RL1EJQ">
     <property role="EcuMT" value="4692080444383341558" />
@@ -284,6 +278,12 @@
       <property role="TrG5h" value="value" />
       <ref role="AX2Wp" node="3qUZ94756Bz" resolve="SIGNAL" />
     </node>
+    <node concept="1TJgyj" id="1BbKaGewWFm" role="1TKVEi">
+      <property role="IQ2ns" value="1858791112135920342" />
+      <property role="20kJfa" value="sensor" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="44tB$RL1EJQ" resolve="DigitalSensor" />
+    </node>
   </node>
   <node concept="1TIwiD" id="msM6pDwmog">
     <property role="EcuMT" value="404418408738809360" />
@@ -298,6 +298,12 @@
       <property role="IQ2nx" value="115416249233289572" />
       <property role="TrG5h" value="operator" />
       <ref role="AX2Wp" node="4lTE7Bn9392" resolve="OPERATOR" />
+    </node>
+    <node concept="1TJgyj" id="1BbKaGewWFo" role="1TKVEi">
+      <property role="IQ2ns" value="1858791112135920344" />
+      <property role="20kJfa" value="sensor" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="44tB$RL1EJR" resolve="AnalogSensor" />
     </node>
   </node>
 </model>
