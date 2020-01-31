@@ -265,6 +265,12 @@
       <node concept="PMmxH" id="44tB$RL1It8" role="3EZMnx">
         <ref role="PMmxG" node="2q8pvaM37wq" resolve="CommonBrickProperties" />
       </node>
+      <node concept="3F0ifn" id="3tGsC06J0ST" role="3EZMnx">
+        <property role="3F0ifm" value="using factor" />
+      </node>
+      <node concept="3F0A7n" id="3tGsC06J0T3" role="3EZMnx">
+        <ref role="1NtTu8" to="c1p6:3tGsC06ION0" resolve="factor" />
+      </node>
       <node concept="l2Vlx" id="44tB$RL1IsY" role="2iSdaV" />
     </node>
   </node>

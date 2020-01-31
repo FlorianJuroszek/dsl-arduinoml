@@ -126,6 +126,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.super_("ArduinoML.structure.Sensor", 0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x268865f2b20c7819L);
     b.origin("r:1e4e32fc-e42a-4b05-84e5-5f0ea797c86d(ArduinoML.structure)/4692080444383341559");
     b.version(2);
+    b.property("factor", 0x376c728006bb4cc0L).type(MetaIdFactory.dataTypeId(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0x10324579ea7L)).origin("3993692863765105856").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForAnalogicalPredicate() {

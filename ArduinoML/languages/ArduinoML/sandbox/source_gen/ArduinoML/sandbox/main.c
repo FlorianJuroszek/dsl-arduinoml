@@ -2,61 +2,56 @@
 #include <util/delay.h>
 #include <Arduino.h>
 
-/** Generating code for application Scenario1**/
+/** Generating code for application TemperatureAlarm**/
 
 // Declaring states function headers 
-void state_off();
-void state_on();
+void state_buzzerOn();
+void state_buzzerOff();
 
 // Declaring available bricks 
-int theLed = 12;
-int theBuzzer = 11;
-int theButton = 10;
+int buzzer = 11;
+int temperatureSensor = 2;
+
 
 long time = 0;
 long debounce = 200;
 
 // Declaring states 
-void state_off()
+void state_buzzerOn()
 {
-  digitalWrite(11, LOW);
-  analogWrite(A11, 510);
-  analogWrite(A12, 21);
-  digitalWrite(12, LOW);
-  Serial.print("off \n");
+  digitalWrite(11, HIGH);
+  Serial.print("buzzerOn \n");
   boolean guard = millis() - time > debounce;
-  if ((digitalRead(theButton)  ==  HIGH)  &&  guard) {
+  if (((analogRead(A2) * 0.045) > 20) &&  guard) {
     time = millis();
-    state_on();
+    state_buzzerOff();
   } 
   else {
-    state_off();
+    state_buzzerOn();
   }
 }
 
-void state_on()
+void state_buzzerOff()
 {
-  digitalWrite(11, HIGH);
-  digitalWrite(12, HIGH);
-  Serial.print("on \n");
+  digitalWrite(11, LOW);
+  Serial.print("buzzerOff \n");
   boolean guard = millis() - time > debounce;
-  if ((digitalRead(theButton)  ==  LOW)  &&  guard) {
+  if (((analogRead(A2) * 0.045) <= 20) &&  guard) {
     time = millis();
-    state_off();
+    state_buzzerOn();
   } 
   else {
-    state_on();
+    state_buzzerOff();
   }
 }
 
 
 void setup() {
   Serial.begin(9600);
-  pinMode(theLed, OUTPUT);
-  pinMode(theBuzzer, OUTPUT);
-  pinMode(theButton, INPUT);
+  pinMode(buzzer, OUTPUT);
+  pinMode(temperatureSensor, INPUT);
 }
 
 void loop() {
-  state_off();
+  state_buzzerOff();
 }
