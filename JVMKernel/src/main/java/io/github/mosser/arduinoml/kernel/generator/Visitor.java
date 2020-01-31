@@ -13,10 +13,17 @@ public abstract class Visitor<T> {
 
 	public abstract void visit(State state);
 	public abstract void visit(Transition transition);
-	public abstract void visit(Action action);
+
+	public abstract void visit(AnalogicalAction analogicalAction);
+	public abstract void visit(DigitalAction digitalAction);
+
+	public abstract void visit(AnalogicalPredicate analogicalTuple);
+	public abstract void visit(DigitalPredicate digitalTuple);
 
 	public abstract void visit(Actuator actuator);
-	public abstract void visit(Sensor sensor);
+
+	public abstract void visit(DigitalSensor digitalSensor);
+	public abstract void visit(AnalogicalSensor analogicalSensor);
 
 
 	/***********************

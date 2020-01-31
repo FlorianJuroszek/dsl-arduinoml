@@ -2,16 +2,14 @@ package io.github.mosser.arduinoml.kernel.behavioral;
 
 import io.github.mosser.arduinoml.kernel.generator.Visitable;
 import io.github.mosser.arduinoml.kernel.generator.Visitor;
-import io.github.mosser.arduinoml.kernel.structural.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Transition implements Visitable {
 
 	private State next;
-	private Sensor sensor;
-	private SIGNAL value;
-	// Add a tuple [sensor, signal, operator]
-
-
+	private List<Predicate> predicates = new ArrayList<Predicate>();
 
 	public State getNext() {
 		return next;
@@ -21,20 +19,12 @@ public class Transition implements Visitable {
 		this.next = next;
 	}
 
-	public Sensor getSensor() {
-		return sensor;
+	public List<Predicate> getPredicates() {
+		return predicates;
 	}
 
-	public void setSensor(Sensor sensor) {
-		this.sensor = sensor;
-	}
-
-	public SIGNAL getValue() {
-		return value;
-	}
-
-	public void setValue(SIGNAL value) {
-		this.value = value;
+	public void setPredicates(List<Predicate> predicates) {
+		this.predicates = predicates;
 	}
 
 	@Override
