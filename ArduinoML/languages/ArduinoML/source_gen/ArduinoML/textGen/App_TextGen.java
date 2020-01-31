@@ -12,10 +12,10 @@ import jetbrains.mps.internal.collections.runtime.IVisitor;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.internal.collections.runtime.Sequence;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
-import jetbrains.mps.internal.collections.runtime.IWhereFilter;
 import org.jetbrains.mps.openapi.language.SProperty;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
+import org.jetbrains.mps.openapi.language.SReferenceLink;
 import org.jetbrains.mps.openapi.language.SConcept;
 
 public class App_TextGen extends TextGenDescriptorBase {
@@ -116,11 +116,7 @@ public class App_TextGen extends TextGenDescriptorBase {
     if (SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.states$LKNY).size() > 0) {
       tgs.indent();
       tgs.append("state_");
-      tgs.append(SPropertyOperations.getString(ListSequence.fromList(SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.states$LKNY)).findFirst(new IWhereFilter<SNode>() {
-        public boolean accept(SNode it) {
-          return SPropertyOperations.getBoolean(it, PROPS.isInitial$j0QN);
-        }
-      }), PROPS.name$tAp1));
+      tgs.append(SPropertyOperations.getString(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.initial_state$5h6z), PROPS.name$tAp1));
       tgs.append("();");
       tgs.newLine();
     }
@@ -130,12 +126,12 @@ public class App_TextGen extends TextGenDescriptorBase {
 
   private static final class PROPS {
     /*package*/ static final SProperty name$tAp1 = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
-    /*package*/ static final SProperty isInitial$j0QN = MetaAdapterFactory.getProperty(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469efL, 0xa00ce583b286469L, "isInitial");
   }
 
   private static final class LINKS {
     /*package*/ static final SContainmentLink states$LKNY = MetaAdapterFactory.getContainmentLink(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469f7L, 0x36bafc91071469faL, "states");
     /*package*/ static final SContainmentLink bricks$XojH = MetaAdapterFactory.getContainmentLink(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469f7L, 0x268865f2b20cc851L, "bricks");
+    /*package*/ static final SReferenceLink initial_state$5h6z = MetaAdapterFactory.getReferenceLink(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469f7L, 0x19a0a7798d8fae1L, "initial_state");
   }
 
   private static final class CONCEPTS {

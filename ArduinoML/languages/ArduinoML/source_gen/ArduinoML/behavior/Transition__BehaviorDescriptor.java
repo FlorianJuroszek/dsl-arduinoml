@@ -35,7 +35,7 @@ public final class Transition__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   /*package*/ static Scope getScope_id52_Geb4QDV$(@NotNull SNode __thisNode__, SAbstractConcept kind, SNode child) {
-    if (SConceptOperations.isSubConceptOf(SNodeOperations.asSConcept(kind), CONCEPTS.Tuple$jn)) {
+    if (SConceptOperations.isSubConceptOf(SNodeOperations.asSConcept(kind), CONCEPTS.Predicate$jn)) {
       return SimpleRoleScope.forNamedElements(__thisNode__, LINKS.tuple$SMtV);
     }
 
@@ -89,7 +89,7 @@ public final class Transition__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept Tuple$jn = MetaAdapterFactory.getConcept(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x4579a879d7243262L, "ArduinoML.structure.Tuple");
+    /*package*/ static final SConcept Predicate$jn = MetaAdapterFactory.getConcept(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x4579a879d7243262L, "ArduinoML.structure.Predicate");
   }
 
   private static final class LINKS {

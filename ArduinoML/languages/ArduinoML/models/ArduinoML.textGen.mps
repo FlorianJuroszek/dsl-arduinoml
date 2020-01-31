@@ -124,7 +124,6 @@
       </concept>
       <concept id="1204980550705" name="jetbrains.mps.baseLanguage.collections.structure.VisitAllOperation" flags="nn" index="2es0OD" />
       <concept id="1203518072036" name="jetbrains.mps.baseLanguage.collections.structure.SmartClosureParameterDeclaration" flags="ig" index="Rh6nW" />
-      <concept id="1225727723840" name="jetbrains.mps.baseLanguage.collections.structure.FindFirstOperation" flags="nn" index="1z4cxt" />
     </language>
   </registry>
   <node concept="WtQ9Q" id="3qUZ9475_5i">
@@ -488,36 +487,14 @@
                     <property role="lacIc" value="state_" />
                   </node>
                   <node concept="l9hG8" id="3qUZ9475TlK" role="lcghm">
-                    <node concept="2OqwBi" id="3qUZ9475YUx" role="lb14g">
-                      <node concept="2OqwBi" id="3qUZ9475Vzf" role="2Oq$k0">
-                        <node concept="2OqwBi" id="3qUZ9475Tun" role="2Oq$k0">
-                          <node concept="117lpO" id="3qUZ9475TmD" role="2Oq$k0" />
-                          <node concept="3Tsc0h" id="3qUZ9475TCI" role="2OqNvi">
-                            <ref role="3TtcxE" to="c1p6:3qUZ94756BU" resolve="states" />
-                          </node>
-                        </node>
-                        <node concept="1z4cxt" id="3qUZ9475Y8J" role="2OqNvi">
-                          <node concept="1bVj0M" id="3qUZ9475Y8L" role="23t8la">
-                            <node concept="3clFbS" id="3qUZ9475Y8M" role="1bW5cS">
-                              <node concept="3clFbF" id="3qUZ9475Yhh" role="3cqZAp">
-                                <node concept="2OqwBi" id="3qUZ9475YsF" role="3clFbG">
-                                  <node concept="37vLTw" id="3qUZ9475Yhg" role="2Oq$k0">
-                                    <ref role="3cqZAo" node="3qUZ9475Y8N" resolve="it" />
-                                  </node>
-                                  <node concept="3TrcHB" id="C0N_wVaNZl" role="2OqNvi">
-                                    <ref role="3TsBF5" to="c1p6:C0N_wVa6hD" resolve="isInitial" />
-                                  </node>
-                                </node>
-                              </node>
-                            </node>
-                            <node concept="Rh6nW" id="3qUZ9475Y8N" role="1bW2Oz">
-                              <property role="TrG5h" value="it" />
-                              <node concept="2jxLKc" id="3qUZ9475Y8O" role="1tU5fm" />
-                            </node>
-                          </node>
+                    <node concept="2OqwBi" id="6q2BuoPYjL" role="lb14g">
+                      <node concept="2OqwBi" id="6q2BuoPu2c" role="2Oq$k0">
+                        <node concept="117lpO" id="6q2BuoPtT9" role="2Oq$k0" />
+                        <node concept="3TrEf2" id="6q2BuoQgq0" role="2OqNvi">
+                          <ref role="3Tt5mk" to="c1p6:6q2BuoQfFx" resolve="initial_state" />
                         </node>
                       </node>
-                      <node concept="3TrcHB" id="3qUZ9475Z8y" role="2OqNvi">
+                      <node concept="3TrcHB" id="6q2BuoQg_I" role="2OqNvi">
                         <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
                       </node>
                     </node>
@@ -1021,7 +998,7 @@
     </node>
   </node>
   <node concept="WtQ9Q" id="msM6pDwng7">
-    <ref role="WuzLi" to="c1p6:msM6pDwmog" resolve="AnalogicalTuple" />
+    <ref role="WuzLi" to="c1p6:msM6pDwmog" resolve="AnalogicalPredicate" />
     <node concept="11bSqf" id="msM6pDwng8" role="11c4hB">
       <node concept="3clFbS" id="msM6pDwng9" role="2VODD2">
         <node concept="3clFbH" id="msM6pDxFRm" role="3cqZAp" />
@@ -1030,14 +1007,14 @@
             <property role="lacIc" value="(analogRead(" />
           </node>
           <node concept="l9hG8" id="msM6pDwnpy" role="lcghm">
-            <node concept="2OqwBi" id="msM6pDwnSJ" role="lb14g">
+            <node concept="2OqwBi" id="1BbKaGexu5i" role="lb14g">
               <node concept="2OqwBi" id="msM6pDwnyh" role="2Oq$k0">
                 <node concept="117lpO" id="msM6pDwnqr" role="2Oq$k0" />
-                <node concept="3TrEf2" id="msM6pDwnGl" role="2OqNvi">
-                  <ref role="3Tt5mk" to="c1p6:4lTE7Bn939I" resolve="sensor" />
+                <node concept="3TrEf2" id="1BbKaGextS9" role="2OqNvi">
+                  <ref role="3Tt5mk" to="c1p6:1BbKaGewWFo" resolve="sensor" />
                 </node>
               </node>
-              <node concept="3TrcHB" id="msM6pDwo4C" role="2OqNvi">
+              <node concept="3TrcHB" id="1BbKaGexui$" role="2OqNvi">
                 <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
               </node>
             </node>
@@ -1048,20 +1025,35 @@
           <node concept="l9hG8" id="msM6pDwoae" role="lcghm">
             <node concept="2OqwBi" id="msM6pDwolA" role="lb14g">
               <node concept="117lpO" id="msM6pDwobD" role="2Oq$k0" />
-              <node concept="3TrcHB" id="msM6pDwoAv" role="2OqNvi">
-                <ref role="3TsBF5" to="c1p6:4lTE7Bn939F" resolve="operator" />
+              <node concept="3TrcHB" id="6q2BuoQXSI" role="2OqNvi">
+                <ref role="3TsBF5" to="c1p6:6q2BuoQV5$" resolve="operator" />
               </node>
             </node>
           </node>
-          <node concept="la8eA" id="msM6pDxjs0" role="lcghm">
-            <property role="lacIc" value=" convertedThreshold) " />
+          <node concept="la8eA" id="1BbKaGeybtY" role="lcghm">
+            <property role="lacIc" value=" " />
+          </node>
+          <node concept="l9hG8" id="1BbKaGexKHF" role="lcghm">
+            <node concept="2YIFZM" id="1BbKaGexLsT" role="lb14g">
+              <ref role="1Pybhc" to="wyt6:~String" resolve="String" />
+              <ref role="37wK5l" to="wyt6:~String.valueOf(int)" resolve="valueOf" />
+              <node concept="2OqwBi" id="1BbKaGexLKw" role="37wK5m">
+                <node concept="117lpO" id="1BbKaGexLxM" role="2Oq$k0" />
+                <node concept="3TrcHB" id="1BbKaGexLV0" role="2OqNvi">
+                  <ref role="3TsBF5" to="c1p6:msM6pDwmoz" resolve="value" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="la8eA" id="1BbKaGeylfl" role="lcghm">
+            <property role="lacIc" value=")" />
           </node>
         </node>
       </node>
     </node>
   </node>
   <node concept="WtQ9Q" id="msM6pDwqtU">
-    <ref role="WuzLi" to="c1p6:msM6pDwmof" resolve="DigitalTuple" />
+    <ref role="WuzLi" to="c1p6:msM6pDwmof" resolve="DigitalPredicate" />
     <node concept="11bSqf" id="msM6pDwqtV" role="11c4hB">
       <node concept="3clFbS" id="msM6pDwqtW" role="2VODD2">
         <node concept="lc7rE" id="msM6pDwquf" role="3cqZAp">
@@ -1069,14 +1061,14 @@
             <property role="lacIc" value="(digitalRead(" />
           </node>
           <node concept="l9hG8" id="msM6pDwquh" role="lcghm">
-            <node concept="2OqwBi" id="msM6pDwqui" role="lb14g">
+            <node concept="2OqwBi" id="1BbKaGextsG" role="lb14g">
               <node concept="2OqwBi" id="msM6pDwquj" role="2Oq$k0">
                 <node concept="117lpO" id="msM6pDwquk" role="2Oq$k0" />
-                <node concept="3TrEf2" id="msM6pDwqul" role="2OqNvi">
-                  <ref role="3Tt5mk" to="c1p6:4lTE7Bn939I" resolve="sensor" />
+                <node concept="3TrEf2" id="1BbKaGextfz" role="2OqNvi">
+                  <ref role="3Tt5mk" to="c1p6:1BbKaGewWFm" resolve="sensor" />
                 </node>
               </node>
-              <node concept="3TrcHB" id="msM6pDwqum" role="2OqNvi">
+              <node concept="3TrcHB" id="1BbKaGextDY" role="2OqNvi">
                 <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
               </node>
             </node>
@@ -1084,13 +1076,8 @@
           <node concept="la8eA" id="msM6pDwqun" role="lcghm">
             <property role="lacIc" value=") " />
           </node>
-          <node concept="l9hG8" id="msM6pDwquo" role="lcghm">
-            <node concept="2OqwBi" id="msM6pDwqup" role="lb14g">
-              <node concept="117lpO" id="msM6pDwquq" role="2Oq$k0" />
-              <node concept="3TrcHB" id="msM6pDwqur" role="2OqNvi">
-                <ref role="3TsBF5" to="c1p6:4lTE7Bn939F" resolve="operator" />
-              </node>
-            </node>
+          <node concept="la8eA" id="6q2BuoQYe4" role="lcghm">
+            <property role="lacIc" value=" == " />
           </node>
           <node concept="la8eA" id="msM6pDwqus" role="lcghm">
             <property role="lacIc" value=" " />

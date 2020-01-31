@@ -40,7 +40,7 @@ import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
     return editorCell;
   }
   private EditorCell createConstant_0() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "a_sensor");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "analogical sensor");
     editorCell.setCellId("Constant_z2xh6p_a0");
     editorCell.setDefaultText("");
     return editorCell;

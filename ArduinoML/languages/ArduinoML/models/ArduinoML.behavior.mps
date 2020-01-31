@@ -186,7 +186,7 @@
             </node>
             <node concept="2Zo12i" id="7QdPs2MWjZa" role="2OqNvi">
               <node concept="chp4Y" id="7QdPs2MWk2x" role="2Zo12j">
-                <ref role="cht4Q" to="c1p6:4lTE7Bn939y" resolve="Tuple" />
+                <ref role="cht4Q" to="c1p6:4lTE7Bn939y" resolve="Predicate" />
               </node>
             </node>
           </node>
