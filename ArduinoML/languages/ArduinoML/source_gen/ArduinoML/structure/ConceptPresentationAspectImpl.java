@@ -11,13 +11,14 @@ import jetbrains.mps.smodel.runtime.ConceptPresentationBuilder;
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
   private ConceptPresentation props_Action;
   private ConceptPresentation props_Actuator;
+  private ConceptPresentation props_AnalogAction;
   private ConceptPresentation props_AnalogSensor;
   private ConceptPresentation props_AnalogicalPredicate;
   private ConceptPresentation props_App;
   private ConceptPresentation props_Brick;
+  private ConceptPresentation props_DigitalAction;
   private ConceptPresentation props_DigitalPredicate;
   private ConceptPresentation props_DigitalSensor;
-  private ConceptPresentation props_LcdScreen;
   private ConceptPresentation props_Predicate;
   private ConceptPresentation props_Sensor;
   private ConceptPresentation props_State;
@@ -31,7 +32,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.Action:
         if (props_Action == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByReference(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469deL, 0x36bafc91071469edL, "target", "", "");
           props_Action = cpb.create();
         }
         return props_Action;
@@ -42,6 +42,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Actuator = cpb.create();
         }
         return props_Actuator;
+      case LanguageConceptSwitch.AnalogAction:
+        if (props_AnalogAction == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469deL, 0x36bafc91071469edL, "target", "", "");
+          props_AnalogAction = cpb.create();
+        }
+        return props_AnalogAction;
       case LanguageConceptSwitch.AnalogSensor:
         if (props_AnalogSensor == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -69,6 +76,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Brick = cpb.create();
         }
         return props_Brick;
+      case LanguageConceptSwitch.DigitalAction:
+        if (props_DigitalAction == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469deL, 0x36bafc91071469edL, "target", "", "");
+          props_DigitalAction = cpb.create();
+        }
+        return props_DigitalAction;
       case LanguageConceptSwitch.DigitalPredicate:
         if (props_DigitalPredicate == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -83,13 +97,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_DigitalSensor = cpb.create();
         }
         return props_DigitalSensor;
-      case LanguageConceptSwitch.LcdScreen:
-        if (props_LcdScreen == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByName();
-          props_LcdScreen = cpb.create();
-        }
-        return props_LcdScreen;
       case LanguageConceptSwitch.Predicate:
         if (props_Predicate == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

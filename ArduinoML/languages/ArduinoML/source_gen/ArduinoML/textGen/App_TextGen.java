@@ -28,8 +28,6 @@ public class App_TextGen extends TextGenDescriptorBase {
     tgs.newLine();
     tgs.append("#include <Arduino.h>");
     tgs.newLine();
-    tgs.append("#include <LiquidCrystal.h>");
-    tgs.newLine();
     tgs.newLine();
     tgs.append("/** Generating code for application ");
     tgs.append(SPropertyOperations.getString(ctx.getPrimaryInput(), PROPS.name$tAp1));
@@ -87,7 +85,6 @@ public class App_TextGen extends TextGenDescriptorBase {
     tgs.indent();
     tgs.append("Serial.begin(9600);");
     tgs.newLine();
-    tgs.indent();
     ListSequence.fromList(SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.bricks$XojH)).visitAll(new IVisitor<SNode>() {
       public void visit(SNode it) {
         tgs.indent();
@@ -113,13 +110,11 @@ public class App_TextGen extends TextGenDescriptorBase {
     tgs.append("void loop() {");
     tgs.newLine();
     ctx.getBuffer().area().increaseIndent();
-    if (SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.states$LKNY).size() > 0) {
-      tgs.indent();
-      tgs.append("state_");
-      tgs.append(SPropertyOperations.getString(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.initial_state$5h6z), PROPS.name$tAp1));
-      tgs.append("();");
-      tgs.newLine();
-    }
+    tgs.indent();
+    tgs.append("state_");
+    tgs.append(SPropertyOperations.getString(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.initial_state$5h6z), PROPS.name$tAp1));
+    tgs.append("();");
+    tgs.newLine();
     ctx.getBuffer().area().decreaseIndent();
     tgs.append("}");
   }

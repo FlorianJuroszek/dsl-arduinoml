@@ -10,10 +10,12 @@ import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.internal.collections.runtime.IVisitor;
 import org.jetbrains.mps.openapi.model.SNode;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import org.jetbrains.mps.openapi.language.SProperty;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import org.jetbrains.mps.openapi.language.SReferenceLink;
+import org.jetbrains.mps.openapi.language.SConcept;
 
 public class State_TextGen extends TextGenDescriptorBase {
   @Override
@@ -29,14 +31,24 @@ public class State_TextGen extends TextGenDescriptorBase {
     tgs.indent();
     ListSequence.fromList(SLinkOperations.getChildren(ctx.getPrimaryInput(), LINKS.actions$LK_u)).visitAll(new IVisitor<SNode>() {
       public void visit(SNode it) {
-
-        tgs.append("digitalWrite(");
-        tgs.append(SPropertyOperations.getString(SLinkOperations.getTarget(it, LINKS.target$LKy8), PROPS.name$tAp1));
-        tgs.append(", ");
-        tgs.append(SPropertyOperations.getString(it, PROPS.signal$LK7Y));
-        tgs.append(");");
-        tgs.newLine();
-        tgs.indent();
+        if (SNodeOperations.isInstanceOf(it, CONCEPTS.AnalogAction$8D)) {
+          tgs.append("analogWrite(A");
+          tgs.append(String.valueOf(SPropertyOperations.getInteger(SLinkOperations.getTarget(it, LINKS.target$LKy8), PROPS.pin$E8DD)));
+          tgs.append(", ");
+          tgs.appendNode(it);
+          tgs.append(");");
+          tgs.newLine();
+          tgs.indent();
+        }
+        if (SNodeOperations.isInstanceOf(it, CONCEPTS.DigitalAction$eC)) {
+          tgs.append("digitalWrite(");
+          tgs.append(String.valueOf(SPropertyOperations.getInteger(SLinkOperations.getTarget(it, LINKS.target$LKy8), PROPS.pin$E8DD)));
+          tgs.append(", ");
+          tgs.appendNode(it);
+          tgs.append(");");
+          tgs.newLine();
+          tgs.indent();
+        }
       }
     });
     tgs.append("Serial.print(\"");
@@ -70,12 +82,17 @@ public class State_TextGen extends TextGenDescriptorBase {
 
   private static final class PROPS {
     /*package*/ static final SProperty name$tAp1 = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
-    /*package*/ static final SProperty signal$LK7Y = MetaAdapterFactory.getProperty(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469deL, 0x36bafc91071469e1L, "signal");
+    /*package*/ static final SProperty pin$E8DD = MetaAdapterFactory.getProperty(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x268865f2b20c7810L, 0x268865f2b20c7813L, "pin");
   }
 
   private static final class LINKS {
     /*package*/ static final SContainmentLink actions$LK_u = MetaAdapterFactory.getContainmentLink(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469efL, 0x36bafc91071469f2L, "actions");
     /*package*/ static final SReferenceLink target$LKy8 = MetaAdapterFactory.getReferenceLink(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469deL, 0x36bafc91071469edL, "target");
     /*package*/ static final SContainmentLink transitions$rzLd = MetaAdapterFactory.getContainmentLink(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469efL, 0xa00ce583b2832a2L, "transitions");
+  }
+
+  private static final class CONCEPTS {
+    /*package*/ static final SConcept AnalogAction$8D = MetaAdapterFactory.getConcept(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x73d359f69f08f05bL, "ArduinoML.structure.AnalogAction");
+    /*package*/ static final SConcept DigitalAction$eC = MetaAdapterFactory.getConcept(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x73d359f69f08f05cL, "ArduinoML.structure.DigitalAction");
   }
 }

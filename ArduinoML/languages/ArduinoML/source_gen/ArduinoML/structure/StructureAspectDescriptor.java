@@ -12,19 +12,20 @@ import jetbrains.mps.smodel.adapter.ids.SConceptId;
 import jetbrains.mps.smodel.runtime.DataTypeDescriptor;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.runtime.impl.ConceptDescriptorBuilder2;
-import jetbrains.mps.smodel.adapter.ids.MetaIdFactory;
 import jetbrains.mps.smodel.adapter.ids.PrimitiveTypeId;
+import jetbrains.mps.smodel.adapter.ids.MetaIdFactory;
 
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptAction = createDescriptorForAction();
   /*package*/ final ConceptDescriptor myConceptActuator = createDescriptorForActuator();
+  /*package*/ final ConceptDescriptor myConceptAnalogAction = createDescriptorForAnalogAction();
   /*package*/ final ConceptDescriptor myConceptAnalogSensor = createDescriptorForAnalogSensor();
   /*package*/ final ConceptDescriptor myConceptAnalogicalPredicate = createDescriptorForAnalogicalPredicate();
   /*package*/ final ConceptDescriptor myConceptApp = createDescriptorForApp();
   /*package*/ final ConceptDescriptor myConceptBrick = createDescriptorForBrick();
+  /*package*/ final ConceptDescriptor myConceptDigitalAction = createDescriptorForDigitalAction();
   /*package*/ final ConceptDescriptor myConceptDigitalPredicate = createDescriptorForDigitalPredicate();
   /*package*/ final ConceptDescriptor myConceptDigitalSensor = createDescriptorForDigitalSensor();
-  /*package*/ final ConceptDescriptor myConceptLcdScreen = createDescriptorForLcdScreen();
   /*package*/ final ConceptDescriptor myConceptPredicate = createDescriptorForPredicate();
   /*package*/ final ConceptDescriptor myConceptSensor = createDescriptorForSensor();
   /*package*/ final ConceptDescriptor myConceptState = createDescriptorForState();
@@ -45,7 +46,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAction, myConceptActuator, myConceptAnalogSensor, myConceptAnalogicalPredicate, myConceptApp, myConceptBrick, myConceptDigitalPredicate, myConceptDigitalSensor, myConceptLcdScreen, myConceptPredicate, myConceptSensor, myConceptState, myConceptTransition);
+    return Arrays.asList(myConceptAction, myConceptActuator, myConceptAnalogAction, myConceptAnalogSensor, myConceptAnalogicalPredicate, myConceptApp, myConceptBrick, myConceptDigitalAction, myConceptDigitalPredicate, myConceptDigitalSensor, myConceptPredicate, myConceptSensor, myConceptState, myConceptTransition);
   }
 
   @Override
@@ -56,6 +57,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptAction;
       case LanguageConceptSwitch.Actuator:
         return myConceptActuator;
+      case LanguageConceptSwitch.AnalogAction:
+        return myConceptAnalogAction;
       case LanguageConceptSwitch.AnalogSensor:
         return myConceptAnalogSensor;
       case LanguageConceptSwitch.AnalogicalPredicate:
@@ -64,12 +67,12 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptApp;
       case LanguageConceptSwitch.Brick:
         return myConceptBrick;
+      case LanguageConceptSwitch.DigitalAction:
+        return myConceptDigitalAction;
       case LanguageConceptSwitch.DigitalPredicate:
         return myConceptDigitalPredicate;
       case LanguageConceptSwitch.DigitalSensor:
         return myConceptDigitalSensor;
-      case LanguageConceptSwitch.LcdScreen:
-        return myConceptLcdScreen;
       case LanguageConceptSwitch.Predicate:
         return myConceptPredicate;
       case LanguageConceptSwitch.Sensor:
@@ -94,10 +97,9 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   private static ConceptDescriptor createDescriptorForAction() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ArduinoML", "Action", 0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469deL);
-    b.class_(false, false, false);
+    b.class_(false, true, false);
     b.origin("r:1e4e32fc-e42a-4b05-84e5-5f0ea797c86d(ArduinoML.structure)/3943742123535526366");
     b.version(2);
-    b.property("signal", 0x36bafc91071469e1L).type(MetaIdFactory.dataTypeId(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469e3L)).origin("3943742123535526369").done();
     b.associate("target", 0x36bafc91071469edL).target(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469e8L).optional(false).origin("3943742123535526381").done();
     return b.create();
   }
@@ -107,6 +109,15 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.super_("ArduinoML.structure.Brick", 0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x268865f2b20c7810L);
     b.origin("r:1e4e32fc-e42a-4b05-84e5-5f0ea797c86d(ArduinoML.structure)/3943742123535526376");
     b.version(2);
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForAnalogAction() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ArduinoML", "AnalogAction", 0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x73d359f69f08f05bL);
+    b.class_(false, false, false);
+    b.super_("ArduinoML.structure.Action", 0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469deL);
+    b.origin("r:1e4e32fc-e42a-4b05-84e5-5f0ea797c86d(ArduinoML.structure)/8346113450212651099");
+    b.version(2);
+    b.property("value", 0x73d359f69f150baeL).type(PrimitiveTypeId.INTEGER).origin("8346113450213444526").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForAnalogSensor() {
@@ -149,6 +160,15 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("pin", 0x268865f2b20c7813L).type(PrimitiveTypeId.INTEGER).origin("2776581263317563411").done();
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForDigitalAction() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ArduinoML", "DigitalAction", 0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x73d359f69f08f05cL);
+    b.class_(false, false, false);
+    b.super_("ArduinoML.structure.Action", 0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469deL);
+    b.origin("r:1e4e32fc-e42a-4b05-84e5-5f0ea797c86d(ArduinoML.structure)/8346113450212651100");
+    b.version(2);
+    b.property("value", 0x73d359f69f08f05fL).type(MetaIdFactory.dataTypeId(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x36bafc91071469e3L)).origin("8346113450212651103").done();
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForDigitalPredicate() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ArduinoML", "DigitalPredicate", 0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x59cc8666981660fL);
     b.class_(false, false, false);
@@ -165,21 +185,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.super_("ArduinoML.structure.Sensor", 0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x268865f2b20c7819L);
     b.origin("r:1e4e32fc-e42a-4b05-84e5-5f0ea797c86d(ArduinoML.structure)/4692080444383341558");
     b.version(2);
-    return b.create();
-  }
-  private static ConceptDescriptor createDescriptorForLcdScreen() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ArduinoML", "LcdScreen", 0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x5a540d960905d9bdL);
-    b.class_(false, false, false);
-    b.super_("ArduinoML.structure.Brick", 0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x268865f2b20c7810L);
-    b.origin("r:1e4e32fc-e42a-4b05-84e5-5f0ea797c86d(ArduinoML.structure)/6508842299504843197");
-    b.version(2);
-    b.property("rs", 0x5a540d960905d9c4L).type(PrimitiveTypeId.INTEGER).origin("6508842299504843204").done();
-    b.property("rw", 0x5a540d960905d9c6L).type(PrimitiveTypeId.INTEGER).origin("6508842299504843206").done();
-    b.property("d4", 0x5a540d960905d9cdL).type(PrimitiveTypeId.INTEGER).origin("6508842299504843213").done();
-    b.property("d5", 0x5a540d960905d9d2L).type(PrimitiveTypeId.INTEGER).origin("6508842299504843218").done();
-    b.property("d6", 0x5a540d960905d9d8L).type(PrimitiveTypeId.INTEGER).origin("6508842299504843224").done();
-    b.property("d7", 0x5a540d960905d9dfL).type(PrimitiveTypeId.INTEGER).origin("6508842299504843231").done();
-    b.property("message", 0x5a540d960905d9e7L).type(PrimitiveTypeId.STRING).origin("6508842299504843239").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForPredicate() {

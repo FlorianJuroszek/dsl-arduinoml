@@ -1,7 +1,6 @@
 #include <avr/io.h>
 #include <util/delay.h>
 #include <Arduino.h>
-#include <LiquidCrystal.h>
 
 /** Generating code for application Scenario1**/
 
@@ -20,11 +19,13 @@ long debounce = 200;
 // Declaring states 
 void state_off()
 {
-  digitalWrite(theBuzzer, LOW);
-  digitalWrite(theLed, LOW);
+  digitalWrite(theBuzzer, 0);
+  digitalWrite(theBuzzer, );
+  digitalWrite(theLed, 0);
+  digitalWrite(theLed, );
   Serial.print("off \n");
   boolean guard = millis() - time > debounce;
-  if ((digitalRead(theButton) is HIGH)  &&  guard) {
+  if ((digitalRead(theButton)  ==  HIGH)  &&  guard) {
     time = millis();
     state_on();
   } 
@@ -35,11 +36,13 @@ void state_off()
 
 void state_on()
 {
-  digitalWrite(theLed, HIGH);
-  digitalWrite(theBuzzer, HIGH);
+  digitalWrite(theBuzzer, 0);
+  digitalWrite(theBuzzer, );
+  digitalWrite(theLed, 0);
+  digitalWrite(theLed, );
   Serial.print("on \n");
   boolean guard = millis() - time > debounce;
-  if ((digitalRead(theButton) is LOW)  &&  guard) {
+  if ((digitalRead(theButton)  ==  LOW)  &&  guard) {
     time = millis();
     state_off();
   } 
