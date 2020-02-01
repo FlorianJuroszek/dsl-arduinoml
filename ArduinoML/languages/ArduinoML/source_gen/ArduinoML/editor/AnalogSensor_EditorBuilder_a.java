@@ -58,7 +58,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     return editorCell;
   }
   private EditorCell createConstant_0() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "analogical sensor");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "analog sensor");
     editorCell.setCellId("Constant_z2xh6p_a0");
     editorCell.setDefaultText("");
     return editorCell;
