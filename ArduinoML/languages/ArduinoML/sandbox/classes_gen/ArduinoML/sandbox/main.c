@@ -19,10 +19,10 @@ long debounce = 200;
 // Declaring states 
 void state_off()
 {
-  digitalWrite(theBuzzer, 0);
-  digitalWrite(theBuzzer, );
-  digitalWrite(theLed, 0);
-  digitalWrite(theLed, );
+  digitalWrite(11, LOW);
+  analogWrite(A11, 510);
+  analogWrite(A12, 21);
+  digitalWrite(12, LOW);
   Serial.print("off \n");
   boolean guard = millis() - time > debounce;
   if ((digitalRead(theButton)  ==  HIGH)  &&  guard) {
@@ -36,10 +36,8 @@ void state_off()
 
 void state_on()
 {
-  digitalWrite(theBuzzer, 0);
-  digitalWrite(theBuzzer, );
-  digitalWrite(theLed, 0);
-  digitalWrite(theLed, );
+  digitalWrite(11, HIGH);
+  digitalWrite(12, HIGH);
   Serial.print("on \n");
   boolean guard = millis() - time > debounce;
   if ((digitalRead(theButton)  ==  LOW)  &&  guard) {
@@ -54,7 +52,7 @@ void state_on()
 
 void setup() {
   Serial.begin(9600);
-    pinMode(theLed, OUTPUT);
+  pinMode(theLed, OUTPUT);
   pinMode(theBuzzer, OUTPUT);
   pinMode(theButton, INPUT);
 }
