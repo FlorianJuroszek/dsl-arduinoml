@@ -4,6 +4,8 @@ import io.github.mosser.arduinoml.kernel.App;
 import io.github.mosser.arduinoml.kernel.behavioral.*;
 import io.github.mosser.arduinoml.kernel.structural.*;
 
+import java.util.Locale;
+
 /**
  * Quick and dirty visitor to support the generation of Wiring code
  */
@@ -19,19 +21,23 @@ public class ToWiring extends Visitor<StringBuffer> {
         result.append(String.format("%s\n", s));
     }
 
+    private void inlinew(String s) {
+        result.append(String.format("%s", s));
+    }
+
     @Override
     public void visit(App app) {
         w("// Wiring code generated from an ArduinoML model");
         w(String.format("// Application name: %s\n", app.getName()));
-        w("float conversionFactor = 1;\n");
+
+        w("float conversionFactor = 1;");
+        w("long time = 0; long debounce = 200;\n");
 
         w("void setup(){");
         for (Brick brick : app.getBricks()) {
             brick.accept(this);
         }
         w("}\n");
-
-        w("long time = 0; long debounce = 200;\n");
 
         for (State state : app.getStates()) {
             state.accept(this);
@@ -57,7 +63,8 @@ public class ToWiring extends Visitor<StringBuffer> {
     @Override
     public void visit(AnalogicalSensor sensor) {
         w(String.format("  pinMode(%d, INPUT);  // %s [AnalogicalSensor]", sensor.getPin(), sensor.getName()));
-        w(String.format("  conversionFactor = %f ", sensor.getConversionFactor()));
+        String conversionFactor = String.format(Locale.US, "%f", sensor.getConversionFactor());
+        w(String.format("  conversionFactor = %s; ", conversionFactor));
     }
 
     @Override
@@ -79,7 +86,7 @@ public class ToWiring extends Visitor<StringBuffer> {
 
     @Override
     public void visit(Transition transition) {
-        w("  if( guard ");
+        inlinew("  if( guard ");
         if (transition.getPredicates() != null) {
             for (Predicate predicate : transition.getPredicates()) {
                 predicate.accept(this);
@@ -100,16 +107,16 @@ public class ToWiring extends Visitor<StringBuffer> {
 
     @Override
     public void visit(AnalogicalAction action) {
-        w(String.format("  analogWrite(%d, a%s);", action.getActuator().getPin(), action.getValue()));
+        w(String.format("  analogWrite(A%d, %s);", action.getActuator().getPin(), action.getValue()));
     }
 
     @Override
     public void visit(DigitalPredicate predicate) {
-        w(String.format("&& ( digitalRead(%s) == %s ) ", predicate.getSensor().getPin(), predicate.getSignal()));
+        inlinew(String.format("&& ( digitalRead(%s) == %s ) ", predicate.getSensor().getPin(), predicate.getSignal()));
     }
 
     @Override
     public void visit(AnalogicalPredicate predicate) {
-        w(String.format("&& ( (analogRead(%s)*conversionFactor) %s %s ) ", predicate.getSensor().getPin(), predicate.getOperator().getLabel(), predicate.getValue()));
+        inlinew(String.format("&& ( (analogRead(%s)*conversionFactor) %s %s ) ", predicate.getSensor().getPin(), predicate.getOperator().getLabel(), predicate.getValue()));
     }
 }

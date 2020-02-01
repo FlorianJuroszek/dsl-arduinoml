@@ -64,7 +64,7 @@
     <configuration name="GroovuinoML" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="groovuinoml.main.GroovuinoML" />
       <module name="dsl-groovy" />
-      <option name="PROGRAM_PARAMETERS" value="&quot;C:\Users\Laura Lopez\Documents\SI5-Periode-2\DSL\project\dsl-arduinoml\GroovuinoML\scripts\AnalogScenarioTemperature.groovy&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="&quot;C:\Users\Laura Lopez\Documents\SI5-Periode-2\DSL\project\dsl-arduinoml\GroovuinoML\scripts\BasicScenario4.groovy&quot;" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="groovuinoml.main.*" />

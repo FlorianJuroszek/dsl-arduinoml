@@ -424,7 +424,7 @@
       <node concept="LafN2" id="3tGsC06JsNW" role="LafNU">
         <ref role="LafN3" node="3tGsC06JsNx" resolve="buzzerOff" />
         <node concept="1G7qTQ" id="3tGsC06JsO9" role="2inpCc">
-          <property role="2pgrGj" value="4lTE7Bn939b/&lt;" />
+          <property role="2pgrGj" value="4lTE7Bn939g/&lt;=" />
           <property role="1G7qT5" value="100" />
           <ref role="ni0DN" node="3tGsC06JsNG" resolve="lightSensor" />
         </node>

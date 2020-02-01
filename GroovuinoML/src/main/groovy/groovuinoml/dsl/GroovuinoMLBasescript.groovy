@@ -1,6 +1,7 @@
 package groovuinoml.dsl
 
 import io.github.mosser.arduinoml.kernel.behavioral.Action
+import io.github.mosser.arduinoml.kernel.behavioral.AnalogicalAction
 import io.github.mosser.arduinoml.kernel.behavioral.AnalogicalPredicate
 import io.github.mosser.arduinoml.kernel.behavioral.DigitalAction
 import io.github.mosser.arduinoml.kernel.behavioral.DigitalPredicate
@@ -51,12 +52,24 @@ abstract class GroovuinoMLBasescript extends Script {
         // recursive closure to allow multiple and statements
         def closure
         closure = { actuator ->
-            [becomes: { signal ->
-                DigitalAction action = new DigitalAction()
-                action.setActuator(actuator instanceof String ? (Actuator) ((GroovuinoMLBinding) this.getBinding()).getVariable(actuator) : (Actuator) actuator)
-                action.setValue(signal instanceof String ? (SIGNAL) ((GroovuinoMLBinding) this.getBinding()).getVariable(signal) : (SIGNAL) signal)
-                actions.add(action)
-                [and: closure]
+            [oftype: { type ->
+                if (type == "analog") {
+                    [takes: { value ->
+                        AnalogicalAction action = new AnalogicalAction<>()
+                        action.setActuator(actuator instanceof String ? (Actuator) ((GroovuinoMLBinding) this.getBinding()).getVariable(actuator) : (Actuator) actuator)
+                        action.setValue(value instanceof String ? (int) ((GroovuinoMLBinding) this.getBinding()).getVariable(value) : (int) value)
+                        actions.add(action)
+                        [and: closure]
+                    }]
+                } else if (type == "digital") {
+                    [becomes: { signal ->
+                        DigitalAction action = new DigitalAction()
+                        action.setActuator(actuator instanceof String ? (Actuator) ((GroovuinoMLBinding) this.getBinding()).getVariable(actuator) : (Actuator) actuator)
+                        action.setValue(signal instanceof String ? (SIGNAL) ((GroovuinoMLBinding) this.getBinding()).getVariable(signal) : (SIGNAL) signal)
+                        actions.add(action)
+                        [and: closure]
+                    }]
+                }
             }]
         }
         [means: closure]
@@ -73,7 +86,7 @@ abstract class GroovuinoMLBasescript extends Script {
 
         def closure
         closure = { sensor ->
-            [ofType: { type ->
+            [oftype: { type ->
                 if (type == "analog") {
                     [operator: { operator ->
                         [threshold: { value ->
