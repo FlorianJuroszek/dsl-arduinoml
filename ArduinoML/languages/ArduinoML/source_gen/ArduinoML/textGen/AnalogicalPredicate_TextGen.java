@@ -16,8 +16,10 @@ public class AnalogicalPredicate_TextGen extends TextGenDescriptorBase {
   public void generateText(final TextGenContext ctx) {
     final TextGenSupport tgs = new TextGenSupport(ctx);
 
-    tgs.append("(analogRead(A");
+    tgs.append("((analogRead(A");
     tgs.append(String.valueOf(SPropertyOperations.getInteger(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.sensor$FWmI), PROPS.pin$E8DD)));
+    tgs.append(") * ");
+    tgs.append(SPropertyOperations.getString(SLinkOperations.getTarget(ctx.getPrimaryInput(), LINKS.sensor$FWmI), PROPS.factor$4Ltu));
     tgs.append(") ");
     tgs.append(SPropertyOperations.getString(ctx.getPrimaryInput(), PROPS.operator$ni2O));
     tgs.append(" ");
@@ -31,6 +33,7 @@ public class AnalogicalPredicate_TextGen extends TextGenDescriptorBase {
 
   private static final class PROPS {
     /*package*/ static final SProperty pin$E8DD = MetaAdapterFactory.getProperty(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x268865f2b20c7810L, 0x268865f2b20c7813L, "pin");
+    /*package*/ static final SProperty factor$4Ltu = MetaAdapterFactory.getProperty(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x411d9e4df106abf7L, 0x376c728006bb4cc0L, "factor");
     /*package*/ static final SProperty operator$ni2O = MetaAdapterFactory.getProperty(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x59cc86669816610L, 0x19a0a7798dbb164L, "operator");
     /*package*/ static final SProperty value$MqDT = MetaAdapterFactory.getProperty(0xdc4471fe75cf409bL, 0xbf038bc732728db2L, 0x59cc86669816610L, 0x59cc86669816623L, "value");
   }

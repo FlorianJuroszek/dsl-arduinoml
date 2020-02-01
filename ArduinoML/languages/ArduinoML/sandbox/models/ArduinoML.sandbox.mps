@@ -10,7 +10,9 @@
       <concept id="2776581263317563408" name="ArduinoML.structure.Brick" flags="ng" index="2kx1Ry">
         <property id="2776581263317563411" name="pin" index="2kx1Rx" />
       </concept>
-      <concept id="4692080444383341559" name="ArduinoML.structure.AnalogSensor" flags="ng" index="2K6NmU" />
+      <concept id="4692080444383341559" name="ArduinoML.structure.AnalogSensor" flags="ng" index="2K6NmU">
+        <property id="3993692863765105856" name="factor" index="LPNT0" />
+      </concept>
       <concept id="4692080444383341558" name="ArduinoML.structure.DigitalSensor" flags="ng" index="2K6NmV" />
       <concept id="720802818724213402" name="ArduinoML.structure.Transition" flags="ng" index="LafN2">
         <reference id="720802818724213403" name="next" index="LafN3" />
@@ -304,6 +306,7 @@
     <node concept="2K6NmU" id="msM6pDx4vX" role="2kxaQz">
       <property role="TrG5h" value="theTemperature" />
       <property role="2kx1Rx" value="2" />
+      <property role="LPNT0" value="5.5" />
     </node>
     <node concept="LFDlT" id="msM6pDvvf6" role="2kxaQz">
       <property role="TrG5h" value="theAlarm" />
@@ -392,6 +395,7 @@
     <node concept="2K6NmU" id="3tGsC06IhV2" role="2kxaQz">
       <property role="TrG5h" value="potentiometer" />
       <property role="2kx1Rx" value="2" />
+      <property role="LPNT0" value="1." />
     </node>
     <node concept="LFDlY" id="3tGsC06IhUP" role="LFDlF">
       <property role="TrG5h" value="lightOn" />
@@ -407,6 +411,90 @@
           <ref role="ni0DN" node="3tGsC06IhV2" resolve="potentiometer" />
         </node>
       </node>
+    </node>
+  </node>
+  <node concept="LFDlA" id="3tGsC06JsNw">
+    <property role="TrG5h" value="LightSensorScenario" />
+    <ref role="2pgJ2m" node="3tGsC06JsNx" resolve="buzzerOff" />
+    <node concept="LFDlY" id="3tGsC06JsNU" role="LFDlF">
+      <property role="TrG5h" value="buzzerOn" />
+      <node concept="3GQUAE" id="3tGsC06JsO6" role="LFDlz">
+        <ref role="LFDlW" node="3tGsC06JsNA" resolve="buzzer" />
+      </node>
+      <node concept="LafN2" id="3tGsC06JsNW" role="LafNU">
+        <ref role="LafN3" node="3tGsC06JsNx" resolve="buzzerOff" />
+        <node concept="1G7qTQ" id="3tGsC06JsO9" role="2inpCc">
+          <property role="2pgrGj" value="4lTE7Bn939b/&lt;" />
+          <property role="1G7qT5" value="100" />
+          <ref role="ni0DN" node="3tGsC06JsNG" resolve="lightSensor" />
+        </node>
+      </node>
+    </node>
+    <node concept="LFDlY" id="3tGsC06JsNx" role="LFDlF">
+      <property role="TrG5h" value="buzzerOff" />
+      <node concept="3GQUAE" id="3tGsC06JsNO" role="LFDlz">
+        <property role="3GQUAD" value="3qUZ94756B_/LOW" />
+        <ref role="LFDlW" node="3tGsC06JsNA" resolve="buzzer" />
+      </node>
+      <node concept="LafN2" id="3tGsC06JsNz" role="LafNU">
+        <ref role="LafN3" node="3tGsC06JsNU" resolve="buzzerOn" />
+        <node concept="1G7qTQ" id="3tGsC06JsNR" role="2inpCc">
+          <property role="1G7qT5" value="100" />
+          <property role="2pgrGj" value="4lTE7Bn9393/&gt;" />
+          <ref role="ni0DN" node="3tGsC06JsNG" resolve="lightSensor" />
+        </node>
+      </node>
+    </node>
+    <node concept="LFDlT" id="3tGsC06JsNA" role="2kxaQz">
+      <property role="TrG5h" value="buzzer" />
+      <property role="2kx1Rx" value="11" />
+    </node>
+    <node concept="2K6NmU" id="3tGsC06JsNG" role="2kxaQz">
+      <property role="TrG5h" value="lightSensor" />
+      <property role="2kx1Rx" value="2" />
+      <property role="LPNT0" value="0.0976" />
+    </node>
+  </node>
+  <node concept="LFDlA" id="3tGsC06JRmY">
+    <property role="TrG5h" value="TemperatureAlarm" />
+    <ref role="2pgJ2m" node="3tGsC06JRmZ" resolve="buzzerOff" />
+    <node concept="LFDlY" id="3tGsC06JRnk" role="LFDlF">
+      <property role="TrG5h" value="buzzerOn" />
+      <node concept="3GQUAE" id="3tGsC06JRnw" role="LFDlz">
+        <ref role="LFDlW" node="3tGsC06JRn4" resolve="buzzer" />
+      </node>
+      <node concept="LafN2" id="3tGsC06JRnm" role="LafNU">
+        <ref role="LafN3" node="3tGsC06JRmZ" resolve="buzzerOff" />
+        <node concept="1G7qTQ" id="3tGsC06JRnz" role="2inpCc">
+          <property role="1G7qT5" value="20" />
+          <property role="2pgrGj" value="4lTE7Bn9393/&gt;" />
+          <ref role="ni0DN" node="3tGsC06JRna" resolve="temperatureSensor" />
+        </node>
+      </node>
+    </node>
+    <node concept="LFDlY" id="3tGsC06JRmZ" role="LFDlF">
+      <property role="TrG5h" value="buzzerOff" />
+      <node concept="3GQUAE" id="3tGsC06JRne" role="LFDlz">
+        <property role="3GQUAD" value="3qUZ94756B_/LOW" />
+        <ref role="LFDlW" node="3tGsC06JRn4" resolve="buzzer" />
+      </node>
+      <node concept="LafN2" id="3tGsC06JRn1" role="LafNU">
+        <ref role="LafN3" node="3tGsC06JRnk" resolve="buzzerOn" />
+        <node concept="1G7qTQ" id="3tGsC06JRnh" role="2inpCc">
+          <property role="2pgrGj" value="4lTE7Bn939g/&lt;=" />
+          <property role="1G7qT5" value="20" />
+          <ref role="ni0DN" node="3tGsC06JRna" resolve="temperatureSensor" />
+        </node>
+      </node>
+    </node>
+    <node concept="LFDlT" id="3tGsC06JRn4" role="2kxaQz">
+      <property role="TrG5h" value="buzzer" />
+      <property role="2kx1Rx" value="11" />
+    </node>
+    <node concept="2K6NmU" id="3tGsC06JRna" role="2kxaQz">
+      <property role="TrG5h" value="temperatureSensor" />
+      <property role="2kx1Rx" value="2" />
+      <property role="LPNT0" value="0.045" />
     </node>
   </node>
 </model>

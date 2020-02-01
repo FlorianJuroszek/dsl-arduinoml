@@ -899,7 +899,7 @@
         <node concept="3clFbH" id="msM6pDxFRm" role="3cqZAp" />
         <node concept="lc7rE" id="msM6pDwnmQ" role="3cqZAp">
           <node concept="la8eA" id="msM6pDwnnc" role="lcghm">
-            <property role="lacIc" value="(analogRead(A" />
+            <property role="lacIc" value="((analogRead(A" />
           </node>
           <node concept="l9hG8" id="msM6pDwnpy" role="lcghm">
             <node concept="2YIFZM" id="3tGsC06Iqd6" role="lb14g">
@@ -919,6 +919,22 @@
             </node>
           </node>
           <node concept="la8eA" id="msM6pDwo8h" role="lcghm">
+            <property role="lacIc" value=") * " />
+          </node>
+          <node concept="l9hG8" id="3tGsC06JhvE" role="lcghm">
+            <node concept="2OqwBi" id="3tGsC06JhZf" role="lb14g">
+              <node concept="2OqwBi" id="3tGsC06JhEL" role="2Oq$k0">
+                <node concept="117lpO" id="3tGsC06Jhz2" role="2Oq$k0" />
+                <node concept="3TrEf2" id="3tGsC06JhP8" role="2OqNvi">
+                  <ref role="3Tt5mk" to="c1p6:1BbKaGewWFo" resolve="sensor" />
+                </node>
+              </node>
+              <node concept="3TrcHB" id="3tGsC06Jicx" role="2OqNvi">
+                <ref role="3TsBF5" to="c1p6:3tGsC06ION0" resolve="factor" />
+              </node>
+            </node>
+          </node>
+          <node concept="la8eA" id="3tGsC06JigA" role="lcghm">
             <property role="lacIc" value=") " />
           </node>
           <node concept="l9hG8" id="msM6pDwoae" role="lcghm">

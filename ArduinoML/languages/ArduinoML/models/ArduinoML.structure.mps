@@ -6,6 +6,7 @@
     <devkit ref="78434eb8-b0e5-444b-850d-e7c4ad2da9ab(jetbrains.mps.devkit.aspect.structure)" />
   </languages>
   <imports>
+    <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
   <registry>
@@ -212,6 +213,11 @@
     <property role="EcuMT" value="4692080444383341559" />
     <property role="TrG5h" value="AnalogSensor" />
     <ref role="1TJDcQ" node="2q8pvaM37wp" resolve="Sensor" />
+    <node concept="1TJgyi" id="3tGsC06ION0" role="1TKVEl">
+      <property role="IQ2nx" value="3993692863765105856" />
+      <property role="TrG5h" value="factor" />
+      <ref role="AX2Wp" to="tpee:gc$lTUB" resolve="_FPNumber_String" />
+    </node>
   </node>
   <node concept="1TIwiD" id="msM6pDwmof">
     <property role="EcuMT" value="404418408738809359" />
