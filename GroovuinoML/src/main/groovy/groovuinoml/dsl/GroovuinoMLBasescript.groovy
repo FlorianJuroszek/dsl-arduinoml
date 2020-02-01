@@ -1,17 +1,25 @@
 package groovuinoml.dsl
 
 import io.github.mosser.arduinoml.kernel.behavioral.Action
+import io.github.mosser.arduinoml.kernel.behavioral.AnalogicalPredicate
 import io.github.mosser.arduinoml.kernel.behavioral.DigitalAction
+import io.github.mosser.arduinoml.kernel.behavioral.DigitalPredicate
+import io.github.mosser.arduinoml.kernel.behavioral.OPERATOR
 import io.github.mosser.arduinoml.kernel.behavioral.State
+import io.github.mosser.arduinoml.kernel.behavioral.Transition
 import io.github.mosser.arduinoml.kernel.structural.Actuator
+import io.github.mosser.arduinoml.kernel.structural.AnalogicalSensor
+import io.github.mosser.arduinoml.kernel.structural.DigitalSensor
 import io.github.mosser.arduinoml.kernel.structural.Sensor
 import io.github.mosser.arduinoml.kernel.structural.SIGNAL
+
+import java.util.function.Predicate
 
 abstract class GroovuinoMLBasescript extends Script {
     // digitalsensor "name" pin n
     def digitalsensor(String name) {
         [
-                pin  : {
+                pin: {
                     n -> ((GroovuinoMLBinding) this.getBinding()).getGroovuinoMLModel().createDigitalSensor(name, n)
                 }
         ]
@@ -20,12 +28,13 @@ abstract class GroovuinoMLBasescript extends Script {
     // analogsensor "name" pin n factor m
     def analogsensor(String name) {
         [
-                pin  : {
-                    n -> [
-                            factor: {
-                                m -> ((GroovuinoMLBinding) this.getBinding()).getGroovuinoMLModel().createAnalogicalSensor(name, n, m)
-                            }
-                    ]
+                pin: {
+                    n ->
+                        [
+                                factor: {
+                                    m -> ((GroovuinoMLBinding) this.getBinding()).getGroovuinoMLModel().createAnalogicalSensor(name, n, m)
+                                }
+                        ]
                 }
         ]
     }
@@ -54,33 +63,50 @@ abstract class GroovuinoMLBasescript extends Script {
     }
 
     // initial state
-    def initial(State state) {
+    def initial(state) {
         ((GroovuinoMLBinding) this.getBinding()).getGroovuinoMLModel().setInitialState(state instanceof String ? (State) ((GroovuinoMLBinding) this.getBinding()).getVariable(state) : (State) state)
     }
 
     // from state1 to state2 when sensor becomes signal
     def from(state1) {
-        def clo
+        List<Predicate> predicates = new ArrayList<Predicate>()
 
-        [to: { state2 ->
-            [when: { sensor ->
-                [becomes: { signal ->
-                    ((GroovuinoMLBinding) this.getBinding()).getGroovuinoMLModel().createTransition(
-                            state1 instanceof String ? (State) ((GroovuinoMLBinding) this.getBinding()).getVariable(state1) : (State) state1,
-                            state2 instanceof String ? (State) ((GroovuinoMLBinding) this.getBinding()).getVariable(state2) : (State) state2,
-                            sensor instanceof String ? (Sensor) ((GroovuinoMLBinding) this.getBinding()).getVariable(sensor) : (Sensor) sensor,
-                            signal instanceof String ? (SIGNAL) ((GroovuinoMLBinding) this.getBinding()).getVariable(signal) : (SIGNAL) signal)
+        def closure
+        closure = { sensor ->
+            [analog: { operator ->
+                [threshold: { value ->
+                    predicates.add(((GroovuinoMLBinding) this.getBinding()).getGroovuinoMLModel().createAnalogicalPredicate(
+                            sensor instanceof String ? (AnalogicalSensor) ((GroovuinoMLBinding) this.getBinding()).getVariable(sensor) : (AnalogicalSensor) sensor,
+                            value instanceof String ? (Integer) ((GroovuinoMLBinding) this.getBinding()).getVariable(value) : (Integer) value,
+                            operator instanceof String ? (OPERATOR) ((GroovuinoMLBinding) this.getBinding()).getVariable(operator) : (OPERATOR) operator,
+                    ))
+                    [and: closure]
                 }]
             }]
+            [digital: { value ->
+                predicates.add(
+                        ((GroovuinoMLBinding) this.getBinding()).getGroovuinoMLModel().createDigitalPredicate(
+                                sensor instanceof String ? (DigitalSensor) ((GroovuinoMLBinding) this.getBinding()).getVariable(sensor) : (DigitalSensor) sensor,
+                                value instanceof String ? (SIGNAL) ((GroovuinoMLBinding) this.getBinding()).getVariable(value) : (SIGNAL) value))
+                [and: closure]
+            }]
+        }
+
+        [to: {
+            state2 ->
+                ((GroovuinoMLBinding) this.getBinding()).getGroovuinoMLModel().createTransition(
+                        state2 instanceof String ? (State) ((GroovuinoMLBinding) this.getBinding()).getVariable(state2) : (State) state2,
+                        predicates)
+                [when: closure]
         }]
     }
 
-    // export name
+// export name
     def export(String name) {
         println(((GroovuinoMLBinding) this.getBinding()).getGroovuinoMLModel().generateCode(name).toString())
     }
 
-    // disable run method while running
+// disable run method while running
     int count = 0
 
     abstract void scriptBody()
@@ -93,4 +119,5 @@ abstract class GroovuinoMLBasescript extends Script {
             println "Run method is disabled"
         }
     }
+
 }
