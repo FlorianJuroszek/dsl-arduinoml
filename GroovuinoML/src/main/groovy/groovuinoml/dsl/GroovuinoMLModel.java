@@ -1,5 +1,6 @@
 package groovuinoml.dsl;
 
+import java.math.BigDecimal;
 import java.util.*;
 
 import groovy.lang.Binding;
@@ -30,7 +31,7 @@ public class GroovuinoMLModel {
         this.binding.setVariable(name, sensor);
     }
 
-    public void createAnalogicalSensor(String name, Integer pinNumber, Float conversionFactor) {
+    public void createAnalogicalSensor(String name, Integer pinNumber, float conversionFactor) {
         AnalogicalSensor sensor = new AnalogicalSensor();
         sensor.setName(name);
         sensor.setPin(pinNumber);
@@ -64,6 +65,7 @@ public class GroovuinoMLModel {
 
     public Predicate createAnalogicalPredicate(AnalogicalSensor sensor, OPERATOR operator, Integer value) {
         AnalogicalPredicate tuple = new AnalogicalPredicate();
+        tuple.setName("temperature");
         tuple.setSensor(sensor);
         tuple.setOperator(operator);
         tuple.setValue(value);

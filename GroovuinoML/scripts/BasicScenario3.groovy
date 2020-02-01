@@ -6,7 +6,7 @@ state "off" means "led" becomes "low"
 
 initial "off"
 
-from "on" to "off" when "button" digital "high"
-from "off" to "on" when "button" digital "high"
+from "on" to "off" when "button" ofType "digital" is "high"
+from "off" to "on" when "button" ofType "digital" is "high"
 
 export "BasicScenario3"

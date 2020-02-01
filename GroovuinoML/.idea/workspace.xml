@@ -64,7 +64,7 @@
     <configuration name="GroovuinoML" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="groovuinoml.main.GroovuinoML" />
       <module name="dsl-groovy" />
-      <option name="PROGRAM_PARAMETERS" value="&quot;C:\Users\Laura Lopez\Documents\SI5-Periode-2\DSL\project\dsl-arduinoml\GroovuinoML\scripts\AnalogicScenarioTemperature.groovy&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="&quot;C:\Users\Laura Lopez\Documents\SI5-Periode-2\DSL\project\dsl-arduinoml\GroovuinoML\scripts\AnalogScenarioTemperature.groovy&quot;" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="groovuinoml.main.*" />
@@ -115,5 +115,21 @@
   <component name="WindowStateProjectService">
     <state x="549" y="173" key="FileChooserDialogImpl" />
     <state x="549" y="173" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/groovy/groovuinoml/dsl/GroovuinoMLModel.java</url>
+          <line>75</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/groovy/groovuinoml/dsl/GroovuinoMLModel.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

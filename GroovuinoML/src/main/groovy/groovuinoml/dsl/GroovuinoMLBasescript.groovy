@@ -73,22 +73,27 @@ abstract class GroovuinoMLBasescript extends Script {
 
         def closure
         closure = { sensor ->
-            [analog: { operator ->
-                [threshold: { value ->
-                    predicates.add(((GroovuinoMLBinding) this.getBinding()).getGroovuinoMLModel().createAnalogicalPredicate(
-                            sensor instanceof String ? (AnalogicalSensor) ((GroovuinoMLBinding) this.getBinding()).getVariable(sensor) : (AnalogicalSensor) sensor,
-                            operator instanceof String ? (OPERATOR) ((GroovuinoMLBinding) this.getBinding()).getVariable(operator) : (OPERATOR) operator,
-                            value instanceof String ? (Integer) ((GroovuinoMLBinding) this.getBinding()).getVariable(value) : (Integer) value
-                    ) as Predicate)
-                    [and: closure]
-                }]
-            }]
-            [digital: { value ->
-                predicates.add(
-                        ((GroovuinoMLBinding) this.getBinding()).getGroovuinoMLModel().createDigitalPredicate(
-                                sensor instanceof String ? (DigitalSensor) ((GroovuinoMLBinding) this.getBinding()).getVariable(sensor) : (DigitalSensor) sensor,
-                                value instanceof String ? (SIGNAL) ((GroovuinoMLBinding) this.getBinding()).getVariable(value) : (SIGNAL) value) as Predicate)
-                [and: closure]
+            [ofType: { type ->
+                if (type == "analog") {
+                    [operator: { operator ->
+                        [threshold: { value ->
+                            predicates.add(
+                                    ((GroovuinoMLBinding) this.getBinding()).getGroovuinoMLModel().createAnalogicalPredicate(
+                                            sensor instanceof String ? (AnalogicalSensor) ((GroovuinoMLBinding) this.getBinding()).getVariable(sensor) : (AnalogicalSensor) sensor,
+                                            operator instanceof String ? (OPERATOR) ((GroovuinoMLBinding) this.getBinding()).getVariable(operator) : (OPERATOR) operator,
+                                            value instanceof String ? (Integer) ((GroovuinoMLBinding) this.getBinding()).getVariable(value) : (Integer) value))
+                            [and: closure]
+                        }]
+                    }]
+                } else if (type == "digital") {
+                    [is: { value ->
+                        predicates.add(
+                                ((GroovuinoMLBinding) this.getBinding()).getGroovuinoMLModel().createDigitalPredicate(
+                                        sensor instanceof String ? (DigitalSensor) ((GroovuinoMLBinding) this.getBinding()).getVariable(sensor) : (DigitalSensor) sensor,
+                                        value instanceof String ? (SIGNAL) ((GroovuinoMLBinding) this.getBinding()).getVariable(value) : (SIGNAL) value))
+                        [and: closure]
+                    }]
+                }
             }]
         }
 

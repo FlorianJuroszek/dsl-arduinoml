@@ -8,8 +8,8 @@ state "standBy" means "led" becomes "low" and "buzzer" becomes "low"
 
 initial "standBy"
 
-from "standBy" to "buzzerOn" when "button" digital "high"
-from "buzzerOn" to "ledOn" when "button" digital "high"
-from "ledOn" to "standBy" when "button" digital "high"
+from "standBy" to "buzzerOn" when "button" ofType "digital" is "high"
+from "buzzerOn" to "ledOn" when "button" ofType "digital" is "high"
+from "ledOn" to "standBy" when "button" ofType "digital" is "high"
 
 export "BasicScenario4"

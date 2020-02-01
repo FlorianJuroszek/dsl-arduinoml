@@ -23,6 +23,7 @@ public class ToWiring extends Visitor<StringBuffer> {
     public void visit(App app) {
         w("// Wiring code generated from an ArduinoML model");
         w(String.format("// Application name: %s\n", app.getName()));
+        w("float conversionFactor = 1;\n");
 
         w("void setup(){");
         for (Brick brick : app.getBricks()) {
@@ -56,7 +57,7 @@ public class ToWiring extends Visitor<StringBuffer> {
     @Override
     public void visit(AnalogicalSensor sensor) {
         w(String.format("  pinMode(%d, INPUT);  // %s [AnalogicalSensor]", sensor.getPin(), sensor.getName()));
-        w(String.format("  float conversionFactor = %f ", sensor.getConversionFactor()));
+        w(String.format("  conversionFactor = %f ", sensor.getConversionFactor()));
     }
 
     @Override
@@ -109,6 +110,6 @@ public class ToWiring extends Visitor<StringBuffer> {
 
     @Override
     public void visit(AnalogicalPredicate predicate) {
-        w(String.format("&& ( analogRead(%s) %s %s ) ", predicate.getSensor().getPin(), predicate.getOperator().getLabel(), predicate.getValue()));
+        w(String.format("&& ( (analogRead(%s)*conversionFactor) %s %s ) ", predicate.getSensor().getPin(), predicate.getOperator().getLabel(), predicate.getValue()));
     }
 }
