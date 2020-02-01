@@ -260,7 +260,7 @@
     <ref role="1XX52x" to="c1p6:44tB$RL1EJR" resolve="AnalogSensor" />
     <node concept="3EZMnI" id="44tB$RL1IsV" role="2wV5jI">
       <node concept="3F0ifn" id="44tB$RL1It2" role="3EZMnx">
-        <property role="3F0ifm" value="analogical sensor" />
+        <property role="3F0ifm" value="analog sensor" />
       </node>
       <node concept="PMmxH" id="44tB$RL1It8" role="3EZMnx">
         <ref role="PMmxG" node="2q8pvaM37wq" resolve="CommonBrickProperties" />
