@@ -30,7 +30,7 @@ public class GroovuinoMLModel {
         this.binding.setVariable(name, sensor);
     }
 
-    public void createAnalogicalSensor(String name, Integer pinNumber, Integer conversionFactor) {
+    public void createAnalogicalSensor(String name, Integer pinNumber, Float conversionFactor) {
         AnalogicalSensor sensor = new AnalogicalSensor();
         sensor.setName(name);
         sensor.setPin(pinNumber);
@@ -55,23 +55,26 @@ public class GroovuinoMLModel {
         this.binding.setVariable(name, state);
     }
 
-    public void createTransition(State to, List<Predicate> predicates) {
+    public void createTransition(State from, State to, List<Predicate> predicates) {
         Transition transition = new Transition();
         transition.setNext(to);
         transition.setPredicates(predicates);
+        from.getTransitions().add(transition);
     }
 
-    public void createAnalogicalPredicate(AnalogicalSensor sensor, Integer value, OPERATOR operator) {
+    public Predicate createAnalogicalPredicate(AnalogicalSensor sensor, OPERATOR operator, Integer value) {
         AnalogicalPredicate tuple = new AnalogicalPredicate();
         tuple.setSensor(sensor);
         tuple.setOperator(operator);
         tuple.setValue(value);
+        return tuple;
     }
 
-    public void createDigitalPredicate(DigitalSensor sensor, SIGNAL signal) {
+    public Predicate createDigitalPredicate(DigitalSensor sensor, SIGNAL signal) {
         DigitalPredicate tuple = new DigitalPredicate();
         tuple.setSensor(sensor);
         tuple.setSignal(signal);
+        return tuple;
     }
 
     public void setInitialState(State state) {

@@ -77,9 +77,9 @@ abstract class GroovuinoMLBasescript extends Script {
                 [threshold: { value ->
                     predicates.add(((GroovuinoMLBinding) this.getBinding()).getGroovuinoMLModel().createAnalogicalPredicate(
                             sensor instanceof String ? (AnalogicalSensor) ((GroovuinoMLBinding) this.getBinding()).getVariable(sensor) : (AnalogicalSensor) sensor,
-                            value instanceof String ? (Integer) ((GroovuinoMLBinding) this.getBinding()).getVariable(value) : (Integer) value,
                             operator instanceof String ? (OPERATOR) ((GroovuinoMLBinding) this.getBinding()).getVariable(operator) : (OPERATOR) operator,
-                    ))
+                            value instanceof String ? (Integer) ((GroovuinoMLBinding) this.getBinding()).getVariable(value) : (Integer) value
+                    ) as Predicate)
                     [and: closure]
                 }]
             }]
@@ -87,7 +87,7 @@ abstract class GroovuinoMLBasescript extends Script {
                 predicates.add(
                         ((GroovuinoMLBinding) this.getBinding()).getGroovuinoMLModel().createDigitalPredicate(
                                 sensor instanceof String ? (DigitalSensor) ((GroovuinoMLBinding) this.getBinding()).getVariable(sensor) : (DigitalSensor) sensor,
-                                value instanceof String ? (SIGNAL) ((GroovuinoMLBinding) this.getBinding()).getVariable(value) : (SIGNAL) value))
+                                value instanceof String ? (SIGNAL) ((GroovuinoMLBinding) this.getBinding()).getVariable(value) : (SIGNAL) value) as Predicate)
                 [and: closure]
             }]
         }
@@ -95,8 +95,9 @@ abstract class GroovuinoMLBasescript extends Script {
         [to: {
             state2 ->
                 ((GroovuinoMLBinding) this.getBinding()).getGroovuinoMLModel().createTransition(
+                        state1 instanceof String ? (State) ((GroovuinoMLBinding) this.getBinding()).getVariable(state1) : (State) state1,
                         state2 instanceof String ? (State) ((GroovuinoMLBinding) this.getBinding()).getVariable(state2) : (State) state2,
-                        predicates)
+                        predicates as List<io.github.mosser.arduinoml.kernel.behavioral.Predicate>)
                 [when: closure]
         }]
     }

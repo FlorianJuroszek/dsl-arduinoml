@@ -3,13 +3,13 @@ package io.github.mosser.arduinoml.kernel.structural;
 import io.github.mosser.arduinoml.kernel.generator.Visitor;
 
 public class AnalogicalSensor extends Sensor {
-    private int conversionFactor;
+    private float conversionFactor;
 
-    public int getConversionFactor() {
+    public float getConversionFactor() {
         return conversionFactor;
     }
 
-    public void setConversionFactor(int conversionFactor) {
+    public void setConversionFactor(float conversionFactor) {
         this.conversionFactor = conversionFactor;
     }
 

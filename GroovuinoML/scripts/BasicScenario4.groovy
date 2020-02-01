@@ -1,4 +1,4 @@
-sensor "button" pin 10
+digitalsensor "button" pin 10
 actuator "buzzer" pin 11
 actuator "led" pin 12
 
@@ -8,8 +8,8 @@ state "standBy" means "led" becomes "low" and "buzzer" becomes "low"
 
 initial "standBy"
 
-from "standBy" to "buzzerOn" when "button" becomes "high"
-from "buzzerOn" to "ledOn" when "button" becomes "high"
-from "ledOn" to "standBy" when "button" becomes "high"
+from "standBy" to "buzzerOn" when "button" digital "high"
+from "buzzerOn" to "ledOn" when "button" digital "high"
+from "ledOn" to "standBy" when "button" digital "high"
 
-export "Switch!"
+export "BasicScenario4"

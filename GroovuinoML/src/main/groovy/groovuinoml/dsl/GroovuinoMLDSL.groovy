@@ -1,5 +1,6 @@
 package groovuinoml.dsl
 
+import io.github.mosser.arduinoml.kernel.behavioral.OPERATOR
 import org.codehaus.groovy.control.CompilerConfiguration
 import org.codehaus.groovy.control.customizers.SecureASTCustomizer
 import io.github.mosser.arduinoml.kernel.structural.SIGNAL
@@ -19,6 +20,12 @@ class GroovuinoMLDSL {
 
         binding.setVariable("high", SIGNAL.HIGH)
         binding.setVariable("low", SIGNAL.LOW)
+
+        binding.setVariable("<", OPERATOR.LOWER)
+        binding.setVariable(">", OPERATOR.GREATER)
+        binding.setVariable("<=", OPERATOR.LOWER_OR_EQUALS)
+        binding.setVariable(">=", OPERATOR.GREATER_OR_EQUALS)
+        binding.setVariable("==", OPERATOR.EQUALS)
     }
 
     private static CompilerConfiguration getDSLConfiguration() {
@@ -40,11 +47,11 @@ class GroovuinoMLDSL {
             tokensWhitelist = []
             //types allowed to be used  (including primitive types)
             constantTypesClassesWhiteList = [
-                    int, Integer, Number, Integer.TYPE, String, Object
+                    int, Integer, Number, Integer.TYPE, String, Object, BigDecimal
             ]
             //classes who are allowed to be receivers of method calls
             receiversClassesWhiteList = [
-                    int, Number, Integer, String, Object
+                    int, Number, Integer, String, Object, BigDecimal
             ]
         }
 

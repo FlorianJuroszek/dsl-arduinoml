@@ -50,13 +50,13 @@ public class ToWiring extends Visitor<StringBuffer> {
 
     @Override
     public void visit(DigitalSensor sensor) {
-        w(String.format("  pinMode(%d, INPUT);  // %s [Sensor]", sensor.getPin(), sensor.getName()));
+        w(String.format("  pinMode(%d, INPUT);  // %s [DigitalSensor]", sensor.getPin(), sensor.getName()));
     }
 
     @Override
     public void visit(AnalogicalSensor sensor) {
-        // TODO
-        w(String.format("  pinMode(%d, INPUT);  // %s [Sensor]", sensor.getPin(), sensor.getName()));
+        w(String.format("  pinMode(%d, INPUT);  // %s [AnalogicalSensor]", sensor.getPin(), sensor.getName()));
+        w(String.format("  float conversionFactor = %f ", sensor.getConversionFactor()));
     }
 
     @Override
